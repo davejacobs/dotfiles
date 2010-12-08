@@ -1,0 +1,17 @@
+# .bashrc - OS X
+# Configures the OS X terminal window and other OS X-specific options
+
+# Format ls results according to man ls (there are tools
+# for this [1])
+export LSCOLORS="cxchdxdxbxexexfxfxeheh"
+
+# Command aliases
+alias see="SetFile -a v"
+alias hide="SetFile -a V"
+alias startsql="/usr/local/Cellar/mysql/5.1.49/share/mysql/mysql.server start"
+alias fld="pbpaste | par $1 | pbcopy"
+
+# IPV6 support (if connected directly to non-NAT cable modem):
+# sudo ip6config start-v6 en0; sudo ip6config start-stf en0
+
+# [1]: http://geoff.greer.fm/lscolors/
