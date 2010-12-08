@@ -31,3 +31,6 @@
 [submodule "vim/bundle/ruby"]
 	path = vim/bundle/ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/clojure"]
+	path = vim/bundle/clojure
+	url = git://github.com/vim-scripts/VimClojure.git
