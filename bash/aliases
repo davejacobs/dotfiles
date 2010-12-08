@@ -1,0 +1,33 @@
+# .bashrc - Aliases
+# Sets Bash aliases common to all OSes, including default
+# command options, shorthand for locations, and commands/functions
+
+# For sustainable aliases
+alias edal='$EDITOR ~/.bash/aliases'
+alias edco='$EDITOR ~/.bash/config'
+
+# Default options
+
+alias ls='ls -aG'
+alias ll='ls -alF'
+
+# Locations
+
+alias dl='cd ~/Downloads'
+alias prj='cd ~/Projects'
+alias scr='cd ~/Scripts'
+alias dropb='cd ~/Dropbox/'
+alias tmps='cd $TMPDIR/../TemporaryItems'
+
+# Projects
+
+alias mipr='cd ~/Projects/mint'
+alias evpr='cd ~/Projects/evolve'
+alias enpr='cd ~/Projects/engine'
+alias aipr='cd ~/Projects/ai'
+
+alias publish='cd ~/Projects/engine && cap -q blog:post_new'
+
+# Commands
+
+alias killruby="lsof -i | grep ruby | awk '{print $2}' | xargs kill -9"

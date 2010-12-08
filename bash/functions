@@ -1,0 +1,5 @@
+# .bashrc - Functions
+# Defines Bash functions common to all OSes
+
+encrypt() { openssl des3 -salt -in $1 -out $2; }
+decrypt() { openssl des3 -d -salt -in $1 -out $2; }
