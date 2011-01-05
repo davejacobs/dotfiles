@@ -10,17 +10,17 @@ color ir_black
 if has('gui_running') 
   " let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
   set guioptions=aiA 
-  set lines=44
+  set lines=40
   set columns=90
 endif
 
 if has('gui_macvim')
   " Disable toolbar, menu bar, scroll bars"
-  set guioptions=aiA 
+  set guioptions=aiAe
   set guifont=Menlo:h13
 
   " Set the theme, with a transparent background (even in fullscreen mode)
-  set transparency=15
+  set transparency=25
   set fuoptions=background:normal
 
   " Set the keyboard shortcuts
