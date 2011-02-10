@@ -2,5 +2,4 @@
 # Lists directories that should be added to PATH
 /usr/local/sbin
 $HOME/bin
-$HOME/.multimarkdown/bin
-$HOME/Developer/Android/tools
+$HOME/Projects/rip/bin

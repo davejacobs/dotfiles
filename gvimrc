@@ -5,13 +5,14 @@ if has('autocmd')
 endif
 
 " Set the theme
-color ir_black
+color desert
 
 if has('gui_running') 
   " let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
   set guioptions=aiA 
   set lines=40
-  set columns=90
+  set columns=100
+  set vb t_vb="." 
 endif
 
 if has('gui_macvim')
@@ -20,7 +21,7 @@ if has('gui_macvim')
   set guifont=Menlo:h13
 
   " Set the theme, with a transparent background (even in fullscreen mode)
-  set transparency=25
+  " set transparency=25
   set fuoptions=background:normal
 
   " Set the keyboard shortcuts

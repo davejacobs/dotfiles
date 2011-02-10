@@ -34,7 +34,6 @@ map <Down>  <NOP>
 set clipboard=unnamed
 
 " Set tab options
-set textwidth=80
 set tabstop=2
 set shiftwidth=2
 set autoindent
@@ -42,7 +41,6 @@ set smartindent
 set smarttab
 set expandtab
 set cindent
-" set cinkeys=0{,0},:,0#,!,!^F
 
 " Set wrap variables
 set linespace=4
@@ -57,8 +55,17 @@ set hls
 " Get rid of that annoying beep
 set vb t_vb="." 
 
+" Don't store swap files by the originals!
+if has('win32') || has('win64')
+   set directory=$TMP
+else
+   set directory=/tmp
+end
+
 " Plugin settings
 map <D-e> :NERDTree<CR>
+map <C-e> :NERDTree<CR>
+let g:NERDTreeWinSize = 20
 
 " Format paragraphs using par
 set formatprg=par\ -w80
@@ -66,3 +73,6 @@ set formatprg=par\ -w80
 " Lisp and Clojure development
 let vimclojure#HighlightBuiltins = 1
 let vimclojure#ParenRainbow = 1
+
+" Post-init commands to set up environment
+cd ~/Projects
