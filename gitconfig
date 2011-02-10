@@ -1,9 +1,11 @@
 [user]
 	name = David Jacobs
-	email = dbjacobs@gmail.com
+	email = david@allthingsprogress.com
 [color]
 	ui = auto
 [apply]
 	whitespace = nowarn
 [core]
 	filemode = false
+[github]
+	user = davejacobs

@@ -4,7 +4,6 @@ require 'irb/completion'
 require 'irb/ext/save-history'
 
 require 'rubygems'
-require 'looksee/shortcuts'
 require 'wirble'
 
 IRB.conf[:SAVE_HISTORY] = 1000

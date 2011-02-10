@@ -4,28 +4,29 @@
 
 umask 022
 
+# Customize the prompt (see [1]), will be changed in Ubuntu
+# if the color prompt settings are off
+PS1="[\[\033[0;32m\]\u\[\033[0m\]@\[\033[0;34m\]\h\[\033[0m\]] \W ∴ "
+
+# Set to full Vim path because (for no good reason) simply using
+# 'vim' causes the program to return with status 1 and not 0
+export EDITOR=/usr/bin/vim
+
 # Import the correct configuration based on OS
 system=`uname -s`
 [[ "$system" == "Darwin" ]] && source $HOME/.bash/osx
 [[ "$system" == "Linux" ]] && source $HOME/.bash/ubuntu
 unset system
 
-# Customize the prompt (see [1]), will be changed in Ubuntu
-# if the color prompt settings are off
-PS1="[\[\033[0;32m\]\u\[\033[0m\]@\[\033[0;34m\]\h\[\033[0m\]] \W ∴ "
-
-# Set shell options
+# Set history options
 HISTCONTROL=${HISTCONTROL+,}ignoredups,ignoreboth # no dupes in history
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-shopt -s histappend   # append, don't overwrite
-shopt -s checkwinsize # if necessary, update window after commands
+# Append, don't overwrite history
+shopt -s histappend   
 
-# Set to full Vim path because (for no good reason) simply using
-# 'vim' causes the program to return with status 1 and not 0
-export EDITOR=/usr/bin/vim
-
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+# If necessary, update window after commands
+shopt -s checkwinsize 
 
 # [1]: http://freeunix.dyndns.org:8088/site2/howto/Bash.shtml

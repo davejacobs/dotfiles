@@ -1,5 +1,9 @@
 # .bashrc - Functions
 # Defines Bash functions common to all OSes
 
+# Simple encryption
 encrypt() { openssl des3 -salt -in $1 -out $2; }
 decrypt() { openssl des3 -d -salt -in $1 -out $2; }
+
+# Fold text with par
+fld() { pbpaste | par $1 | pbcopy; }
