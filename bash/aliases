@@ -13,21 +13,24 @@ alias ll='ls -alF'
 
 # Locations
 
+alias dropb='cd ~/Dropbox'
 alias dl='cd ~/Downloads'
 alias prj='cd ~/Projects'
 alias scr='cd ~/Scripts'
-alias dropb='cd ~/Dropbox/'
-alias tmps='cd $TMPDIR/../TemporaryItems'
 
 # Projects
 
+alias dfpr='cd ~/Projects/dotfiles'
 alias mipr='cd ~/Projects/mint'
-alias evpr='cd ~/Projects/evolve'
 alias enpr='cd ~/Projects/engine'
+alias evpr='cd ~/Projects/evolve'
 alias aipr='cd ~/Projects/ai'
+alias scpr='cd ~/Projects/scripts'
+alias stpr='cd ~/Projects/stats'
+alias rupr='cd ~/Projects/rush'
 
-alias publish='cd ~/Projects/engine && cap -q blog:post_new'
 
 # Commands
 
-alias killruby="lsof -i | grep ruby | awk '{print $2}' | xargs kill -9"
+alias publish='cd ~/Projects/engine && cap -q blog:post_new'
+alias killruby='lsof -i | grep ruby | awk "{print $2}" | xargs kill -9'
