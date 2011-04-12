@@ -1,10 +1,10 @@
 " .vimrc - Universal customization for Vim
 " by David Jacobs
 
-" Source this file after saving it
-" autocmd bufwritepost .vimrc source $MYVIMRC 
-
+" -----------------------------------------------------------
 " Pathogen configuration
+" -----------------------------------------------------------
+
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -12,10 +12,13 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+" -----------------------------------------------------------
 " General configuration
+" -----------------------------------------------------------
+
 set clipboard=unnamed   " Allow anonymous clipboard
-set hls                 " Highlight search results
-set vb t_vb="."         " Get rid of that annoying error beep & flash
+set hlsearch            " Highlight search results
+set visualbell t_vb="." " Get rid of that annoying error beep & flash
 set expandtab           " Use soft tabs
 set tabstop=2           " Width of soft tabs
 set autoindent 
@@ -25,20 +28,21 @@ set smartindent
 set smarttab            " Use shiftwidth to tab at line beginning
 set wrap                " Wrap text inside screen
 set linebreak           " Wrap words, not characters
-set linespace=4         " Measured in pixels
+set linespace=4         " Baseline spacing, measured in pixels
 set nolist              " Do not show difference between tabs and spaces
 set foldmethod=marker   " Fold using visual cues {{{ and }}}
 set formatprg=par\ -w80 " Format paragraphs using par
-
-" Prevent checkouts folder from being included in Command-T
-" directory searches
-set wildignore+=checkouts/**,.git
+set wig+=checkouts/**   " Completion/search blacklist
+set wig+=.git
 
 if has('unix') || has('mac')
-  set directory=/tmp  " Don't store swap files by the originals!
+  set directory=/tmp    " Don't store swap files by the originals!
 end
 
-" My remapped keys
+" -----------------------------------------------------------
+" Keyboard configuration
+" -----------------------------------------------------------
+
 let mapleader=','
 let maplocalleader=';'
 
@@ -70,6 +74,10 @@ map <D-r>   :ConqueTermSplit lein repl<CR>
 map <C-e>   :NERDTree<CR>
 map <D-e>   :NERDTree<CR>
 
+" -----------------------------------------------------------
+" Plugin configuration
+" -----------------------------------------------------------
+
 let g:ConqueTerm_Syntax='clojure'
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
@@ -77,7 +85,14 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 
 " -----------------------------------------------------------
-" Post-init setup
+" Auto sourcing
+" -----------------------------------------------------------
+
+" Source this file after saving it
+" autocmd bufwritepost .vimrc source $MYVIMRC 
+
+" -----------------------------------------------------------
+" Post-init configuration
 " -----------------------------------------------------------
 
 cd ~/Projects

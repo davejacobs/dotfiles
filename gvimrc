@@ -1,9 +1,9 @@
 " .gvimrc - GUI customization for GVim and MacVim
 
-" Source this file after saving it
-" autocmd bufwritepost .gvimrc source $MYGVIMRC
-
+" -----------------------------------------------------------
 " General configuration
+" -----------------------------------------------------------
+
 color desert
 set lines=40
 set columns=100
@@ -14,6 +14,9 @@ set guioptions+=e " Disable toolbar, menu bar, scroll bars"
 set guioptions-=m " Remove menu bar
 set guioptions-=T " Remove toolbar
 
+" -----------------------------------------------------------
+" MacVim configuration
+" -----------------------------------------------------------
 if has('gui_macvim')
   set guifont=Menlo:h13
   " set transparency=25  " 25% opaque background
@@ -35,3 +38,10 @@ if has('gui_macvim')
   " Plugins
   let g:CommandTMaxDepth=8
 endif
+
+" -----------------------------------------------------------
+" Auto sourcing
+" -----------------------------------------------------------
+
+" Source this file after saving it
+" autocmd bufwritepost .gvimrc source $MYGVIMRC
