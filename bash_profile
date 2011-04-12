@@ -12,3 +12,4 @@ source $HOME/.bash/completions
 source $HOME/.bash/config
 source $HOME/.bash/functions
 source $HOME/.bash/ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
