@@ -2,9 +2,7 @@
 " by David Jacobs
 
 " Source this file after saving it
-" if has('autocmd')
-"   autocmd bufwritepost .vimrc source $MYVIMRC 
-" endif
+" autocmd bufwritepost .vimrc source $MYVIMRC 
 
 " Pathogen configuration
 set nocompatible
@@ -77,7 +75,6 @@ let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
-let g:CommandTMaxDepth=8
 
 " -----------------------------------------------------------
 " Post-init setup
