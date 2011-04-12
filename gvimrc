@@ -5,7 +5,7 @@ if has('autocmd')
 endif
 
 " Set the theme
-colorscheme solarized
+color desert
 
 if has('gui_running') 
   " let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
