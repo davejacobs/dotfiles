@@ -1,50 +1,37 @@
-" GUI options for MacVim
-" Source the .gvimrc file after saving it
-if has('autocmd')
-  autocmd bufwritepost .gvimrc source ~/.gvimrc 
-endif
+" .gvimrc - GUI customization for GVim and MacVim
 
-" Set the theme
+" Source this file after saving it
+" autocmd bufwritepost .gvimrc source $MYGVIMRC
+
+" General configuration
 color desert
-
-if has('gui_running') 
-  " let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
-  " Remove menu bar
-  " set guioptions -= m
-  " Remove toolbar
-  " set guioptions -= T
-  
-  set guioptions=aiA 
-  set lines=40
-  set columns=100
-  set vb t_vb="." 
-endif
+set lines=40
+set columns=100
+set vb t_vb="."   " Get rid of that annoying error beep & flash
+set guioptions+=a " Autoselect
+set guioptions+=A " Autoselect
+set guioptions+=e " Disable toolbar, menu bar, scroll bars"
+set guioptions-=m " Remove menu bar
+set guioptions-=T " Remove toolbar
 
 if has('gui_macvim')
-  " Disable toolbar, menu bar, scroll bars"
-  set guioptions=aiAe
   set guifont=Menlo:h13
+  " set transparency=25  " 25% opaque background
+  set fuoptions+=background:normal
+  set fuoptions+=maxhorz " Fully expand in fullscreen mode,
+  set fuoptions+=maxvert " horizontally and vertically
 
-  " Set the theme, with a transparent background (even in fullscreen mode)
-  " set transparency=25
-  set fuoptions=background:normal
-  " grow to maximum horizontal width on entering fullscreen mode
-  set fuoptions+=maxhorz
-  set fuoptions+=maxvert
+  highlight clear nontext " Hide non-text characters
+  highlight link nontext ignore
 
-  " free up Command-F
+  " Reassign important MacVim key bindings
   macmenu &Edit.Find.Find\.\.\. key = <D-S-f> 
+  macmenu &File.New\ Window     key = <D-S-n>
+  macmenu &File.New\ Tab        key = <D-n>
 
-  " toggle fullscreen mode
   map <D-f> :set invfu<CR>                
-
-  " Set the keyboard shortcuts
-  macmenu &File.New\ Window key = <D-S-n>
-  macmenu &File.New\ Tab key = <D-n>
   map <D-t> :CommandT<CR>
 
-  " Hide non-text and ignored characters, according to the current color scheme
-  highlight clear nontext
-  highlight link nontext ignore
-  " au colorscheme * hi clear nontext | hi link nontext ignore
+  " Plugins
+  let g:CommandTMaxDepth=8
 endif
