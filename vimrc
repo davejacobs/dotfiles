@@ -44,8 +44,8 @@ map <Right> <NOP>
 map <Up>    <NOP>
 map <Down>  <NOP>
 
-map <D-j> :split
-map <D-k> :vsplit
+map <D-j> :split<CR>
+map <D-k> :vsplit<CR>
 
 " Set tab options
 set tabstop=2
@@ -55,9 +55,9 @@ set smartindent
 set smarttab
 set expandtab
 set cindent
+set linespace=3 " measured in pixels
 
-" Set wrap variables
-set linespace=4
+" Set wrap variables set linespace=4
 set wrap
 set linebreak
 set nolist
