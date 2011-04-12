@@ -55,3 +55,6 @@
 [submodule "vim/bundle/conque"]
 	path = vim/bundle/conque
 	url = git://github.com/rson/vim-conque.git
+[submodule "vim/bundle/rspec"]
+	path = vim/bundle/rspec
+	url = git://github.com/taq/vim-rspec.git
