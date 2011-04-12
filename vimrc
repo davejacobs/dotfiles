@@ -1,42 +1,51 @@
 " .vimrc - Universal customization for Vim
 " by David Jacobs
 
-" Wishlist
-" - Solid directory switching for command-T
+" Source this file after saving it
+" if has('autocmd')
+"   autocmd bufwritepost .vimrc source $MYVIMRC 
+" endif
 
-" Bundle options - using Pathogen.vim
+" Pathogen configuration
 set nocompatible
-
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
-" Source the .vimrc file after saving it
-" if has('autocmd')
-"   autocmd bufwritepost .vimrc source $MYVIMRC 
-" endif
+" General configuration
+set clipboard=unnamed   " Allow anonymous clipboard
+set hls                 " Highlight search results
+set vb t_vb="."         " Get rid of that annoying error beep & flash
+set expandtab           " Use soft tabs
+set tabstop=2           " Width of soft tabs
+set autoindent 
+set shiftwidth=2        " Width of autoindent
+set cindent             " C-style autoindenting
+set smartindent
+set smarttab            " Use shiftwidth to tab at line beginning
+set wrap                " Wrap text inside screen
+set linebreak           " Wrap words, not characters
+set linespace=4         " Measured in pixels
+set nolist              " Do not show difference between tabs and spaces
+set foldmethod=marker   " Fold using visual cues {{{ and }}}
+set formatprg=par\ -w80 " Format paragraphs using par
 
-" Allow anonymous clipboard
-set clipboard=unnamed
+" Prevent checkouts folder from being included in Command-T
+" directory searches
+set wildignore+=checkouts/**,.git
 
-" Highlight search results:
-set hls
-
-" Get rid of that annoying beep
-set vb t_vb="." 
+if has('unix') || has('mac')
+  set directory=/tmp  " Don't store swap files by the originals!
+end
 
 " My remapped keys
 let mapleader=','
 let maplocalleader=';'
 
-" jk - the easy way to escape insert mode 
+" kj- the easy way to escape insert mode 
 inoremap kj <Esc>
-
-" Use control + j or k to switch between split screens
-map <C-j>   <C-W>j<C-W>_
-map <C-k>   <C-W>k<C-W>_
 
 " Disable those damned arrow keys!
 map <Left>  <NOP>
@@ -44,46 +53,34 @@ map <Right> <NOP>
 map <Up>    <NOP>
 map <Down>  <NOP>
 
-map <D-j> :split<CR>
-map <D-k> :vsplit<CR>
+" Easy splits & navigation
+map <D-j>   :split<CR>
+map <D-k>   :vsplit<CR>
+map <C-j>   <C-w>j
+map <C-k>   <C-w>k
+map <C-h>   <C-w>h
+map <C-l>   <C-w>l
 
-" Set tab options
-set tabstop=2
-set shiftwidth=2
-set autoindent
-set smartindent
-set smarttab
-set expandtab
-set cindent
-set linespace=3 " measured in pixels
+" Easy clipboard manipulation, ugly/non-orthogonal for now
+nmap rd     "_dP
+nmap rdd    "_ddP
+nmap rciw   "_ciw<Esc>p
 
-" Set wrap variables set linespace=4
-set wrap
-set linebreak
-set nolist
-set foldmethod=marker
+" Plugins
+map <C-r>   :ConqueTermSplit lein repl<CR>
+map <D-r>   :ConqueTermSplit lein repl<CR>
+map <C-e>   :NERDTree<CR>
+map <D-e>   :NERDTree<CR>
 
-" Don't store swap files by the originals!
-if has('unix') || has('mac')
-  set directory=/tmp
-end
-
-" Plugin configuration
-
-" Conque subprocess key bindinds
-map <D-r> :ConqueTermSplit lein repl<CR>
 let g:ConqueTerm_Syntax='clojure'
-
-map <D-e> :NERDTree<CR>
-map <C-e> :NERDTree<CR>
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
-
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
+let g:CommandTMaxDepth=8
 
-" Format paragraphs using par
-set formatprg=par\ -w80
+" -----------------------------------------------------------
+" Post-init setup
+" -----------------------------------------------------------
 
-" Post-init commands to set up environment
 cd ~/Projects
