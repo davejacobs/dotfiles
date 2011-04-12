@@ -71,7 +71,8 @@ end
 " Plugin configuration
 
 " Conque subprocess key bindinds
-map <D-r> :ConqueTerm lein repl
+map <D-r> :ConqueTermSplit lein repl<CR>
+let g:ConqueTerm_Syntax='clojure'
 
 map <D-e> :NERDTree<CR>
 map <C-e> :NERDTree<CR>
