@@ -1,4 +1,9 @@
-" Universal customization for Vim
+" .vimrc - Universal customization for Vim
+" by David Jacobs
+
+" Wishlist
+" - Solid directory switching for command-T
+
 " Bundle options - using Pathogen.vim
 set nocompatible
 
@@ -6,13 +11,21 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
-
 syntax on
 
 " Source the .vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC 
-endif
+" if has('autocmd')
+"   autocmd bufwritepost .vimrc source $MYVIMRC 
+" endif
+
+" Allow anonymous clipboard
+set clipboard=unnamed
+
+" Highlight search results:
+set hls
+
+" Get rid of that annoying beep
+set vb t_vb="." 
 
 " My remapped keys
 let mapleader=','
@@ -22,8 +35,8 @@ let maplocalleader=';'
 inoremap kj <Esc>
 
 " Use control + j or k to switch between split screens
-map <C-J>   <C-W>j<C-W>_
-map <C-K>   <C-W>k<C-W>_
+map <C-j>   <C-W>j<C-W>_
+map <C-k>   <C-W>k<C-W>_
 
 " Disable those damned arrow keys!
 map <Left>  <NOP>
@@ -31,7 +44,8 @@ map <Right> <NOP>
 map <Up>    <NOP>
 map <Down>  <NOP>
 
-set clipboard=unnamed
+map <D-j> :split
+map <D-k> :vsplit
 
 " Set tab options
 set tabstop=2
@@ -49,30 +63,26 @@ set linebreak
 set nolist
 set foldmethod=marker
 
-" Highlight search results:
-set hls
-
-" Get rid of that annoying beep
-set vb t_vb="." 
-
 " Don't store swap files by the originals!
-if has('win32') || has('win64')
-   set directory=$TMP
-else
-   set directory=/tmp
+if has('unix') || has('mac')
+  set directory=/tmp
 end
 
-" Plugin settings
+" Plugin configuration
+
+" Conque subprocess key bindinds
+map <D-r> :ConqueTerm lein repl
+
 map <D-e> :NERDTree<CR>
 map <C-e> :NERDTree<CR>
-let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize=20
+let g:NERDTreeChDirMode=2
+
+let vimclojure#HighlightBuiltins=1
+let vimclojure#ParenRainbow=1
 
 " Format paragraphs using par
 set formatprg=par\ -w80
-
-" Lisp and Clojure development
-let vimclojure#HighlightBuiltins = 1
-let vimclojure#ParenRainbow = 1
 
 " Post-init commands to set up environment
 cd ~/Projects
