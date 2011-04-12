@@ -58,3 +58,6 @@
 [submodule "vim/bundle/rspec"]
 	path = vim/bundle/rspec
 	url = git://github.com/taq/vim-rspec.git
+[submodule "supertab"]
+	path = supertab
+	url = git://github.com/ervandew/supertab.git
