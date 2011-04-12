@@ -49,3 +49,9 @@
 [submodule "vim/bundle/git-vim"]
 	path = vim/bundle/git-vim
 	url = https://github.com/motemen/git-vim
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/conque"]
+	path = vim/bundle/conque
+	url = git://github.com/rson/vim-conque.git

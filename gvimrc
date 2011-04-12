@@ -5,10 +5,15 @@ if has('autocmd')
 endif
 
 " Set the theme
-color desert
+colorscheme solarized
 
 if has('gui_running') 
   " let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
+  " Remove menu bar
+  " set guioptions -= m
+  " Remove toolbar
+  " set guioptions -= T
+  
   set guioptions=aiA 
   set lines=40
   set columns=100
@@ -23,6 +28,15 @@ if has('gui_macvim')
   " Set the theme, with a transparent background (even in fullscreen mode)
   " set transparency=25
   set fuoptions=background:normal
+  " grow to maximum horizontal width on entering fullscreen mode
+  set fuoptions+=maxhorz
+  set fuoptions+=maxvert
+
+  " free up Command-F
+  macmenu &Edit.Find.Find\.\.\. key = <D-S-f> 
+
+  " toggle fullscreen mode
+  map <D-f> :set invfu<CR>                
 
   " Set the keyboard shortcuts
   macmenu &File.New\ Window key = <D-S-n>
