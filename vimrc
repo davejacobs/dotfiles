@@ -18,7 +18,7 @@ syntax on
 
 set clipboard=unnamed   " Allow anonymous clipboard
 set hlsearch            " Highlight search results
-set visualbell t_vb="." " Get rid of that annoying error beep & flash
+set visualbell t_vb=    " Get rid of that annoying error beep & flash
 set expandtab           " Use soft tabs
 set tabstop=2           " Width of soft tabs
 set autoindent 
@@ -34,6 +34,9 @@ set foldmethod=marker   " Fold using visual cues {{{ and }}}
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+=.git
+set laststatus=2        " Always show status bar
+set statusline=         " Customize status bar
+set statusline+=\ %t\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
 
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
@@ -83,6 +86,14 @@ let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
+
+" -----------------------------------------------------------
+" Aliases
+" -----------------------------------------------------------
+
+command! Status  GitStatus
+command! Add     GitAdd
+command! Commit  GitCommit
 
 " -----------------------------------------------------------
 " Auto sourcing
