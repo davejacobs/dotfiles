@@ -1,12 +1,17 @@
-# These are generators for different completion files for several languages
-# Copy these into the appropriate REPL to generate your files.
+These are generators for different completion files for several languages.
+Copy these into the appropriate REPL to generate your files.
 
 Clojure
 =======
 
 (def completions
-    (reduce concat (map (fn [p] (keys (ns-publics (find-ns p))))
-                        '(clojure.core clojure.set clojure.xml clojure.zip))))
+    (reduce concat
+     (map #(keys (ns-publics (find-ns %)))
+          '(clojure.core clojure.set clojure.xml clojure.zip))))
 
-(with-open [f (java.io.BufferedWriter. (java.io.FileWriter. (str (System/getenv "HOME") "/.clj_completions")))]
-    (.write f (apply str (interleave completions (repeat "\n")))))
+(let [home (System/getenv "HOME")
+      completions-file (str home "/.clj_completions")
+      writer (java.io.BufferedWriter. (java.io.FileWriter. completions-file))
+      dictionary (apply str (interleave completions (repeat "\n")))]
+  (with-open [f writer]
+    (.write f dictionary)))
