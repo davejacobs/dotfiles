@@ -43,3 +43,6 @@
 [submodule "vim/bundle/pastie"]
 	path = vim/bundle/pastie
 	url = git://github.com/tpope/vim-pastie.git
+[submodule "vim/bundle/endwise"]
+	path = vim/bundle/endwise
+	url = git://github.com/tpope/vim-endwise.git
