@@ -3,8 +3,7 @@
 
 " -----------------------------------------------------------
 " Pathogen configuration
-" -----------------------------------------------------------
-
+" ----------------------------------------------------------- 
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -59,7 +58,9 @@ map <Up>    <NOP>
 map <Down>  <NOP>
 
 " Easy splits & navigation
+map <F9>    :split<CR>
 map <D-j>   :split<CR>
+map <F10>   :vsplit<CR>
 map <D-k>   :vsplit<CR>
 map <C-j>   <C-w>j
 map <C-k>   <C-w>k
@@ -72,8 +73,8 @@ nmap rdd    "_ddP
 nmap rciw   "_ciw<Esc>p
 
 " Plugins
-map <C-r>   :ConqueTermSplit lein repl<CR>
-map <D-r>   :ConqueTermSplit lein repl<CR>
+map <C-i>   :ConqueTermSplit lein repl<CR>
+map <D-i>   :ConqueTermSplit lein repl<CR>
 map <C-e>   :NERDTree<CR>
 map <D-e>   :NERDTree<CR>
 
