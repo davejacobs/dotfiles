@@ -4,15 +4,21 @@
 " General configuration
 " -----------------------------------------------------------
 
-color desert
+set guioptions=         " Reset options
+set guioptions+=a       " Autoselect
+set guioptions+=A       " Autoselect
+set guioptions+=e       " Disable toolbar, menu bar, scroll bars"
+set guioptions+=i       " Show Vim icon in taskbar
+set guioptions-=m       " Remove menu bar
+set guioptions-=T       " Remove toolbar
+set guioptions-=l       " Remove left scrollbar
+set guioptions-=r       " Remove right scrollbar
+set guioptions-=b       " Remove bottom scrollbar
 set lines=40
 set columns=100
-set vb t_vb="."   " Get rid of that annoying error beep & flash
-set guioptions+=a " Autoselect
-set guioptions+=A " Autoselect
-set guioptions+=e " Disable toolbar, menu bar, scroll bars"
-set guioptions-=m " Remove menu bar
-set guioptions-=T " Remove toolbar
+set visualbell t_vb=    " Get rid of that annoying error beep & flash
+set background=dark
+color solarized         " http://ethanschoonover.com/solarized
 
 " -----------------------------------------------------------
 " MacVim configuration
