@@ -9,3 +9,5 @@
 	filemode = false
 [github]
 	user = davejacobs
+[status]
+   showUntrackedFiles = no
