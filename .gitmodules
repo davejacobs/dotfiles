@@ -13,3 +13,6 @@
 [submodule "vim/bundle/git"]
 	path = vim/bundle/git
 	url = git://github.com/motemen/git-vim.git
+[submodule "vim/bundle/conque"]
+	path = vim/bundle/conque
+	url = git://github.com/rson/vim-conque.git
