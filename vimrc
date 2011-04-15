@@ -51,6 +51,13 @@ let maplocalleader=';'
 " kj- the easy way to escape insert mode 
 inoremap kj <Esc>
 
+" q - the easy way to quit
+noremap Q   q
+noremap q   :q<CR>
+
+" s - the easy way to save
+noremap s   :w<CR>
+
 " Disable those damned arrow keys!
 map <Left>  <NOP>
 map <Right> <NOP>
@@ -68,21 +75,31 @@ map <C-h>   <C-w>h
 map <C-l>   <C-w>l
 
 " Easy clipboard manipulation, ugly/non-orthogonal for now
-nmap rd     "_dP
-nmap rdd    "_ddP
-nmap rciw   "_ciw<Esc>p
+nmap <Leader>d   "_dP
+nmap <Leader>dd  "_ddP
+nmap <Leader>riw "_ciw<Esc>p
 
 " Plugins
-map <C-i>   :ConqueTermSplit lein repl<CR>
-map <D-i>   :ConqueTermSplit lein repl<CR>
-map <C-e>   :NERDTree<CR>
-map <D-e>   :NERDTree<CR>
+map <C-e> :NERDTree<CR>
+map <D-e> :NERDTree<CR>
+
+map <Leader>n :NERDTreeToggle<CR>
+
+map <C-i> :ConqueTermSplit lein repl<CR>
+map <D-i> :ConqueTermSplit lein repl<CR>
+
+map <Leader>b :ConqueTermSplit bash<CR>
+map <Leader>r :ConqueTermSplit ripl<CR>
+map <Leader>a :ConqueTermSplit rails console<CR>
+map <Leader>c :ConqueTermSplit lein repl<CR>
+map <Leader>p :ConqueTermSplit python<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
 
 let g:ConqueTerm_Syntax='clojure'
+let g:ConqueTerm_SendVisKey = '<F8>'
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
 let vimclojure#HighlightBuiltins=1
@@ -107,4 +124,8 @@ command! Commit  GitCommit
 " Post-init configuration
 " -----------------------------------------------------------
 
-cd ~/Projects
+if isdirectory('~/Projects')
+  cd ~/Projects
+else
+  cd ~/projects
+endif
