@@ -64,7 +64,7 @@ map <Right> <NOP>
 map <Up>    <NOP>
 map <Down>  <NOP>
 
-" Easy splits & navigation
+" Easy splits, navigation & tabs
 map <F9>    :split<CR>
 map <D-j>   :split<CR>
 map <F10>   :vsplit<CR>
@@ -73,6 +73,10 @@ map <C-j>   <C-w>j
 map <C-k>   <C-w>k
 map <C-h>   <C-w>h
 map <C-l>   <C-w>l
+
+map <Leader>t  :tabnew<CR>
+map <Leader>l :tabn<CR>
+map <Leader>h :tabp<CR>
 
 " Easy clipboard manipulation, ugly/non-orthogonal for now
 nmap <Leader>d   "_dP
@@ -109,9 +113,9 @@ let vimclojure#ParenRainbow=1
 " Aliases
 " -----------------------------------------------------------
 
-command! Status  GitStatus
-command! Add     GitAdd
-command! Commit  GitCommit
+" command! Status  GitStatus
+" command! Add     GitAdd
+" command! Commit  GitCommit
 
 " -----------------------------------------------------------
 " Auto sourcing
@@ -124,7 +128,7 @@ command! Commit  GitCommit
 " Post-init configuration
 " -----------------------------------------------------------
 
-if isdirectory('~/Projects')
+if isdirectory(expand('~/Projects'))
   cd ~/Projects
 else
   cd ~/projects
