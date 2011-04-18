@@ -9,5 +9,14 @@
 	filemode = false
 [github]
 	user = davejacobs
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  who = shortlog -s --
+
 ; [status]
 ;   showUntrackedFiles = no
