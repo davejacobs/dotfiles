@@ -8,7 +8,6 @@ done
 
 # Source all config files
 source $HOME/.bash/aliases
-source $HOME/.bash/completions
 source $HOME/.bash/config
 source $HOME/.bash/functions
 source $HOME/.bash/ruby
