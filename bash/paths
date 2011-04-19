@@ -3,5 +3,6 @@
 /usr/local/sbin
 $HOME/bin
 $HOME/Projects/rip/bin
+$HOME/Projects/scripts/bin
 $HOME/.lein
 $HOME/.cljr/bin
