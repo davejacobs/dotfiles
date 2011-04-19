@@ -58,6 +58,9 @@ noremap q   :q<CR>
 " s - the easy way to save
 noremap s   :w<CR>
 
+" Leader/a - the easy way to select all
+noremap <Leader>a ggVG
+
 " Disable those damned arrow keys!
 map <Left>  <NOP>
 map <Right> <NOP>
@@ -74,7 +77,7 @@ map <C-k>   <C-w>k
 map <C-h>   <C-w>h
 map <C-l>   <C-w>l
 
-map <Leader>t  :tabnew<CR>
+map <Leader>t :tabnew<CR>
 map <Leader>l :tabn<CR>
 map <Leader>h :tabp<CR>
 
@@ -92,11 +95,11 @@ map <Leader>n :NERDTreeToggle<CR>
 map <C-i> :ConqueTermSplit lein repl<CR>
 map <D-i> :ConqueTermSplit lein repl<CR>
 
-map <Leader>b :ConqueTermSplit bash<CR>
-map <Leader>r :ConqueTermSplit ripl<CR>
-map <Leader>a :ConqueTermSplit rails console<CR>
-map <Leader>c :ConqueTermSplit lein repl<CR>
-map <Leader>p :ConqueTermSplit python<CR>
+map <Leader>b  :ConqueTermSplit bash<CR>
+map <Leader>r  :ConqueTermSplit ripl<CR>
+map <Leader>rc :ConqueTermSplit rails console<CR>
+map <Leader>c  :ConqueTermSplit lein repl<CR>
+map <Leader>p  :ConqueTermSplit python<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
