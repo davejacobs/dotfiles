@@ -10,9 +10,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/git"]
-	path = vim/bundle/git
-	url = git://github.com/motemen/git-vim.git
 [submodule "vim/bundle/conque"]
 	path = vim/bundle/conque
 	url = git://github.com/rson/vim-conque.git
@@ -61,3 +58,6 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/gitv"]
+	path = vim/bundle/gitv
+	url = git://github.com/gregsexton/gitv.git
