@@ -1,4 +1,4 @@
-" .vimrc - Universal customization for Vim
+" vimrc - Universal customization for Vim
 " by David Jacobs
 
 " -----------------------------------------------------------
@@ -40,6 +40,12 @@ set statusline+=\ %t\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
 end
+
+if has('gui_running')
+  color solarized
+else
+  color desert
+endif
 
 " -----------------------------------------------------------
 " Keyboard configuration
