@@ -18,3 +18,4 @@
   lg = log -p
   who = shortlog -s --
   lgp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  logp = --pretty=format:"%h - %an, %ar : %s"
