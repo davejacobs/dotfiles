@@ -11,6 +11,10 @@ alias edco='$EDITOR ~/.bash/config'
 alias ls='ls -aG'
 alias ll='ls -alF'
 
+# Tools
+
+alias g='git'
+
 # Locations
 
 alias dropb='cd ~/Dropbox'
