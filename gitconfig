@@ -10,6 +10,8 @@
 [github]
 	user = davejacobs
 [alias]
+  a = add
+  c = commit
   st = status
   ci = commit
   br = branch
@@ -19,3 +21,13 @@
   who = shortlog -s --
   lgp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   logp = --pretty=format:"%h - %an, %ar : %s"
+
+  feature = flow feature
+  release = flow release
+  hotfix = flow hotfix
+  support = flow support
+
+  ft = flow feature
+  rl = flow release
+  hf = flow hotfix
+  sp = flow support
