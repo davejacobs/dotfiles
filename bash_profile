@@ -1,6 +1,8 @@
 # .bash_profile - Profile
 # Reads bash/paths to set up PATH, delegates configuration to subfiles
 
+export PATH=~/Projects/rip/bin:$PATH
+
 # Source all config files
 source $HOME/.bash/aliases
 source $HOME/.bash/config
@@ -12,4 +14,3 @@ source $HOME/.bash/ruby
 for p in $(cat $HOME/.bash/paths | grep -Ev ^\# | grep -Ev ^$); do
   export PATH=$p:$PATH
 done
-

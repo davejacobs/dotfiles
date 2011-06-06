@@ -7,4 +7,8 @@
 
 # Add Rip to RUBYLIB
 export RUBYLIB=$RUBYLIB:$HOME/Projects/rip/lib
-export RUBYOPT=rubygems
+# export RUBYOPT=rubygems
+
+export RIPHELPERS=1
+export RIPDIR=$HOME/.rip
+eval `rip-config`
