@@ -4,9 +4,11 @@ require 'irb/completion'
 require 'irb/ext/save-history'
 require 'wirble'
 
-IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
-IRB.conf[:PROMPT_MODE] = :SIMPLE
+if defined?(IRB.conf)
+  IRB.conf[:SAVE_HISTORY] = 1000
+  IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+  IRB.conf[:PROMPT_MODE] = :SIMPLE
+end
 
 class Object
   def local_methods(obj=self)
