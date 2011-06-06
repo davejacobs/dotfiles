@@ -74,7 +74,7 @@ map <Right> <NOP>
 map <Up>    <NOP>
 map <Down>  <NOP>
 
-" Easy splits, navigation & tabs
+" Easy splits, navigation, search, buffers & tabs
 map <F9>    :split<CR>
 map <D-j>   :split<CR>
 map <F10>   :vsplit<CR>
@@ -83,6 +83,11 @@ map <C-j>   <C-w>j
 map <C-k>   <C-w>k
 map <C-h>   <C-w>h
 map <C-l>   <C-w>l
+
+map <Leader>y :nohls<CR>
+
+map <Leader>b :buffers<CR>
+map <Leader>bn :bn<CR>
 
 map <Leader>t :tabnew<CR>
 map <Leader>l :tabn<CR>
@@ -94,8 +99,8 @@ nmap <Leader>dd  "_ddP
 nmap <Leader>riw "_ciw<Esc>p
 
 " Plugins
-map <C-e> :NERDTree<CR>
-map <D-e> :NERDTree<CR>
+map <C-e> :NERDTreeToggle<CR>
+map <D-e> :NERDTreeToggle<CR>
 
 map <Leader>n :NERDTreeToggle<CR>
 
