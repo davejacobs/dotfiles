@@ -28,6 +28,19 @@ class Object
   end
 end
 
+class String
+  def /(path)
+    curr_path = File.expand_path(self)
+
+    # If we're actually dealing with a filename
+    if File.exist? curr_path
+      File.join(curr_path, path)
+    else
+      self
+    end
+  end
+end
+
 def copy(str)
   IO.popen('pbcopy', 'w') {|f| f << str.to_s }
 end
