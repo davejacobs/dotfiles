@@ -14,10 +14,13 @@ alias ll='ls -alF'
 # Tools
 
 alias g='git'
+alias s='ssh'
+alias r='ruby'
+alias l='lein'
 
 # Locations
 
-alias dropb='cd ~/Dropbox'
+alias drb='cd ~/Dropbox'
 alias dl='cd ~/Downloads'
 alias prj='cd ~/Projects'
 alias scr='cd ~/Scripts'
