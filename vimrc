@@ -33,6 +33,7 @@ set foldmethod=marker   " Fold using visual cues {{{ and }}}
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+=.git
+set wig+=tmp/**
 set laststatus=2        " Always show status bar
 set statusline=         " Customize status bar
 set statusline+=\ %t\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
