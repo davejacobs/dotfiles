@@ -44,6 +44,7 @@ end
 
 if has('gui_running')
   color solarized
+  highlight Search gui=underline
 else
   color desert
 endif
