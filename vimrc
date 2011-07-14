@@ -105,6 +105,11 @@ map <D-e> :NERDTreeToggle<CR>
 
 map <Leader>n :NERDTreeToggle<CR>
 
+map <C-/> <plug>NERDCommenterToggle
+map <D-/> <plug>NERDCommenterToggle
+
+map <Leader>/ <plug>NERDCommenterToggle
+
 map <C-i> :ConqueTermSplit lein repl<CR>
 map <D-i> :ConqueTermSplit lein repl<CR>
 
