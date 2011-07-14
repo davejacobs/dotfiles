@@ -69,6 +69,12 @@ noremap s   :w<CR>
 " Leader/a - the easy way to select all
 noremap <Leader>a ggVG
 
+" Run == formatting on the entire file and return to original position
+noremap <Leader>= gg=G``
+
+" Sudo - even if you didn't open the file as root
+cmap w!! %!sudo tee > /dev/null %
+
 " Disable those damned arrow keys!
 map <Left>  <NOP>
 map <Right> <NOP>
@@ -127,6 +133,7 @@ let g:ConqueTerm_Syntax='clojure'
 let g:ConqueTerm_SendVisKey = '<F8>'
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
+
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 
