@@ -24,7 +24,7 @@ color solarized         " http://ethanschoonover.com/solarized
 " MacVim configuration
 " -----------------------------------------------------------
 if has('gui_macvim')
-  set guifont=Menlo:h13
+  set guifont=Menlo:h14
   " set transparency=25  " 25% opaque background
   set fuoptions+=background:normal
   set fuoptions+=maxhorz " Fully expand in fullscreen mode,
