@@ -93,8 +93,10 @@ map <C-l>   <C-w>l
 
 map <Leader>y :nohls<CR>
 
-map <Leader>b :buffers<CR>
+map <Leader>bl :buffers<CR>
 map <Leader>bn :bn<CR>
+map <Leader>bp :bp<CR>
+map <Leader>b  :b#<CR>
 
 map <Leader>t :tabnew<CR>
 map <Leader>l :tabn<CR>
