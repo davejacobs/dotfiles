@@ -67,3 +67,6 @@
 [submodule "vim/bundle/comments"]
 	path = vim/bundle/comments
 	url = https://github.com/scrooloose/nerdcommenter
+[submodule "vim/bundle/minibufexpl"]
+	path = vim/bundle/minibufexpl
+	url = https://github.com/fholgado/minibufexpl.vim.git
