@@ -135,6 +135,7 @@ let g:ConqueTerm_Syntax='clojure'
 let g:ConqueTerm_SendVisKey = '<F8>'
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
+let g:miniBufExplMapCTabSwitchBufs=1
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
@@ -157,9 +158,10 @@ let vimclojure#ParenRainbow=1
 " -----------------------------------------------------------
 " Post-init configuration
 " -----------------------------------------------------------
-
-if isdirectory(expand('~/Projects'))
-  cd ~/Projects
-else
-  cd ~/projects
+if getcwd() == expand('~')
+  if isdirectory(expand('~/Projects'))
+    cd ~/Projects
+  elseif isdirectory(expand('~/workspace'))
+    cd ~/workspace
+  endif
 endif
