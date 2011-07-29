@@ -121,11 +121,11 @@ map <Leader>/ <plug>NERDCommenterToggle
 map <C-i> :ConqueTermSplit lein repl<CR>
 map <D-i> :ConqueTermSplit lein repl<CR>
 
-map <Leader>b  :ConqueTermSplit bash<CR>
-map <Leader>r  :ConqueTermSplit ripl<CR>
+map <Leader>sh :ConqueTermSplit bash<CR>
+map <Leader>rb :ConqueTermSplit ripl<CR>
 map <Leader>rc :ConqueTermSplit rails console<CR>
-map <Leader>c  :ConqueTermSplit lein repl<CR>
-map <Leader>p  :ConqueTermSplit python<CR>
+map <Leader>cl :ConqueTermSplit lein repl<CR>
+map <Leader>py :ConqueTermSplit python<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
