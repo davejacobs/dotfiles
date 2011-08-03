@@ -2,7 +2,7 @@
 #
 # Configures Ruby-specific settings, variables and paths
 
-# Start RVM
+# Load RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add Rip to RUBYLIB
