@@ -44,7 +44,7 @@ if has('unix') || has('mac')
 end
 
 if has('gui_running')
-  color solarized
+  color desert
   highlight Search gui=underline
 else
   color desert
