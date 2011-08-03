@@ -43,3 +43,6 @@ fi
 alias mntnet='sudo mount -t vboxsf NetworkDocs ~/Network'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+# Assume that Ubuntu is being used for production Rails environments
+export RAILS_ENV=production
