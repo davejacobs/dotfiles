@@ -1,10 +1,10 @@
 # .bashrc - Paths
 # Lists directories that should be added to PATH, in reverse
 # order (for now)
+
+/usr/local/sbin
+/usr/local/bin
+$HOME/bin
+$HOME/Projects/scripts/bin
 $HOME/.cljr/bin
 $HOME/.lein
-$HOME/Projects/scripts/bin
-$HOME/Projects/rip/bin
-$HOME/bin
-/usr/local/bin
-/usr/local/sbin
