@@ -29,9 +29,4 @@ shopt -s histappend
 # If necessary, update window after commands
 shopt -s checkwinsize 
 
-# Bash completion for Git
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
-
 # [1]: http://freeunix.dyndns.org:8088/site2/howto/Bash.shtml

@@ -11,6 +11,11 @@ alias hide="SetFile -a V"
 alias startsql="/usr/local/Cellar/mysql/5.1.49/share/mysql/mysql.server start"
 alias cleanterm="sudo rm -f /private/var/log/asl/*.asl"
 
+# Bash completion for Git
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 # IPV6 support (if connected directly to non-NAT cable modem):
 # sudo ip6config start-v6 en0; sudo ip6config start-stf en0
 
