@@ -1,4 +1,4 @@
 rvm_project_rvmrc_default=1
 rvm_archflags="-arch x86_64"
 rvm_make_flags="-j 4"
-export rvm_path="/Users/David/.rvm"
+# export rvm_path="/Users/David/.rvm"
