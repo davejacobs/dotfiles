@@ -3,7 +3,7 @@
 
 # Format ls results according to man ls (there are tools
 # for this [1])
-export LSCOLORS="cxchdxdxbxexexfxfxeheh"
+export LSCOLORS="cxcxdxdxbxexexfxfxeheh"
 
 # Command aliases
 alias see="SetFile -a v"
