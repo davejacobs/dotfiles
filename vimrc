@@ -103,6 +103,8 @@ map <Leader>t :tabnew<CR>
 map <Leader>l :tabn<CR>
 map <Leader>h :tabp<CR>
 
+map <Leader>a :Ack ""<Left>
+
 " Easy clipboard manipulation, ugly/non-orthogonal for now
 nmap <Leader>d   "_dP
 nmap <Leader>dd  "_ddP
