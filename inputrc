@@ -2,3 +2,6 @@
 tab: complete
 set completion-ignore-case on
 set blink-matching-paren on
+
+"\e[B": history-search-forward
+"\e[A": history-search-backward
