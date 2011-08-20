@@ -100,17 +100,19 @@ map <C-k>   <C-w>k
 map <C-h>   <C-w>h
 map <C-l>   <C-w>l
 
-map <Leader>y :nohls<CR>
+map <Leader>y   :nohls<CR>
 map Y y$
 
-map <Leader>bl :buffers<CR>
-map <Leader>bn :bn<CR>
-map <Leader>bp :bp<CR>
-map <Leader>b  :b#<CR>
+map <Leader>bl  :buffers<CR>
+map <Leader>bn  :bn<CR>
+map <M-D-Left>  :bn<CR>
+map <Leader>bp  :bp<CR>
+map <M-D-Right> :bp<CR>
+map <Leader>b   :b#<CR>
 
-map <Leader>t :tabnew<CR>
-map <Leader>l :tabn<CR>
-map <Leader>h :tabp<CR>
+map <Leader>t   :tabnew<CR>
+map <Leader>l   :tabn<CR>
+map <Leader>h   :tabp<CR>
 
 imap <D-CR> <ESC>o
 
