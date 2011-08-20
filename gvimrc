@@ -25,6 +25,7 @@ color desert            " http://ethanschoonover.com/solarized
 " -----------------------------------------------------------
 if has('gui_macvim')
   set guifont=Menlo:h14
+  set guifont=Inconsolata:h16
   " set transparency=25  " 25% opaque background
   set fuoptions+=background:normal
   set fuoptions+=maxhorz " Fully expand in fullscreen mode,
