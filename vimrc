@@ -48,6 +48,7 @@ end
 if has('gui_running')
   color desert
   highlight Search gui=underline
+  highlight Search guibg=#333333
 else
   color desert
 endif
