@@ -30,6 +30,8 @@ set linebreak           " Wrap words, not characters
 set linespace=4         " Baseline spacing, measured in pixels
 set nolist              " Do not show difference between tabs and spaces
 set incsearch           " Incremental search
+set complete-=menu      " Bash-like inline completion
+set wim=list:longest    " Bash-like inline completion
 set foldmethod=marker   " Fold using visual cues {{{ and }}}
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
