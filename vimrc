@@ -73,8 +73,13 @@ noremap s :w<CR>
 " Leader/a - the easy way to select all
 noremap <Leader>a ggVG
 
+" Leader/s - the easy way to search
+nmap <leader>s :%s/
+vmap <leader>s :s/
+
 " Run == formatting on the entire file and return to original position
 noremap <Leader>= gg=G``
+noremap <D-M-i> gg=G``
 
 " Sudo - even if you didn't open the file as root
 cmap w!! %!sudo tee > /dev/null %
@@ -106,7 +111,7 @@ map <Leader>t :tabnew<CR>
 map <Leader>l :tabn<CR>
 map <Leader>h :tabp<CR>
 
-map <Leader>a :Ack ""<Left>
+imap <D-CR> <ESC>o
 
 " Easy clipboard manipulation, ugly/non-orthogonal for now
 nmap <Leader>d   "_dP
@@ -114,6 +119,9 @@ nmap <Leader>dd  "_ddP
 nmap <Leader>riw "_ciw<Esc>p
 
 " Plugins
+map <Leader>a :Ack ""<Left>
+map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
+
 map <C-e> :NERDTreeToggle<CR>
 map <D-e> :NERDTreeToggle<CR>
 
@@ -139,12 +147,32 @@ map <Leader>py :ConqueTermSplit python<CR>
 
 let g:ConqueTerm_Syntax='clojure'
 let g:ConqueTerm_SendVisKey = '<F8>'
+let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
+let g:NERDSpaceDelims = 1             " Add a space before comments
 let g:miniBufExplMapCTabSwitchBufs=1
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
+
+" Ack functions, taken from: 
+" https://github.com/pivotal/vim-config/commit/ddb041154c250e2eefacdc2916e7bbd3c51f42c0#diff-2
+function! AckCommand()
+  let command = "ack ".expand("<cword>")
+  cexpr system(command)
+  cw
+endfunction
+
+function! AckVisual()
+  normal gv"xy
+  let command = "ack ".@x
+  cexpr system(command)
+  cw
+endfunction
+
+map <leader>a :call AckGrep()<CR>
+vmap <leader>a :call AckVisual()<CR>
 
 " -----------------------------------------------------------
 " Aliases
