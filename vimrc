@@ -101,6 +101,7 @@ map <C-h>   <C-w>h
 map <C-l>   <C-w>l
 
 map <Leader>y :nohls<CR>
+map Y y$
 
 map <Leader>bl :buffers<CR>
 map <Leader>bn :bn<CR>
