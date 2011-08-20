@@ -60,15 +60,15 @@ endif
 let mapleader=','
 let maplocalleader=';'
 
-" kj- the easy way to escape insert mode 
+" kj - the easy way to escape insert mode 
 inoremap kj <Esc>
 
 " q - the easy way to quit
-noremap Q   q
-noremap q   :q<CR>
+noremap Q q
+noremap q :q<CR>
 
 " s - the easy way to save
-noremap s   :w<CR>
+noremap s :w<CR>
 
 " Leader/a - the easy way to select all
 noremap <Leader>a ggVG
