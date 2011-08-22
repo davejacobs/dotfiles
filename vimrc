@@ -158,6 +158,8 @@ function! AckVisual()
   cw
 endfunction
 
+map <Leader>a :call AckCommand()<CR>
+vmap <Leader>a :call AckVisual()<CR>
 
 " -----------------------------------------------------------
 " Auto sourcing
