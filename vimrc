@@ -127,6 +127,8 @@ map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gem
 
 map <C-e> :NERDTreeToggle<CR>
 map <D-e> :NERDTreeToggle<CR>
+map <C-S-n>   :CommandT
+map <C-t>     :CommandTBuffer
 
 map <Leader>n :NERDTreeToggle<CR>
 
@@ -150,6 +152,7 @@ map <Leader>py :ConqueTermSplit python<CR>
 
 let g:ConqueTerm_Syntax='clojure'
 let g:ConqueTerm_SendVisKey = '<F8>'
+let g:CommandTMaxDepth=8
 let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
