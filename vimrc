@@ -30,8 +30,7 @@ set linebreak           " Wrap words, not characters
 set linespace=4         " Baseline spacing, measured in pixels
 set nolist              " Do not show difference between tabs and spaces
 set incsearch           " Incremental search
-set complete-=menu      " Bash-like inline completion
-set wim=list:longest    " Bash-like inline completion
+set completeopt-=menu   " Bash-like inline completion
 set foldmethod=marker   " Fold using visual cues {{{ and }}}
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
@@ -74,8 +73,8 @@ noremap s :w<CR>
 noremap <Leader>a ggVG
 
 " Leader/s - the easy way to search
-nmap <leader>s :%s/
-vmap <leader>s :s/
+nmap <Leader>s :%s/
+vmap <Leader>s :s/
 
 " Run == formatting on the entire file and return to original position
 noremap <Leader>= gg=G``
@@ -84,37 +83,31 @@ noremap <D-M-i> gg=G``
 " Sudo - even if you didn't open the file as root
 cmap w!! %!sudo tee > /dev/null %
 
-" Disable those damned arrow keys!
-map <Left>  <NOP>
-map <Right> <NOP>
-map <Up>    <NOP>
-map <Down>  <NOP>
-
 " Easy splits, navigation, search, buffers & tabs
-map <F9>    :split<CR>
-map <D-j>   :split<CR>
-map <F10>   :vsplit<CR>
-map <D-k>   :vsplit<CR>
-map <C-j>   <C-w>j
-map <C-k>   <C-w>k
-map <C-h>   <C-w>h
-map <C-l>   <C-w>l
+map <F9>        :split<CR>
+map <D-j>       :split<CR>
+map <F10>       :vsplit<CR>
+map <D-k>       :vsplit<CR>
+map <C-j>       <C-w>j
+map <C-k>       <C-w>k
+map <C-h>       <C-w>h
+map <C-l>       <C-w>l
 
 map <Leader>y   :nohls<CR>
-map Y y$
+map Y           y$
 
 map <Leader>bl  :buffers<CR>
 map <Leader>bn  :bn<CR>
-map <M-D-Left>  :bn<CR>
+map <M-D-Left>  :bp<CR>
 map <Leader>bp  :bp<CR>
-map <M-D-Right> :bp<CR>
+map <M-D-Right> :bn<CR>
 map <Leader>b   :b#<CR>
 
 map <Leader>t   :tabnew<CR>
 map <Leader>l   :tabn<CR>
 map <Leader>h   :tabp<CR>
 
-imap <D-CR> <ESC>o
+imap <D-CR>     <ESC>o
 
 " Easy clipboard manipulation, ugly/non-orthogonal for now
 nmap <Leader>d   "_dP
@@ -125,33 +118,22 @@ nmap <Leader>riw "_ciw<Esc>p
 map <Leader>a :Ack ""<Left>
 map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
 
-map <C-e> :NERDTreeToggle<CR>
-map <D-e> :NERDTreeToggle<CR>
 map <C-S-n>   :CommandT
 map <C-t>     :CommandTBuffer
 
+map <C-e>     :NERDTreeToggle<CR>
+map <D-e>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
-map <C-/> <plug>NERDCommenterToggle
-map <D-/> <plug>NERDCommenterToggle
-
+map <C-/>     <plug>NERDCommenterToggle
+map <D-/>     <plug>NERDCommenterToggle
 map <Leader>/ <plug>NERDCommenterToggle
 
-map <C-i> :ConqueTermSplit lein repl<CR>
-map <D-i> :ConqueTermSplit lein repl<CR>
-
-map <Leader>sh :ConqueTermSplit bash<CR>
-map <Leader>rb :ConqueTermSplit ripl<CR>
-map <Leader>rc :ConqueTermSplit rails console<CR>
-map <Leader>cl :ConqueTermSplit lein repl<CR>
-map <Leader>py :ConqueTermSplit python<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
 
-let g:ConqueTerm_Syntax='clojure'
-let g:ConqueTerm_SendVisKey = '<F8>'
 let g:CommandTMaxDepth=8
 let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
@@ -176,16 +158,6 @@ function! AckVisual()
   cw
 endfunction
 
-map <leader>a :call AckGrep()<CR>
-vmap <leader>a :call AckVisual()<CR>
-
-" -----------------------------------------------------------
-" Aliases
-" -----------------------------------------------------------
-
-" command! Status  GitStatus
-" command! Add     GitAdd
-" command! Commit  GitCommit
 
 " -----------------------------------------------------------
 " Auto sourcing
@@ -197,6 +169,7 @@ vmap <leader>a :call AckVisual()<CR>
 " -----------------------------------------------------------
 " Post-init configuration
 " -----------------------------------------------------------
+
 if getcwd() == expand('~')
   if isdirectory(expand('~/Projects'))
     cd ~/Projects
