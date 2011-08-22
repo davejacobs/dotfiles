@@ -36,14 +36,13 @@ if has('gui_macvim')
 
   " Reassign important MacVim key bindings
   macmenu &Edit.Find.Find\.\.\. key = <D-S-f> 
-  macmenu &File.New\ Window     key = <D-S-n>
-  macmenu &File.New\ Tab        key = <D-n>
+  macmenu &File.New\ Window     key = <D-n>
+  " macmenu &File.New\ Window     key = <D-S-n>
+  " macmenu &File.New\ Tab        key = <D-n>
 
-  map <D-f> :set invfu<CR>                
-  map <D-t> :CommandT<CR>
-
-  " Plugins
-  let g:CommandTMaxDepth=8
+  map <D-f>   :set invfu<CR>                
+  map <D-S-n> :CommandT<CR>
+  map <D-t>   :CommandTBuffer<CR>
 endif
 
 " -----------------------------------------------------------
