@@ -40,17 +40,11 @@ set laststatus=2        " Always show status bar
 set statusline=         " Customize status bar
 set statusline+=\ %t\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
 
+color desert
+
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
 end
-
-if has('gui_running')
-  color desert
-  highlight Search gui=underline
-  highlight Search guibg=#333333
-else
-  color desert
-endif
 
 " -----------------------------------------------------------
 " Keyboard configuration
@@ -70,11 +64,11 @@ noremap q :q<CR>
 noremap s :w<CR>
 
 " Leader/a - the easy way to select all
-noremap <Leader>a ggVG
+noremap <Leader>aa ggVG
 
 " Leader/s - the easy way to search
-nmap <Leader>s :%s/
-vmap <Leader>s :s/
+" nmap <Leader>s :%s/
+" vmap <Leader>s :s/
 
 " Run == formatting on the entire file and return to original position
 noremap <Leader>= gg=G``
@@ -103,10 +97,6 @@ map <Leader>bp  :bp<CR>
 map <M-D-Right> :bn<CR>
 map <Leader>b   :b#<CR>
 
-map <Leader>t   :tabnew<CR>
-map <Leader>l   :tabn<CR>
-map <Leader>h   :tabp<CR>
-
 imap <D-CR>     <ESC>o
 
 " Easy clipboard manipulation, ugly/non-orthogonal for now
@@ -118,14 +108,12 @@ nmap <Leader>riw "_ciw<Esc>p
 map <Leader>a :Ack ""<Left>
 map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
 
-map <C-S-n>   :CommandT
-map <C-t>     :CommandTBuffer
+map <D-n>   :CommandT<CR>
+map <D-t>     :CommandTBuffer<CR>
 
-map <C-e>     :NERDTreeToggle<CR>
 map <D-e>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
-map <C-/>     <plug>NERDCommenterToggle
 map <D-/>     <plug>NERDCommenterToggle
 map <Leader>/ <plug>NERDCommenterToggle
 
