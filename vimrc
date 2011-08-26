@@ -108,7 +108,7 @@ nmap <Leader>riw "_ciw<Esc>p
 map <Leader>a :Ack ""<Left>
 map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
 
-map <D-n>   :CommandT<CR>
+map <D-N>     :CommandT<CR>
 map <D-t>     :CommandTBuffer<CR>
 
 map <D-e>     :NERDTreeToggle<CR>
