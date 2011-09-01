@@ -131,7 +131,7 @@ let g:CommandTMaxDepth=8
 let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
-let g:NERDSpaceDelims = 1             " Add a space before comments
+let g:NERDSpaceDelims=1               " Add a space before comments
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
