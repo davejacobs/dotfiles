@@ -117,6 +117,9 @@ map <Leader>n :NERDTreeToggle<CR>
 map <D-/>     <plug>NERDCommenterToggle
 map <Leader>/ <plug>NERDCommenterToggle
 
+map <D-r>     :SweetVimRspecRunFile<CR>
+map <D-R>     :SweetVimRspecRunFocused<CR>
+map <M-D-r>   :SweetVimRspecRunPrevious<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
