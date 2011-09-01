@@ -2,6 +2,7 @@
 
 require 'irb/completion'
 require 'irb/ext/save-history'
+require 'interactive_editor'
 
 if defined?(IRB.conf)
   IRB.conf[:SAVE_HISTORY] = 1000
