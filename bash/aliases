@@ -39,7 +39,7 @@ alias rupr='cd ~/Projects/rush'
 # Commands
 
 alias publish='cd ~/Projects/engine && cap -q blog:post_new'
-alias killruby='lsof -i | grep ruby | awk "{print $2}" | xargs kill -9'
+alias killruby='ps aux | grep ruby | awk "{print $2}" | xargs kill -9'
 alias tunnel='ssh -N -L 1234:localhost:80 $1'
 alias tunnelp='ssh -N -l david -L 1234:localhost:$2 $1'
 
