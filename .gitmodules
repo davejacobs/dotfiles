@@ -67,3 +67,6 @@
 [submodule "vim/bundle/sweet-rspec"]
 	path = vim/bundle/sweet-rspec
 	url = https://github.com/duskhacker/sweet-rspec-vim.git
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
+	url = https://github.com/mhz/vim-matchit.git
