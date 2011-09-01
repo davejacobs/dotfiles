@@ -125,6 +125,8 @@ map <M-D-r>   :SweetVimRspecRunPrevious<CR>
 " Plugin configuration
 " -----------------------------------------------------------
 
+runtime 'bundle/matchit/plugin/matchit.vim'
+
 let g:CommandTMaxDepth=8
 let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
