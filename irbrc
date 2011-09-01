@@ -41,6 +41,16 @@ class String
   end
 end
 
+class Array
+  def zipmap(&func)
+    Hash[*zip(map &func).flatten]
+  end
+end
+
+def inspect_variable(symbol, context=binding)
+  puts "#{symbol} = #{eval(symbol.to_s, context)}"
+end
+
 def copy(str)
   IO.popen('pbcopy', 'w') {|f| f << str.to_s }
 end
