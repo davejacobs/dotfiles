@@ -7,6 +7,8 @@
 	whitespace = nowarn
 [core]
 	filemode = false
+[diff]
+	ignoreSubmodules = dirty 
 [github]
 	user = davejacobs
 [alias]
