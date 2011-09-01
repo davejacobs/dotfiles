@@ -64,9 +64,6 @@
 [submodule "vim/bundle/rake"]
 	path = vim/bundle/rake
 	url = git://github.com/tpope/vim-rake.git
-[submodule "vim/bundle/sweet-rspec"]
-	path = vim/bundle/sweet-rspec
-	url = https://github.com/duskhacker/sweet-rspec-vim.git
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = https://github.com/mhz/vim-matchit.git
@@ -76,3 +73,6 @@
 [submodule "vim/bundle/textobj-ruby"]
 	path = vim/bundle/textobj-ruby
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "vim/bundle/rspec"]
+	path = vim/bundle/rspec
+	url = https://github.com/ericdwhite/sweet-rspec-vim.git
