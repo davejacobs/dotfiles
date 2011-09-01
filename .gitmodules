@@ -46,9 +46,6 @@
 [submodule "vim/bundle/cucumber"]
 	path = vim/bundle/cucumber
 	url = git://github.com/tpope/vim-cucumber.git
-[submodule "vim/bundle/rspec"]
-	path = vim/bundle/rspec
-	url = git://github.com/taq/vim-rspec.git
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -64,9 +61,6 @@
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/comments"]
-	path = vim/bundle/comments
-	url = https://github.com/scrooloose/nerdcommenter
 [submodule "vim/bundle/rake"]
 	path = vim/bundle/rake
 	url = git://github.com/tpope/vim-rake.git
