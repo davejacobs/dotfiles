@@ -75,4 +75,4 @@
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
 [submodule "vim/bundle/rspec"]
 	path = vim/bundle/rspec
-	url = https://github.com/ericdwhite/sweet-rspec-vim.git
+	url = https://github.com/duskhacker/sweet-rspec-vim.git
