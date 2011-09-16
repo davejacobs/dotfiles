@@ -20,29 +20,31 @@ set visualbell t_vb=    " Get rid of that annoying error beep & flash
 set background=dark
 color desert            " http://ethanschoonover.com/solarized
 
+highlight Search gui=underline
+highlight Search guibg=#333333
+highlight clear nontext " Hide non-text characters
+highlight link nontext ignore
+
+set guifont=Menlo:h14
+set guifont=Inconsolata:h16
+
 " -----------------------------------------------------------
 " MacVim configuration
 " -----------------------------------------------------------
 if has('gui_macvim')
-  set guifont=Menlo:h14
   " set transparency=25  " 25% opaque background
   set fuoptions+=background:normal
   set fuoptions+=maxhorz " Fully expand in fullscreen mode,
   set fuoptions+=maxvert " horizontally and vertically
 
-  highlight clear nontext " Hide non-text characters
-  highlight link nontext ignore
-
   " Reassign important MacVim key bindings
-  macmenu &Edit.Find.Find\.\.\. key = <D-S-f> 
-  macmenu &File.New\ Window     key = <D-S-n>
-  macmenu &File.New\ Tab        key = <D-n>
+  macmenu &Edit.Find.Find\.\.\. key = <nop>
+  macmenu &File.New\ Window     key = <nop>
+  macmenu &File.New\ Tab        key = <nop>
 
-  map <D-f> :set invfu<CR>                
-  map <D-t> :CommandT<CR>
-
-  " Plugins
-  let g:CommandTMaxDepth=8
+  map <D-f>   :set invfu<CR>                
+  map <D-n> :CommandT<CR>
+  map <D-t>   :CommandTBuffer<CR>
 endif
 
 " -----------------------------------------------------------

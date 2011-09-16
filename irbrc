@@ -2,6 +2,7 @@
 
 require 'irb/completion'
 require 'irb/ext/save-history'
+require 'interactive_editor'
 
 if defined?(IRB.conf)
   IRB.conf[:SAVE_HISTORY] = 1000
@@ -38,6 +39,16 @@ class String
       self
     end
   end
+end
+
+class Array
+  def zipmap(&func)
+    Hash[*zip(map &func).flatten]
+  end
+end
+
+def inspect_variable(symbol, context=binding)
+  puts "#{symbol} = #{eval(symbol.to_s, context)}"
 end
 
 def copy(str)

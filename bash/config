@@ -22,6 +22,7 @@ unset system
 HISTCONTROL=${HISTCONTROL+,}ignoredups,ignoreboth # no dupes in history
 HISTSIZE=1000
 HISTFILESIZE=2000
+HISTIGNORE="&:ls:[bf]g:exit:git st:g st:rails console:rails server"
 
 # Append, don't overwrite history
 shopt -s histappend   

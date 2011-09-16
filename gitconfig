@@ -7,11 +7,16 @@
 	whitespace = nowarn
 [core]
 	filemode = false
+	excludesfile = /Users/David/.gitignore
+[diff]
+	ignoreSubmodules = dirty 
 [github]
 	user = davejacobs
 [alias]
   a = add
   c = commit
+  d = diff
+  s = status
   st = status
   ci = commit
   br = branch
