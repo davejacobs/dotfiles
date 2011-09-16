@@ -30,6 +30,7 @@ set linebreak           " Wrap words, not characters
 set linespace=4         " Baseline spacing, measured in pixels
 set nolist              " Do not show difference between tabs and spaces
 set incsearch           " Incremental search
+set completeopt-=menu   " Bash-like inline completion
 set foldmethod=marker   " Fold using visual cues {{{ and }}}
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
@@ -39,16 +40,11 @@ set laststatus=2        " Always show status bar
 set statusline=         " Customize status bar
 set statusline+=\ %t\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
 
+color desert
+
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
 end
-
-if has('gui_running')
-  color desert
-  highlight Search gui=underline
-else
-  color desert
-endif
 
 " -----------------------------------------------------------
 " Keyboard configuration
@@ -57,51 +53,51 @@ endif
 let mapleader=','
 let maplocalleader=';'
 
-" kj- the easy way to escape insert mode 
+" kj - the easy way to escape insert mode 
 inoremap kj <Esc>
 
 " q - the easy way to quit
-noremap Q   q
-noremap q   :q<CR>
+noremap Q q
+noremap q :q<CR>
 
 " s - the easy way to save
-noremap s   :w<CR>
+noremap s :w<CR>
 
 " Leader/a - the easy way to select all
-noremap <Leader>a ggVG
+noremap <Leader>aa ggVG
+
+" Leader/s - the easy way to search
+" nmap <Leader>s :%s/
+" vmap <Leader>s :s/
 
 " Run == formatting on the entire file and return to original position
 noremap <Leader>= gg=G``
+noremap <D-M-i> gg=G``
 
 " Sudo - even if you didn't open the file as root
 cmap w!! %!sudo tee > /dev/null %
 
-" Disable those damned arrow keys!
-map <Left>  <NOP>
-map <Right> <NOP>
-map <Up>    <NOP>
-map <Down>  <NOP>
-
 " Easy splits, navigation, search, buffers & tabs
-map <F9>    :split<CR>
-map <D-j>   :split<CR>
-map <F10>   :vsplit<CR>
-map <D-k>   :vsplit<CR>
-map <C-j>   <C-w>j
-map <C-k>   <C-w>k
-map <C-h>   <C-w>h
-map <C-l>   <C-w>l
+map <F9>        :split<CR>
+map <D-j>       :split<CR>
+map <F10>       :vsplit<CR>
+map <D-k>       :vsplit<CR>
+map <C-j>       <C-w>j
+map <C-k>       <C-w>k
+map <C-h>       <C-w>h
+map <C-l>       <C-w>l
 
-map <Leader>y :nohls<CR>
+map <Leader>y   :nohls<CR>
+map Y           y$
 
-map <Leader>bl :buffers<CR>
-map <Leader>bn :bn<CR>
-map <Leader>bp :bp<CR>
-map <Leader>b  :b#<CR>
+map <Leader>bl  :buffers<CR>
+map <Leader>bn  :bn<CR>
+map <M-D-Left>  :bp<CR>
+map <Leader>bp  :bp<CR>
+map <M-D-Right> :bn<CR>
+map <Leader>b   :b#<CR>
 
-map <Leader>t :tabnew<CR>
-map <Leader>l :tabn<CR>
-map <Leader>h :tabp<CR>
+imap <D-CR>     <ESC>o
 
 " Easy clipboard manipulation, ugly/non-orthogonal for now
 nmap <Leader>d   "_dP
@@ -109,45 +105,54 @@ nmap <Leader>dd  "_ddP
 nmap <Leader>riw "_ciw<Esc>p
 
 " Plugins
-map <C-e> :NERDTreeToggle<CR>
-map <D-e> :NERDTreeToggle<CR>
+map <Leader>a :Ack ""<Left>
+map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
 
+map <D-N>     :CommandT<CR>
+map <D-t>     :CommandTBuffer<CR>
+
+map <D-e>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
-map <C-/> <plug>NERDCommenterToggle
-map <D-/> <plug>NERDCommenterToggle
-
+map <D-/>     <plug>NERDCommenterToggle
 map <Leader>/ <plug>NERDCommenterToggle
 
-map <C-i> :ConqueTermSplit lein repl<CR>
-map <D-i> :ConqueTermSplit lein repl<CR>
-
-map <Leader>sh :ConqueTermSplit bash<CR>
-map <Leader>rb :ConqueTermSplit ripl<CR>
-map <Leader>rc :ConqueTermSplit rails console<CR>
-map <Leader>cl :ConqueTermSplit lein repl<CR>
-map <Leader>py :ConqueTermSplit python<CR>
+map <D-r>     :SweetVimRspecRunFile<CR>
+map <D-R>     :SweetVimRspecRunFocused<CR>
+map <M-D-r>   :SweetVimRspecRunPrevious<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
 
-let g:ConqueTerm_Syntax='clojure'
-let g:ConqueTerm_SendVisKey = '<F8>'
+runtime 'bundle/matchit/plugin/matchit.vim'
+
+let g:CommandTMaxDepth=8
+let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
-let g:miniBufExplMapCTabSwitchBufs=1
+let g:NERDSpaceDelims=1               " Add a space before comments
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 
-" -----------------------------------------------------------
-" Aliases
-" -----------------------------------------------------------
+" Ack functions, taken from: 
+" https://github.com/pivotal/vim-config/commit/ddb041154c250e2eefacdc2916e7bbd3c51f42c0#diff-2
+function! AckCommand()
+  let command = "ack ".expand("<cword>")
+  cexpr system(command)
+  cw
+endfunction
 
-" command! Status  GitStatus
-" command! Add     GitAdd
-" command! Commit  GitCommit
+function! AckVisual()
+  normal gv"xy
+  let command = "ack ".@x
+  cexpr system(command)
+  cw
+endfunction
+
+map <Leader>a :call AckCommand()<CR>
+vmap <Leader>a :call AckVisual()<CR>
 
 " -----------------------------------------------------------
 " Auto sourcing
@@ -159,6 +164,7 @@ let vimclojure#ParenRainbow=1
 " -----------------------------------------------------------
 " Post-init configuration
 " -----------------------------------------------------------
+
 if getcwd() == expand('~')
   if isdirectory(expand('~/Projects'))
     cd ~/Projects
