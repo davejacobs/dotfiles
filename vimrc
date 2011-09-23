@@ -29,9 +29,12 @@ set wrap                " Wrap text inside screen
 set linebreak           " Wrap words, not characters
 set linespace=4         " Baseline spacing, measured in pixels
 set nolist              " Do not show difference between tabs and spaces
+set number              " Show line numbers
 set incsearch           " Incremental search
+set ignorecase          " Ignore search case
+set smartcase           " ... unless uppercase letters are explicit
 set completeopt-=menu   " Bash-like inline completion
-set foldmethod=marker   " Fold using visual cues {{{ and }}}
+set foldmethod=indent   " Fold using indentation
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+=.git
@@ -56,12 +59,11 @@ let maplocalleader=';'
 " kj - the easy way to escape insert mode 
 inoremap kj <Esc>
 
-" q - the easy way to quit
-noremap Q q
-noremap q :q<CR>
+" Q - the easy way to quit
+noremap Q :q<CR>
 
-" s - the easy way to save
-noremap s :w<CR>
+" Leader/z - the easy way to fold one level
+noremap <Leader>z zMzr
 
 " Leader/a - the easy way to select all
 noremap <Leader>aa ggVG

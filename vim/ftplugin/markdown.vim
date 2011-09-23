@@ -5,6 +5,7 @@
 
 setlocal spell spelllang=en_us " Spell check
 setlocal nosmartindent
+set nonu
 
 " Mappings
 nmap j gj
