@@ -27,14 +27,12 @@ alias scr='cd ~/Scripts'
 
 # Projects
 
-alias dfpr='cd ~/Projects/dotfiles'
-alias mipr='cd ~/Projects/mint'
-alias enpr='cd ~/Projects/engine'
-alias evpr='cd ~/Projects/evolve'
-alias aipr='cd ~/Projects/ai'
-alias scpr='cd ~/Projects/scripts'
 alias stpr='cd ~/Projects/stats'
-alias rupr='cd ~/Projects/rush'
+alias mipr='cd ~/Projects/mint'
+alias wipr='cd ~/Projects/wit.io'
+alias scpr='cd ~/Projects/scripts'
+alias dfpr='cd ~/Projects/dotfiles'
+alias aipr='cd ~/Projects/ai'
 
 # Commands
 
