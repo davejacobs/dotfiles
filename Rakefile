@@ -14,6 +14,9 @@ task :install do
   end.each do |f|
     link_file(f.expand_path, transform_file_name(f))
   end
+
+  system "brew install ack"
+  system "ruby ./vim/bundle/command-t/ruby/command-t/extconf.rb && make"
 end
 
 def transform_file_name(original_name)
