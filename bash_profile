@@ -14,3 +14,8 @@ source $HOME/.bash/ruby
 for p in $(cat $HOME/.bash/paths | grep -Ev ^\# | grep -Ev ^$); do
   export PATH=$p:$PATH
 done
+
+# Construct Java CLASSPATH line by line from listing in ~/.bash/classpaths
+for clp in $(cat $HOME/.bash/classpaths | grep -Ev ^\# | grep -Ev ^$); do
+  export CLASSPATH=$clp:$CLASSPATH
+done
