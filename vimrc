@@ -9,6 +9,7 @@ set nocompatible
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
+source ~/.vim/autoload/slime.vim
 filetype plugin indent on
 syntax on
 
@@ -17,6 +18,7 @@ syntax on
 " -----------------------------------------------------------
 
 set clipboard=unnamed   " Allow anonymous clipboard
+set hidden              " Allow unsaved changes in hidden buffers
 set hlsearch            " Highlight search results
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
 set expandtab           " Use soft tabs
@@ -24,6 +26,8 @@ set tabstop=2           " Width of soft tabs
 set autoindent 
 set shiftwidth=2        " Width of autoindent
 set cindent             " C-style autoindenting
+set cinoptions=(0       " Align arguments separated by line breaks inside parens
+set cinoptions+=
 set smartindent
 set smarttab            " Use shiftwidth to tab at line beginning
 set wrap                " Wrap text inside screen
@@ -40,11 +44,20 @@ set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+=.git
 set wig+=tmp/**
+set autoread
+set autowriteall        " Save when focus is lost
 set laststatus=2        " Always show status bar
 set statusline=         " Customize status bar
-set statusline+=\ %t\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
+set statusline+=\ %F\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
 
+autocmd FocusLost * silent! wall
+
+color ir_black
 color desert
+
+nmap <D-C> :color desert<CR>
+nmap <D-I> :color ir_black<CR>
+nmap <D-L> :color solarized<CR>
 
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
@@ -102,19 +115,15 @@ map <Leader>b   :b#<CR>
 
 imap <D-CR>     <ESC>o
 
-" Easy clipboard manipulation, ugly/non-orthogonal for now
-nmap <Leader>d   "_dP
-nmap <Leader>dd  "_ddP
-nmap <Leader>riw "_ciw<Esc>p
+map <D-<>       :tabedit $MYVIMRC<CR>
 
 " Plugins
 map <Leader>a :Ack ""<Left>
-map <leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
+map <Leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log ./* `rvm gemhome`/*<CR>
 
 map <D-N>     :CommandT<CR>
 map <D-t>     :CommandTBuffer<CR>
 
-map <D-e>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
 map <D-/>     <plug>NERDCommenterToggle
@@ -134,7 +143,10 @@ let g:CommandTMaxDepth=8
 let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
+let g:NERDTreeDirArrows=1
 let g:NERDSpaceDelims=1               " Add a space before comments
+let g:NERDTreeIgnore=['tags']
+let g:NERDTreeMinimalUI=1
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
@@ -175,3 +187,4 @@ if getcwd() == expand('~')
     cd ~/workspace
   endif
 endif
+set foldlevel=20
