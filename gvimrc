@@ -18,6 +18,7 @@ set lines=40
 set columns=100
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
 set background=dark
+color ir_black          " http://ethanschoonover.com/solarized
 color desert            " http://ethanschoonover.com/solarized
 
 highlight Search gui=underline
