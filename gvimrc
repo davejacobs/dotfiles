@@ -40,8 +40,8 @@ if has('gui_macvim')
 
   " Reassign important MacVim key bindings
   macmenu &Edit.Find.Find\.\.\. key = <nop>
-  macmenu &File.New\ Window     key = <nop>
-  macmenu &File.New\ Tab        key = <nop>
+  " macmenu &File.New\ Window     key = <nop>
+  " macmenu &File.New\ Tab        key = <nop>
 
   map <D-f>   :set invfu<CR>                
   map <D-N>   :CommandT<CR>
