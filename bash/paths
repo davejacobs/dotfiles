@@ -4,7 +4,8 @@
 
 /usr/local/sbin
 /usr/local/bin
-$HOME/bin
-$HOME/Projects/scripts/bin
-$HOME/.cljr/bin
-$HOME/.lein
+~/bin
+~/Projects/scripts/bin
+~/.cljr/bin
+~/.cake/bin
+~/.lein
