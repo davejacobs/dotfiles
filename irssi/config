@@ -89,10 +89,9 @@ channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
   { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; }
-  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "Yes"; }
   { name = "#python"; chatnet = "Freenode"; autojoin = "Yes"; }
-  { name = "#clojure"; chatnet = "Freenode"; autojoin = "Yes"; }
-  { name = "#statistics"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "No"; }
+  { name = "#statistics"; chatnet = "Freenode"; autojoin = "No"; }
 );
 
 aliases = {
@@ -270,3 +269,37 @@ settings = {
     reuse_unused_windows = "yes";
   };
 };
+
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ruby";
+        tag = "Freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#python";
+        tag = "Freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#clojure";
+        tag = "Freenode";
+      }
+    );
+  };
+}
