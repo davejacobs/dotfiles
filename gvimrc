@@ -44,8 +44,8 @@ if has('gui_macvim')
   macmenu &File.New\ Tab        key = <nop>
 
   map <D-f>   :set invfu<CR>                
-  map <D-n> :CommandT<CR>
-  map <D-t>   :CommandTBuffer<CR>
+  map <D-N>   :CommandT<CR>
+  map <D-E>   :CommandTBuffer<CR>
 endif
 
 " -----------------------------------------------------------
