@@ -40,6 +40,7 @@ set ignorecase          " Ignore search case
 set smartcase           " ... unless uppercase letters are explicit
 set completeopt-=menu   " Bash-like inline completion
 set foldmethod=indent   " Fold using indentation
+set tildeop             " Tilde is an operator
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+=.git
