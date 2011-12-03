@@ -17,6 +17,9 @@ alias g='git'
 alias s='ssh'
 alias r='ruby'
 alias l='lein'
+alias rs='rspec'
+alias c='cucumber'
+alias t='rspec && cucumber'
 
 # Locations
 
@@ -32,11 +35,10 @@ alias mipr='cd ~/Projects/mint'
 alias wipr='cd ~/Projects/wit.io'
 alias scpr='cd ~/Projects/scripts'
 alias dfpr='cd ~/Projects/dotfiles'
-alias aipr='cd ~/Projects/ai'
 
 # Commands
 
-alias publish='cd ~/Projects/engine && cap -q blog:post_new'
+alias publish='cd ~/Projects/wit.io && cap -q blog:post_new'
 alias killruby='ps aux | grep ruby | awk "{print $2}" | xargs kill -9'
 alias tunnel='ssh -N -L 1234:localhost:80 $1'
 alias tunnelp='ssh -N -l david -L 1234:localhost:$2 $1'
