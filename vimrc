@@ -123,7 +123,7 @@ map <Leader>a :Ack ""<Left>
 map <Leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log ./* `rvm gemhome`/*<CR>
 
 map <D-N>     :CommandT<CR>
-map <D-t>     :CommandTBuffer<CR>
+map <D-e>     :CommandTBuffer<CR>
 
 map <Leader>n :NERDTreeToggle<CR>
 
