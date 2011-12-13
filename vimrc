@@ -122,9 +122,16 @@ map <D-<>       :tabedit $MYVIMRC<CR>
 map <Leader>a :Ack ""<Left>
 map <Leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log ./* `rvm gemhome`/*<CR>
 
+map <Leader>N :CommandT<CR>
 map <D-N>     :CommandT<CR>
+
+map <Leader>e :CommandTBuffer<CR>
 map <D-e>     :CommandTBuffer<CR>
 
+map <Leader>t :CommandTFlush<CR>
+map <D-t>     :CommandTFlush<CR>
+
+map <D-n>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
 map <D-/>     <plug>NERDCommenterToggle
