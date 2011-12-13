@@ -5,7 +5,7 @@
 /usr/local/sbin
 /usr/local/bin
 ~/bin
-~/Projects/scripts/bin
+~/Code/scripts/bin
 ~/.cljr/bin
 ~/.cake/bin
 ~/.lein
