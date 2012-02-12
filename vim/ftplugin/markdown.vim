@@ -5,7 +5,8 @@
 
 setlocal spell spelllang=en_us " Spell check
 setlocal nosmartindent
-set nonu
+setlocal cinoptions=           " Turn off programmer indentation
+setlocal nonumber
 
 " Mappings
 nmap j gj
