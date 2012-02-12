@@ -9,6 +9,7 @@ set nocompatible
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
+call yankstack#setup()
 source ~/.vim/autoload/slime.vim
 filetype plugin indent on
 syntax on
