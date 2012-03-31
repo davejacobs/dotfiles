@@ -79,6 +79,9 @@
 [submodule "vim/bundle/slimv"]
 	path = vim/bundle/slimv
 	url = https://github.com/vim-scripts/slimv.vim.git
-[submodule "vim/bundle/yankstack"]
-	path = vim/bundle/yankstack
-	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule "emacs.d/clojure-mode"]
+	path = emacs.d/clojure-mode
+	url = git://github.com/technomancy/clojure-mode.git
+[submodule "emacs.d/slime"]
+	path = emacs.d/slime
+	url = git://github.com/nablaone/slime.git
