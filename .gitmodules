@@ -85,3 +85,6 @@
 [submodule "emacs.d/slime"]
 	path = emacs.d/slime
 	url = git://github.com/nablaone/slime.git
+[submodule "vim/bundle/paredit"]
+	path = vim/bundle/paredit
+	url = https://github.com/emezeske/paredit.vim.git
