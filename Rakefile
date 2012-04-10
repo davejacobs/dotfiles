@@ -1,22 +1,19 @@
 # A script to facilitate dotfiles management. This is a reworking of the
-# Rakefile at http://github.com/ryanb/dotfiles. Look, no if statements!
-# Okay, one if you count the ternary conditional.
+# Rakefile at http://github.com/ryanb/dotfiles.
 
 require 'rake'
 require 'pathname'
 
 desc 'install dotfiles into user home directory'
 task :install do
-  # Select all non-excluded files from the current directory
-  Pathname.glob('*').reject do |f|
-    puts "processing #{f}"
-    f.basename.to_s =~ /Rakefile|README.*|LICENSE|\..*/
-  end.each do |f|
-    link_file(f.expand_path, transform_file_name(f))
-  end
+  skeleton_files = lambda {|x| x =~ /Rakefile|README.*|LICENSE|\..*/ }
+  link_files = lambda {|f| link_file(f.expand_path, transform_file_name(f)) }
+
+  Pathname.glob('*').reject(&skeleton_files).each(&link_files)
 
   system "brew install ack"
-  system "ruby ./vim/bundle/command-t/ruby/command-t/extconf.rb && make"
+  system "git submodule init && git submodule update"
+  system "cd vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make"
 end
 
 def transform_file_name(original_name)
