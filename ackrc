@@ -1,4 +1,15 @@
+# Support Haml
 --type-add
 html=.haml
 --type-add
 css=.sass,.scss
+
+# Markdown, textile, and reStructuredText
+--type-set=plaintext=.md,.markdown,.textile,.rst,.txt
+
+# Search with case sensitivity if there is mixed case
+--smart-case
+
+# Follow symlinks
+--follow
+
