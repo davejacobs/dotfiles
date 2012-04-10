@@ -5,7 +5,9 @@
 
 setlocal spell spelllang=en_us " Spell check
 setlocal nosmartindent
-set nonu
+setlocal nocindent             " C-style autoindenting
+setlocal nosmarttab            " Use shiftwidth to tab at line beginning
+setlocal nonu
 
 " Mappings
 nmap j gj

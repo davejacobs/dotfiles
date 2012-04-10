@@ -26,8 +26,7 @@ highlight Search guibg=#333333
 highlight clear nontext " Hide non-text characters
 highlight link nontext ignore
 
-set guifont=Inconsolata:h16
-set guifont=Menlo:h15
+set guifont=Monaco:h14
 
 " -----------------------------------------------------------
 " MacVim configuration

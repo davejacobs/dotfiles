@@ -1,3 +1,5 @@
 ~/.cljr
 ~/.lein
 ~/.jark
+./lib
+./src
