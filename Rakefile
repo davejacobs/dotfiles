@@ -6,7 +6,7 @@ require 'pathname'
 
 desc 'install dotfiles into user home directory'
 task :install do
-  skeleton_files = lambda {|x| x =~ /Rakefile|README.*|LICENSE|\..*/ }
+  skeleton_files = lambda {|x| x.to_s =~ /Rakefile|README.*|LICENSE|\..*/ }
   link_files = lambda {|f| link_file(f.expand_path, transform_file_name(f)) }
 
   Pathname.glob('*').reject(&skeleton_files).each(&link_files)
