@@ -139,7 +139,7 @@ map <Leader>e :CommandTBuffer<CR>
 map <D-e>     :CommandTBuffer<CR>
 
 map <Leader>t :CommandTFlush<CR>
-map <D-t>     :CommandTFlush<CR>
+map <D-y>     :CommandTFlush<CR>
 
 map <D-n>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
