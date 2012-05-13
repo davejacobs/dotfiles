@@ -258,8 +258,8 @@ statusbar = {
 settings = {
   core = {
     real_name = "David";
-    user_name = "acts_as_david";
-    nick = "acts_as_david";
+    user_name = "davejacobs";
+    nick = "davejacobs";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
