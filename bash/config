@@ -16,6 +16,7 @@ export EDITOR=/usr/bin/vim
 system=`uname -s`
 [[ "$system" == "Darwin" ]] && source $HOME/.bash/osx
 [[ "$system" == "Linux" ]] && source $HOME/.bash/ubuntu
+[[ "$system" == "Linux" ]] && source $HOME/.bash/arch
 unset system
 
 # Set history options

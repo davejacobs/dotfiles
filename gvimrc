@@ -26,27 +26,27 @@ highlight Search guibg=#333333
 highlight clear nontext " Hide non-text characters
 highlight link nontext ignore
 
-set guifont=Inconsolata:h16
-set guifont=Menlo:h15
-
-" -----------------------------------------------------------
-" MacVim configuration
-" -----------------------------------------------------------
-if has('gui_macvim')
+if has("gui_gtk2")
+  set guifont=Monaco\ 11
+  set lines=35
+  set columns=90
+elseif has("gui_macvim")
+  set guifont=Monaco:h14
   " set transparency=25  " 25% opaque background
   set fuoptions+=background:normal
   set fuoptions+=maxhorz " Fully expand in fullscreen mode,
   set fuoptions+=maxvert " horizontally and vertically
 
   " Reassign important MacVim key bindings
-  macmenu &Edit.Find.Find\.\.\. key = <nop>
   " macmenu &File.New\ Window     key = <nop>
   " macmenu &File.New\ Tab        key = <nop>
-
+  macmenu &Edit.Find.Find\.\.\. key = <nop>
   map <D-f>   :set invfu<CR>                
   map <D-N>   :CommandT<CR>
   map <D-E>   :CommandTBuffer<CR>
-endif
+elseif has("gui_win32")
+  set guifont=Monaco:h13
+end
 
 " -----------------------------------------------------------
 " Auto sourcing
