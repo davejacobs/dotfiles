@@ -1,9 +1,14 @@
 #!/usr/bin/ruby
 
-require 'irb/completion'
-require 'irb/ext/save-history'
-require 'interactive_editor'
-require 'yaml'
+begin
+  require 'irb/completion'
+  require 'irb/ext/save-history'
+  require 'interactive_editor'
+  require 'yaml'
+rescue LoadError => e
+  puts "[warning] Could not load all files"
+end
+
 
 if defined?(IRB.conf)
   IRB.conf[:SAVE_HISTORY] = 1000

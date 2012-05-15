@@ -21,6 +21,7 @@
   ci = commit
   br = branch
   co = checkout
+  cp = cherry-pick
   pu = push
   pl = pull
   df = diff

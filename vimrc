@@ -17,7 +17,7 @@ syntax on
 " General configuration
 " -----------------------------------------------------------
 
-set clipboard=unnamed   " Allow anonymous clipboard
+" set clipboard=unnamed   " Allow anonymous clipboard
 set hidden              " Allow unsaved changes in hidden buffers
 set hlsearch            " Highlight search results
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
@@ -48,8 +48,14 @@ set wig+=tmp/**
 set autoread
 set autowriteall        " Save when focus is lost
 set laststatus=2        " Always show status bar
-set statusline=         " Customize status bar
-set statusline+=\ %F\ \|\ len:\ \%L\ \|\ type:\ %Y\ \|\ ascii:\ \%03.3b\ \|\ hex:\ %2.2B\ \|\ line:\ \%2l
+set statusline=[%n]\ %f\ %m\ %y
+set statusline+=%{fugitive#statusline()} " Show git details"
+set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} " Show RVM details"
+set statusline+=%w              " [Preview]
+set statusline+=%=              " Left/right separator
+set statusline+=%c,             " Cursor column
+set statusline+=%l/%L           " Cursor line/total lines
+set statusline+=\ %P            " Percent through file
 
 autocmd FocusLost * silent! wall
 
@@ -116,6 +122,10 @@ map <Leader>b   :b#<CR>
 
 imap <D-CR>     <ESC>o
 
+" Copy current file path to system pasteboard
+map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
+
 map <D-<>       :tabedit $MYVIMRC<CR>
 
 " Plugins
@@ -129,7 +139,7 @@ map <Leader>e :CommandTBuffer<CR>
 map <D-e>     :CommandTBuffer<CR>
 
 map <Leader>t :CommandTFlush<CR>
-map <D-t>     :CommandTFlush<CR>
+map <D-y>     :CommandTFlush<CR>
 
 map <D-n>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
