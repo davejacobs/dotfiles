@@ -35,6 +35,7 @@ alias mipr='cd ~/Projects/mint'
 alias wipr='cd ~/Projects/wit.io'
 alias scpr='cd ~/Projects/scripts'
 alias dfpr='cd ~/Projects/dotfiles'
+alias mlpr='cd ~/Projects/ml-clojure'
 
 # Commands
 

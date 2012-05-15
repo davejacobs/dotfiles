@@ -258,8 +258,8 @@ statusbar = {
 settings = {
   core = {
     real_name = "David";
-    user_name = "acts_as_david";
-    nick = "acts_as_david";
+    user_name = "davejacobs";
+    nick = "davejacobs";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
@@ -298,6 +298,37 @@ windows = {
         type = "CHANNEL";
         chat_type = "IRC";
         name = "#clojure";
+        tag = "Freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#sciruby";
+        tag = "Freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#haskell";
+        tag = "Freenode";
+      }
+    );
+  };
+
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#documentcloud";
         tag = "Freenode";
       }
     );

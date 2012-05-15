@@ -7,6 +7,8 @@ setlocal spell spelllang=en_us " Spell check
 setlocal nosmartindent
 setlocal cinoptions=           " Turn off programmer indentation
 setlocal nonumber
+setlocal nocindent             " C-style autoindenting
+setlocal nosmarttab            " Use shiftwidth to tab at line beginning
 
 " Mappings
 nmap j gj
