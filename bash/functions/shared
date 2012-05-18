@@ -24,13 +24,23 @@ namedistro() {
   echo $ret
 }
 
+# Only source file if present
+sourcesafe() {
+  [[ -f $1 ]] && source $1
+}
+
+# Create an environmental variable based on lines
+# in a file
 sourceenv() {
   src=$1
   variable=$2
-  entries = $(cat $src | grep -Ev '^\#|^$')
-  for entry in entries; do
-    export $variable=$entry:${!variable}
-  done
+
+  if [ -f $src ]; then
+    entries=$(cat $src | grep -Ev '^\#|^$')
+    for entry in $entries; do
+      export $variable=$entry:${!variable}
+    done
+  fi
 }
 
 # Simple encryption
