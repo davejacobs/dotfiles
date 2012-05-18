@@ -6,9 +6,9 @@
 " ----------------------------------------------------------- 
 
 set nocompatible
-filetype off
 call pathogen#infect()
 call pathogen#helptags()
+filetype off
 source ~/.vim/autoload/slime.vim
 filetype plugin indent on
 syntax on
