@@ -7,7 +7,7 @@ export LSCOLORS="cxcxdxdxbxexexfxfxeheh"
 
 # Bash completion for Git
 if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+  source `brew --prefix`/etc/bash_completion
 fi
 
 # IPV6 support (if connected directly to non-NAT cable modem):

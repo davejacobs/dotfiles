@@ -1,3 +1,6 @@
+alias copy="xsel --clipboard --input"
+alias paste="xsel --clipboard --output"
+
 # Enable ls colors and add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   [[ -r ~/.dircolors ]] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -7,6 +10,3 @@ if [ -x /usr/bin/dircolors ]; then
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
-
-alias copy="xsel --clipboard --input"
-alias paste="xsel --clipboard --output"
