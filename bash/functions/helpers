@@ -1,0 +1,42 @@
+# Determine system distro
+namedistro() {
+  system=`uname -s`
+  case "$system" in
+  Darwin)
+    ret="osx"
+    ;;
+  Linux)
+    if [ -f "/etc/lsb-release" ]; then
+      ret="ubuntu"
+    elif [ -f "/etc/arch-release" ]; then
+      ret="arch"
+    fi
+    ;;
+  *)
+    ret="*"
+    ;;
+  esac
+  unset system
+
+  echo $ret
+}
+
+# Only source file if present
+sourcesafe() {
+  [[ -f $1 ]] && source $1
+}
+
+# Create an environmental variable based on lines
+# in a file
+sourceenv() {
+  src=$1
+  variable=$2
+
+  if [ -f $src ]; then
+    entries=$(cat $src | grep -Ev '^\#|^$')
+    for entry in $entries; do
+      export $variable=$entry:${!variable}
+    done
+  fi
+}
+

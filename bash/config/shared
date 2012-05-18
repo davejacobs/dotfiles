@@ -1,23 +1,18 @@
-# .bashrc - Config
-# Determines shell window presentation and customization for all OSes,
-# branching to specific config files where needed
-
-# Set to full Vim path because (for no good reason) simply using
-# 'vim' causes the program to return with status 1 and not 0
-export EDITOR=/usr/bin/vim
 umask 022
 
-# Customize the prompt (see [1]), will be changed in Ubuntu
-# if the color prompt settings are off
+# Use full path to Vim for proper exit status
+export EDITOR=/usr/bin/vim 
+
+# See `man ls` or Dyndns.org [1] for more info on PS
 PS1="[\[\033[0;32m\]\u\[\033[0m\]@\[\033[0;34m\]\h\[\033[0m\]] \W ∴ "
+
+shopt -s histappend   # Append, don't overwrite history   
+shopt -s checkwinsize # Update window after commands 
 
 HISTCONTROL=${HISTCONTROL+,}ignoredups # De-dupe history
 HISTCONTROL=${HISTCONTROL+,}ignoreboth 
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTIGNORE="&:ls:[bf]g:exit:git st:g st"
-
-shopt -s histappend   # Append, don't overwrite history   
-shopt -s checkwinsize # Update window after commands 
 
 # [1]: http://freeunix.dyndns.org:8088/site2/howto/Bash.shtml
