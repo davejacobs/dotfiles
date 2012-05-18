@@ -1,6 +1,29 @@
 # .bashrc - Functions
 # Defines Bash functions common to all OSes
 
+# Determine system distro
+namedistro() {
+  system=`uname -s`
+  case "$system" in
+  Darwin)
+    ret="osx"
+    ;;
+  Linux)
+    if [ -f "/etc/lsb-release" ]; then
+      ret="ubuntu"
+    elif [ -f "/etc/arch-release" ]; then
+      ret="arch"
+    fi
+    ;;
+  *)
+    ret="*"
+    ;;
+  esac
+  unset system
+
+  echo $ret
+}
+
 sourceenv() {
   src=$1
   variable=$2
