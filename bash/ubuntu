@@ -29,20 +29,5 @@ if [ "$color_prompt" == "no" ]; then
 fi
 unset color_prompt force_color_prompt
 
-# Enable ls colors and add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-  [[ -r ~/.dircolors ]] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-
-  alias ls='ls --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
-fi
-
-# Ubuntu-specific aliases (to match what I expect in OS X)
-alias mntnet='sudo mount -t vboxsf NetworkDocs ~/Network'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
 # Assume that Ubuntu is being used for production Rails environments
 export RAILS_ENV=production
