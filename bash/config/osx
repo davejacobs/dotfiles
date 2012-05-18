@@ -1,11 +1,8 @@
-# .bashrc - OS X
-# Configures the OS X terminal window and other OS X-specific options
-
 # Format ls results according to man ls (there are tools
 # for this [1])
 export LSCOLORS="cxcxdxdxbxexexfxfxeheh"
 
-# Bash completion for Git
+# Bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   source `brew --prefix`/etc/bash_completion
 fi

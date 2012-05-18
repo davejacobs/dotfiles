@@ -1,17 +1,13 @@
-# .bashrc - Ubuntu
-# Configures the Ubuntu terminal window and other Ubuntu-specific options
-
 # Make less friendly for non-text input files, see lesspipe(1)
 [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Identify the chroot you work in
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# Set fancy prompt
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+  xterm-color) color_prompt=yes;;
 esac
 
 force_color_prompt=yes

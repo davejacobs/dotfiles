@@ -1,14 +1,1 @@
-# .bashrc - Ruby
-#
-# Configures Ruby-specific settings, variables and paths
-
-# Load RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# Add Rip to RUBYLIB
-# export RUBYLIB=$RUBYLIB:$HOME/Projects/rip/lib
-# export RUBYOPT=rubygems
-
-# export RIPHELPERS=1
-# export RIPDIR=$HOME/.rip
-# eval `rip-config`

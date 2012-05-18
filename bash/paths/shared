@@ -1,11 +1,6 @@
-# .bashrc - Paths
-# Lists directories that should be added to PATH, in reverse
-# order (for now)
-
 /usr/local/sbin
 /usr/local/bin
 ~/bin
-~/Code/scripts/bin
 ~/.cljr/bin
 ~/.cake/bin
 ~/.lein

@@ -1,7 +1,7 @@
 # .bash_profile - Profile
 # Reads bash/paths to set up PATH, delegates configuration to subfiles
 
-source $HOME/.bash/functions/shared
+source $HOME/.bash/functions/helpers
 
 distro=$(namedistro)
 
