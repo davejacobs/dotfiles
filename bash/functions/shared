@@ -1,6 +1,15 @@
 # .bashrc - Functions
 # Defines Bash functions common to all OSes
 
+sourceenv() {
+  src=$1
+  variable=$2
+  entries = $(cat $src | grep -Ev '^\#|^$')
+  for entry in entries; do
+    export $variable=$entry:${!variable}
+  done
+}
+
 # Simple encryption
 encrypt() { openssl des3 -salt -in $1 -out $2; }
 decrypt() { openssl des3 -d -salt -in $1 -out $2; }
