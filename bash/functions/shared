@@ -11,11 +11,18 @@ sourceenv() {
 }
 
 # Simple encryption
-encrypt() { openssl des3 -salt -in $1 -out $2; }
-decrypt() { openssl des3 -d -salt -in $1 -out $2; }
+encrypt() {
+  openssl des3 -salt -in $1 -out $2; 
+}
+
+decrypt() {
+  openssl des3 -d -salt -in $1 -out $2; 
+}
 
 # Fold text with par
-fld() { paste | par $1 | copy; }
+fld() {
+  paste | par $1 | copy; 
+}
 
 # Enhanced grep
 # grepr() { grep -R $1 --include '*.*' *; }
