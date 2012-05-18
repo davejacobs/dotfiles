@@ -1,8 +1,10 @@
-These are generators for different completion files for several languages.
-Copy these into the appropriate REPL to generate your files.
+Completions
+===========
+
+Copy these into the appropriate REPL to generate files for bash and other completion.
 
 Clojure
-=======
+-------
 
 (def completions
     (reduce concat
