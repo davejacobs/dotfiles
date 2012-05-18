@@ -59,9 +59,6 @@ set statusline+=\ %P            " Percent through file
 
 autocmd FocusLost * silent! wall
 
-color ir_black
-color desert
-
 nmap <D-C> :color desert<CR>
 nmap <D-I> :color ir_black<CR>
 nmap <D-L> :color solarized<CR>
@@ -155,8 +152,6 @@ map <M-D-r>   :SweetVimRspecRunPrevious<CR>
 " Plugin configuration
 " -----------------------------------------------------------
 
-runtime 'bundle/matchit/plugin/matchit.vim'
-
 let g:CommandTMaxDepth=8
 let g:CommandTMaxHeight=10
 let g:NERDTreeWinSize=20
@@ -188,21 +183,15 @@ map <Leader>a :call AckCommand()<CR>
 vmap <Leader>a :call AckVisual()<CR>
 
 " -----------------------------------------------------------
-" Auto sourcing
-" -----------------------------------------------------------
-
-" Source this file after saving it
-" autocmd bufwritepost .vimrc source $MYVIMRC 
-
-" -----------------------------------------------------------
 " Post-init configuration
 " -----------------------------------------------------------
 
 if getcwd() == expand('~')
   if isdirectory(expand('~/Projects'))
     cd ~/Projects
+  if isdirectory(expand('~/projects'))
+    cd ~/projects
   elseif isdirectory(expand('~/workspace'))
     cd ~/workspace
   endif
 endif
-set foldlevel=20

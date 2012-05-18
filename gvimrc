@@ -47,10 +47,3 @@ elseif has("gui_macvim")
 elseif has("gui_win32")
   set guifont=Monaco:h13
 end
-
-" -----------------------------------------------------------
-" Auto sourcing
-" -----------------------------------------------------------
-
-" Source this file after saving it
-" autocmd bufwritepost .gvimrc source $MYGVIMRC
