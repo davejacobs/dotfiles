@@ -28,6 +28,3 @@ if [ "$color_prompt" == "no" ]; then
   PS1="\u@\h\ \W ∴ "  
 fi
 unset color_prompt force_color_prompt
-
-# Assume that Ubuntu is being used for production Rails environments
-export RAILS_ENV=production
