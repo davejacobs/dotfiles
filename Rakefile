@@ -6,11 +6,13 @@ require 'pathname'
 
 desc 'install dotfiles into user home directory'
 task :install do
-  skeleton_files = lambda {|x| x.to_s =~ /Rakefile|README.*|LICENSE|\..*/ }
+  ignored_files = ['Rakefile', 'README.*', 'LICENSE', '..*']
+  files_to_ignore = lambda {|x| x.to_s =~ Regexp.new(ignored_files.join '|' }
   link_files = lambda {|f| link_file(f.expand_path, transform_file_name(f)) }
-
   Pathname.glob('*').reject(&skeleton_files).each(&link_files)
+end
 
+task :plugins do
   system "brew install ack"
   system "git submodule init && git submodule update"
   system "cd vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make"

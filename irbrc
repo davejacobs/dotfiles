@@ -58,11 +58,13 @@ def inspect_variable(symbol, context=binding)
 end
 
 def copy(str)
-  IO.popen('pbcopy', 'w') {|f| f << str.to_s }
+  # `copy` is an alias to the system copy function
+  IO.popen('copy', 'w') {|f| f << str.to_s }
 end
 
 def paste
-  `pbpaste`
+  # `paste` is an alias to the system copy function
+  `paste`
 end
 
 def copy_history

@@ -1,0 +1,4 @@
+# Make font smoothing default on non-Apple external displays
+smoothfonts() {
+  defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+}
