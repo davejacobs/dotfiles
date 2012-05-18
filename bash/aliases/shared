@@ -3,13 +3,14 @@
 # command options, shorthand for locations, and commands/functions
 
 # For sustainable aliases
-alias edal='$EDITOR ~/.bash/aliases'
-alias edco='$EDITOR ~/.bash/config'
+alias edal='$EDITOR ~/.bash/aliases/shared'
+alias edco='$EDITOR ~/.bash/config/shared'
 
 # Default options
 
 alias ls='ls -aG'
 alias ll='ls -alF'
+alias grep='grep --color=auto'
 
 # Tools
 
@@ -40,8 +41,5 @@ alias mlpr='cd ~/Projects/ml-clojure'
 # Commands
 
 alias publish='cd ~/Projects/wit.io && cap -q blog:post_new'
-alias killruby='ps aux | grep ruby | awk "{print $2}" | xargs kill -9'
 alias tunnel='ssh -N -L 1234:localhost:80 $1'
 alias tunnelp='ssh -N -l david -L 1234:localhost:$2 $1'
-
-alias grep='grep --color=auto -R --include "*.*" $1 *'
