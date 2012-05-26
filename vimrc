@@ -189,9 +189,11 @@ vmap <Leader>a :call AckVisual()<CR>
 if getcwd() == expand('~')
   if isdirectory(expand('~/Projects'))
     cd ~/Projects
-  if isdirectory(expand('~/projects'))
+  elseif isdirectory(expand('~/projects'))
     cd ~/projects
   elseif isdirectory(expand('~/workspace'))
     cd ~/workspace
   endif
 endif
+
+set foldlevel=20
