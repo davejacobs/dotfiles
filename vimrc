@@ -11,35 +11,30 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-pastie'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rake'
-Bundle 'Lokaltog/vim-powerline'
+
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
-Bundle 'rson/vim-conque'
-Bundle 'ervandew/supertab'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'mileszs/ack.vim'
+
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/VimClojure'
+Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5-syntax.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'gregsexton/gitv'
-Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-haml'
+
+Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'duskhacker/sweet-rspec-vim'
-Bundle 'vim-scripts/slimv.vim'
-Bundle 'technomancy/clojure-mode'
+Bundle 'tpope/vim-endwise'
 Bundle 'emezeske/paredit.vim'
+
+Bundle 'altercation/vim-colors-solarized'
 
 " -----------------------------------------------------------
 " General configuration
