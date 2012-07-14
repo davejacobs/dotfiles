@@ -1,21 +1,53 @@
 " vimrc - Universal customization for Vim
 " by David Jacobs
 
+set nocompatible
+
 " -----------------------------------------------------------
-" Pathogen configuration
+" Package configuration
 " ----------------------------------------------------------- 
 
-set nocompatible
-call pathogen#infect()
-call pathogen#helptags()
-filetype off
-source ~/.vim/autoload/slime.vim
-filetype plugin indent on
-syntax on
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-pastie'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rake'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdtree'
+Bundle 'rson/vim-conque'
+Bundle 'ervandew/supertab'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/html5-syntax.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'gregsexton/gitv'
+Bundle 'mileszs/ack.vim'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'duskhacker/sweet-rspec-vim'
+Bundle 'vim-scripts/slimv.vim'
+Bundle 'technomancy/clojure-mode'
+Bundle 'emezeske/paredit.vim'
 
 " -----------------------------------------------------------
 " General configuration
 " -----------------------------------------------------------
+
+filetype off
+filetype plugin indent on
+syntax on
 
 " set clipboard=unnamed   " Allow anonymous clipboard
 set hidden              " Allow unsaved changes in hidden buffers
