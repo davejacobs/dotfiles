@@ -33,7 +33,7 @@ alias scr='cd ~/Scripts'
 
 alias stpr='cd ~/Projects/stats'
 alias mipr='cd ~/Projects/mint'
-alias wipr='cd ~/Projects/wit.io'
+alias wipr='cd ~/Projects/wit'
 alias scpr='cd ~/Projects/scripts'
 alias dfpr='cd ~/Projects/dotfiles'
 alias mlpr='cd ~/Projects/ml'
