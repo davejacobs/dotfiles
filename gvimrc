@@ -19,11 +19,6 @@ set columns=100
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
 set background=dark
 
-" color solarized
-" color ir_black
-" color desert
-color wombat
-
 highlight Search gui=underline
 highlight Search guibg=#333333
 highlight clear nontext " Hide non-text characters
@@ -45,8 +40,36 @@ elseif has("gui_macvim")
   " macmenu &File.New\ Tab        key = <nop>
   macmenu &Edit.Find.Find\.\.\. key = <nop>
   map <D-f>   :set invfu<CR>                
-  map <D-N>   :CommandTFlush<CR>:CommandT<CR>
-  map <D-E>   :CommandTBuffer<CR>
 elseif has("gui_win32")
   set guifont=Monaco:h13
 end
+
+" color solarized
+" color ir_black
+" color desert
+" color macvim
+color wombat
+
+nmap <D-W> :color wombat<CR>
+nmap <D-C> :color desert<CR>
+nmap <D-I> :color ir_black<CR>
+nmap <D-L> :color solarized<CR>
+
+map <D-j>       :split<CR>
+map <D-k>       :vsplit<CR>
+
+map <M-D-Left>  :bp<CR>
+map <M-D-Right> :bn<CR>
+imap <D-CR>     <Esc>o
+
+noremap <D-M-i> gg=G``
+
+" Copy current file path to system pasteboard
+map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+
+map <D-<>     :tabedit $MYVIMRC<CR>
+
+map <D-N>     :CommandTFlush<CR>:CommandT<CR>
+map <D-e>     :CommandTBuffer<CR>
+map <D-n>     :NERDTreeToggle<CR>
+map <D-/>     <plug>NERDCommenterToggle
