@@ -60,6 +60,7 @@ set statusline=
 
 autocmd FocusLost * silent! wall
 
+nmap <D-W> :color wombat<CR>
 nmap <D-C> :color desert<CR>
 nmap <D-I> :color ir_black<CR>
 nmap <D-L> :color solarized<CR>
