@@ -44,7 +44,6 @@ filetype off
 filetype plugin indent on
 syntax on
 
-" set clipboard=unnamed   " Allow anonymous clipboard
 set hidden              " Allow unsaved changes in hidden buffers
 set hlsearch            " Highlight search results
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
@@ -153,18 +152,11 @@ map <D-N>     :CommandTFlush<CR>:CommandT<CR>
 map <Leader>e :CommandTBuffer<CR>
 map <D-e>     :CommandTBuffer<CR>
 
-map <Leader>t :CommandTFlush<CR>
-map <D-y>     :CommandTFlush<CR>
-
 map <D-n>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
 map <D-/>     <plug>NERDCommenterToggle
 map <Leader>/ <plug>NERDCommenterToggle
-
-map <D-r>     :SweetVimRspecRunFile<CR>
-map <D-R>     :SweetVimRspecRunFocused<CR>
-map <M-D-r>   :SweetVimRspecRunPrevious<CR>
 
 " -----------------------------------------------------------
 " Plugin configuration
@@ -179,7 +171,7 @@ let g:NERDSpaceDelims=1               " Add a space before comments
 let g:NERDTreeIgnore=['tags']
 let g:NERDTreeMinimalUI=1
 let g:rails_statusline=0
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols='fancy'
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
