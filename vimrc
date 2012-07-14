@@ -25,9 +25,9 @@ set expandtab           " Use soft tabs
 set tabstop=2           " Width of soft tabs
 set autoindent 
 set shiftwidth=2        " Width of autoindent
-set cindent             " C-style autoindenting
-set cinoptions=(0       " Align arguments separated by line breaks inside parens
-set cinoptions+=
+" set cindent             " C-style autoindenting
+" set cinoptions=(0       " Align arguments separated by line breaks inside parens
+" set cinoptions+=
 set smartindent
 set smarttab            " Use shiftwidth to tab at line beginning
 set wrap                " Wrap text inside screen
