@@ -75,11 +75,6 @@ set statusline=
 
 autocmd FocusLost * silent! wall
 
-nmap <D-W> :color wombat<CR>
-nmap <D-C> :color desert<CR>
-nmap <D-I> :color ir_black<CR>
-nmap <D-L> :color solarized<CR>
-
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
 end
@@ -94,31 +89,18 @@ let maplocalleader=';'
 " kj - the easy way to escape insert mode 
 inoremap kj <Esc>
 
-" Q - the easy way to quit
-noremap Q :q<CR>
-
 " Leader/z - the easy way to fold one level
 noremap <Leader>z zMzr
 
-" Leader/a - the easy way to select all
-noremap <Leader>aa ggVG
-
-" Leader/s - the easy way to search
-" nmap <Leader>s :%s/
-" vmap <Leader>s :s/
-
 " Run == formatting on the entire file and return to original position
 noremap <Leader>= gg=G``
-noremap <D-M-i> gg=G``
 
 " Sudo - even if you didn't open the file as root
 cmap w!! %!sudo tee > /dev/null %
 
 " Easy splits, navigation, search, buffers & tabs
 map <F9>        :split<CR>
-map <D-j>       :split<CR>
 map <F10>       :vsplit<CR>
-map <D-k>       :vsplit<CR>
 map <C-j>       <C-w>j
 map <C-k>       <C-w>k
 map <C-h>       <C-w>h
@@ -129,33 +111,19 @@ map Y           y$
 
 map <Leader>bl  :buffers<CR>
 map <Leader>bn  :bn<CR>
-map <M-D-Left>  :bp<CR>
 map <Leader>bp  :bp<CR>
-map <M-D-Right> :bn<CR>
 map <Leader>b   :b#<CR>
 
-imap <D-CR>     <ESC>o
-
 " Copy current file path to system pasteboard
-map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
-
-map <D-<>       :tabedit $MYVIMRC<CR>
 
 " Plugins
 map <Leader>a :Ack ""<Left>
 map <Leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log ./* `rvm gemhome`/*<CR>
 
 map <Leader>N :CommandTFlush<CR>:CommandT<CR>
-map <D-N>     :CommandTFlush<CR>:CommandT<CR>
-
 map <Leader>e :CommandTBuffer<CR>
-map <D-e>     :CommandTBuffer<CR>
-
-map <D-n>     :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
-
-map <D-/>     <plug>NERDCommenterToggle
 map <Leader>/ <plug>NERDCommenterToggle
 
 " -----------------------------------------------------------
