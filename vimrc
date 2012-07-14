@@ -57,9 +57,6 @@ set expandtab           " Use soft tabs
 set tabstop=2           " Width of soft tabs
 set autoindent 
 set shiftwidth=2        " Width of autoindent
-" set cindent             " C-style autoindenting
-" set cinoptions=(0       " Align arguments separated by line breaks inside parens
-" set cinoptions+=
 set smartindent
 set smarttab            " Use shiftwidth to tab at line beginning
 set wrap                " Wrap text inside screen
@@ -76,19 +73,10 @@ set scrolloff=7         " How far away from the edge the cursor initiates scroll
 set tildeop             " Tilde is an operator
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
-set wig+=.git
+set wig+='
 set wig+=tmp/**
 set autoread
 set autowriteall        " Save when focus is lost
-" set laststatus=2        " Always show status bar
-" set statusline=[%n]\ %f\ %m\ %y
-" " set statusline+=%{fugitive#statusline()} " Show git details
-" set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} " Show RVM details
-" set statusline+=%w              " [Preview]
-" set statusline+=%=              " Left/right separator
-" set statusline+=%c,             " Cursor column
-" set statusline+=%l/%L           " Cursor line/total lines
-" set statusline+=\ %P            " Percent through file
 set statusline=
 
 autocmd FocusLost * silent! wall
