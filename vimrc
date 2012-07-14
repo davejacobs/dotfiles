@@ -47,15 +47,16 @@ set wig+=.git
 set wig+=tmp/**
 set autoread
 set autowriteall        " Save when focus is lost
-set laststatus=2        " Always show status bar
-set statusline=[%n]\ %f\ %m\ %y
-set statusline+=%{fugitive#statusline()} " Show git details"
-set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} " Show RVM details"
-set statusline+=%w              " [Preview]
-set statusline+=%=              " Left/right separator
-set statusline+=%c,             " Cursor column
-set statusline+=%l/%L           " Cursor line/total lines
-set statusline+=\ %P            " Percent through file
+" set laststatus=2        " Always show status bar
+" set statusline=[%n]\ %f\ %m\ %y
+" " set statusline+=%{fugitive#statusline()} " Show git details
+" set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} " Show RVM details
+" set statusline+=%w              " [Preview]
+" set statusline+=%=              " Left/right separator
+" set statusline+=%c,             " Cursor column
+" set statusline+=%l/%L           " Cursor line/total lines
+" set statusline+=\ %P            " Percent through file
+set statusline=
 
 autocmd FocusLost * silent! wall
 
@@ -160,6 +161,8 @@ let g:NERDTreeDirArrows=1
 let g:NERDSpaceDelims=1               " Add a space before comments
 let g:NERDTreeIgnore=['tags']
 let g:NERDTreeMinimalUI=1
+let g:rails_statusline=0
+let g:Powerline_symbols = 'fancy'
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
