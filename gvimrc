@@ -45,7 +45,7 @@ elseif has("gui_macvim")
   " macmenu &File.New\ Tab        key = <nop>
   macmenu &Edit.Find.Find\.\.\. key = <nop>
   map <D-f>   :set invfu<CR>                
-  map <D-N>   :CommandT<CR>
+  map <D-N>   :CommandTFlush<CR>:CommandT<CR>
   map <D-E>   :CommandTBuffer<CR>
 elseif has("gui_win32")
   set guifont=Monaco:h13
