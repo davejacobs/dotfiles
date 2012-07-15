@@ -63,6 +63,7 @@ set ignorecase          " Ignore search case
 set smartcase           " ... unless uppercase letters are explicit
 set completeopt-=menu   " Bash-like inline completion
 set foldmethod=indent   " Fold using indentation
+set foldlevelstart=20   " Do not fold by default
 set scrolloff=7         " How far away from the edge the cursor initiates scrolling
 set tildeop             " Tilde is an operator
 set formatprg=par\ -w80 " Format paragraphs using par
@@ -175,5 +176,3 @@ if getcwd() == expand('~')
     cd ~/workspace
   endif
 endif
-
-set foldlevel=20
