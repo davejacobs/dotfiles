@@ -1,6 +1,3 @@
-# A script to facilitate dotfiles management. This is a reworking of the
-# Rakefile at http://github.com/ryanb/dotfiles.
-
 require 'rake'
 require 'pathname'
 
