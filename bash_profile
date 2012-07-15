@@ -16,5 +16,8 @@ for environment in path classpath; do
   sourceenv $HOME/.bash/${environment}s/${distro} $envvar
 done
 
-source $HOME/.bash/developer/ruby
+for language in $(find $HOME/.bash/developer -type f); do
+  source $language
+done
+
 source $HOME/.bash/completions/git
