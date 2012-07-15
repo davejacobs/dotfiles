@@ -1,6 +1,6 @@
 /usr/local/sbin
 /usr/local/bin
-~/bin
-~/.cljr/bin
-~/.cake/bin
-~/.lein
+$HOME/bin
+$HOME/.cljr/bin
+$HOME/.cake/bin
+$HOME/.lein
