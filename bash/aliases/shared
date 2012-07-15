@@ -11,6 +11,7 @@ alias edco='$EDITOR ~/.bash/config/shared'
 alias ls='ls -aG'
 alias ll='ls -alF'
 alias grep='grep --color=auto'
+alias cap='cap -v'
 
 # Tools
 
@@ -40,6 +41,5 @@ alias mlpr='cd $WIT_PROJECTS_DIR/ml'
 
 # Commands
 
-alias publish='cd ~/Projects/wit.io && cap -q blog:post_new'
 alias tunnel='ssh -N -L 1234:localhost:80 $1'
 alias tunnelp='ssh -N -l david -L 1234:localhost:$2 $1'
