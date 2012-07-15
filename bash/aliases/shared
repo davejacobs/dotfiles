@@ -31,12 +31,12 @@ alias scr='cd ~/Scripts'
 
 # Projects
 
-alias stpr='cd ~/Projects/stats'
-alias mipr='cd ~/Projects/mint'
-alias wipr='cd ~/Projects/wit'
-alias scpr='cd ~/Projects/scripts'
-alias dfpr='cd ~/Projects/dotfiles'
-alias mlpr='cd ~/Projects/ml'
+alias stpr='cd $WIT_PROJECTS_DIR/stats'
+alias mipr='cd $WIT_PROJECTS_DIR/mint'
+alias wipr='cd $WIT_PROJECTS_DIR/wit'
+alias scpr='cd $WIT_PROJECTS_DIR/scripts'
+alias dfpr='cd $WIT_PROJECTS_DIR/dotfiles'
+alias mlpr='cd $WIT_PROJECTS_DIR/ml'
 
 # Commands
 

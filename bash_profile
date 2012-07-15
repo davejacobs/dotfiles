@@ -5,9 +5,9 @@ source $HOME/.bash/functions/helpers
 
 distro=$(namedistro)
 
-for dir in aliases config functions; do
+for dir in config aliases functions; do
   sourcesafe $HOME/.bash/${dir}/shared
-  sourcesafe $HOME/.bash/${dir}/${distroname}
+  sourcesafe $HOME/.bash/${dir}/${distro}
 done
 
 for environment in path classpath; do
