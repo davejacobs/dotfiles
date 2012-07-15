@@ -15,7 +15,8 @@ end
 
 task :plugins do
   system "brew install ack"
-  system "git submodule init && git submodule update"
+  system "git submodule update --init"
+  system "vim +BundleInstall +qall"
   system "cd vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make"
 end
 
