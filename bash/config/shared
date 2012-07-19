@@ -1,6 +1,7 @@
 # Directory config
 export WIT_PROJECTS_DIR="$HOME/projects"
-export WIT_WEB_DIR="$HOME/projects"
+export WIT_WEB_DIR="$HOME/www"
+export WIT_DROPBOX_DIR="$HOME/dropbox"
 
 umask 022
 
