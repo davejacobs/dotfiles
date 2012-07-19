@@ -3,8 +3,9 @@
 # command options, shorthand for locations, and commands/functions
 
 # For sustainable aliases
-alias edal='$EDITOR ~/.bash/aliases/shared'
-alias edco='$EDITOR ~/.bash/config/shared'
+alias edal='$EDITOR $HOME/.bash/aliases/shared'
+alias edco='$EDITOR $HOME/.bash/config/shared'
+alias edfu='$EDITOR $HOME/.bash/functions/shared'
 
 # Default options
 
