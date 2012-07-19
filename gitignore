@@ -3,3 +3,8 @@
 *.swp
 .svn
 tags
+Thumbs.db
+*~
+*.swp
+*.netrwhist
+tmp/**/*
