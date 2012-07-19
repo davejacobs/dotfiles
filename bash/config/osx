@@ -1,6 +1,6 @@
 # Directory config
-export WIT_PROJECTS_DIR="$HOME/Projects/"
-export WIT_WEB_DIR="$HOME/Projects/"
+export WIT_PROJECTS_DIR="$HOME/Projects"
+export WIT_WEB_DIR="$HOME/Projects"
 
 # Format ls results according to man ls (there are tools
 # for this [1])
