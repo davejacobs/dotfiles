@@ -25,10 +25,9 @@ alias t='rspec && cucumber'
 
 # Locations
 
-alias drb='cd ~/Dropbox'
-alias dl='cd ~/Downloads'
-alias prj='cd ~/Projects'
-alias scr='cd ~/Scripts'
+alias drb='cd $WIT_DROPBOX_DIR'
+alias dl='cd $WIT_DOWNLOADS_DIR'
+alias prj='cd $WIT_PROJECTS_DIR'
 
 # Projects
 
