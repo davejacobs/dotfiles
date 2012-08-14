@@ -11,7 +11,14 @@ task :install do
 end
 
 task :plugins do
-  system "brew install ack"
+  homebrew_is_installed = !`which brew`.empty?
+  
+  if homebrew_is_installed
+    system "brew install ack"
+  else
+    puts "[error] cannot use Homebrew to install ack"
+  end
+
   system "git submodule update --init"
   system "vim +BundleInstall +qall"
   system "cd vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make"
