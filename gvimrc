@@ -7,7 +7,6 @@
 set guioptions=         " Reset options
 set guioptions+=a       " Autoselect
 set guioptions+=A       " Autoselect
-set guioptions+=e       " Disable toolbar, menu bar, scroll bars"
 set guioptions+=i       " Show Vim icon in taskbar
 set guioptions-=m       " Remove menu bar
 set guioptions-=T       " Remove toolbar

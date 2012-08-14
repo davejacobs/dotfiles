@@ -1,0 +1,1 @@
+set lispwords+=deftest,testing
