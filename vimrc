@@ -142,8 +142,14 @@ let g:NERDTreeMinimalUI=1
 let g:rails_statusline=0
 let g:Powerline_symbols='fancy'
 
+let vimclojure#SplitPos='bottom'
+let vimclojure#SplitSize=5
+let vimclojure#WantNailgun=1
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
+let vimclojure#FuzzyIndent=1
+let vimclojure#FuzzyIndentPatterns .= ",deftest,testing,defproject"
+" let vimclojure#NailgunClient = '/usr/local/bin/ng'
 
 " Ack functions, taken from: 
 " https://github.com/pivotal/vim-config/commit/ddb041154c250e2eefacdc2916e7bbd3c51f42c0#diff-2
