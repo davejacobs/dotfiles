@@ -12,6 +12,8 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   source `brew --prefix`/etc/bash_completion
 fi
 
+source `brew --prefix`/etc/profile.d/z.sh
+
 # IPV6 support (if connected directly to non-NAT cable modem):
 # sudo ip6config start-v6 en0; sudo ip6config start-stf en0
 
