@@ -4,3 +4,4 @@ $HOME/bin
 $HOME/.cljr/bin
 $HOME/.cake/bin
 $HOME/.lein
+/usr/local/share/npm/bin
