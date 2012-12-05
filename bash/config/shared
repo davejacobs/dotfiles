@@ -18,6 +18,6 @@ HISTCONTROL=${HISTCONTROL+,}ignoredups # De-dupe history
 HISTCONTROL=${HISTCONTROL+,}ignoreboth 
 HISTSIZE=1000
 HISTFILESIZE=2000
-HISTIGNORE="&:ls:[bf]g:exit:git st:g st"
+HISTIGNORE="&:[bf]g:exit:git st:g st"
 
 # [1]: http://freeunix.dyndns.org:8088/site2/howto/Bash.shtml
