@@ -2,7 +2,7 @@
 --type-add
 html=.haml
 --type-add
-css=.sass,.scss
+css=.sass,.scss,.less
 
 # Markdown, textile, and reStructuredText
 --type-set=plaintext=.md,.markdown,.textile,.rst,.txt
