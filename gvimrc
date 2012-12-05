@@ -16,7 +16,6 @@ set guioptions-=b       " Remove bottom scrollbar
 set lines=40
 set columns=100
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
-set background=dark
 
 highlight Search gui=underline
 highlight Search guibg=#333333
@@ -28,7 +27,7 @@ if has("gui_gtk2")
   set lines=35
   set columns=90
 elseif has("gui_macvim")
-  set guifont=Monaco:h14
+  set guifont=Monaco:h12
   " set transparency=25  " 25% opaque background
   set fuoptions+=background:normal
   set fuoptions+=maxhorz " Fully expand in fullscreen mode,
@@ -43,11 +42,12 @@ elseif has("gui_win32")
   set guifont=Monaco:h13
 end
 
-" color solarized
 " color ir_black
 " color desert
 " color macvim
-color wombat
+" color wombat
+color solarized
+set background=light
 
 nmap <D-W> :color wombat<CR>
 nmap <D-C> :color desert<CR>
