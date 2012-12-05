@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
+Bundle 'sjl/gundo.vim'
 
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/VimClojure'
@@ -27,12 +28,13 @@ Bundle 'othree/html5-syntax.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
+Bundle 'groenewege/vim-less'
 
 Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-endwise'
-Bundle 'emezeske/paredit.vim'
+Bundle 'vim-scripts/paredit.vim'
 
 Bundle 'altercation/vim-colors-solarized'
 
@@ -100,14 +102,15 @@ noremap <Leader>= gg=G``
 cmap w!! %!sudo tee > /dev/null %
 
 " Easy splits, navigation, search, buffers & tabs
-map <F9>        :split<CR>
-map <F10>       :vsplit<CR>
+map <Leader>s  :split<CR>
+map <Leader>v  :vsplit<CR>
 map <C-j>       <C-w>j
 map <C-k>       <C-w>k
 map <C-h>       <C-w>h
 map <C-l>       <C-w>l
 
 map <Leader>y   :nohls<CR>
+vmap <Leader>p  :!par<CR>
 map Y           y$
 
 map <Leader>bl  :buffers<CR>
@@ -122,8 +125,9 @@ map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%"
 map <Leader>a :Ack ""<Left>
 map <Leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log ./* `rvm gemhome`/*<CR>
 
+map <C-N> :CommandTFlush<CR>:CommandT<CR>
 map <Leader>N :CommandTFlush<CR>:CommandT<CR>
-map <Leader>e :CommandTBuffer<CR>
+" map <Leader>e :CommandTBuffer<CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>/ <plug>NERDCommenterToggle
 
@@ -141,33 +145,6 @@ let g:NERDTreeIgnore=['tags']
 let g:NERDTreeMinimalUI=1
 let g:rails_statusline=0
 let g:Powerline_symbols='fancy'
-
-let vimclojure#SplitPos='bottom'
-let vimclojure#SplitSize=5
-let vimclojure#WantNailgun=1
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
-let vimclojure#FuzzyIndent=1
-let vimclojure#FuzzyIndentPatterns .= ",deftest,testing,defproject"
-" let vimclojure#NailgunClient = '/usr/local/bin/ng'
-
-" Ack functions, taken from: 
-" https://github.com/pivotal/vim-config/commit/ddb041154c250e2eefacdc2916e7bbd3c51f42c0#diff-2
-function! AckCommand()
-  let command = "ack ".expand("<cword>")
-  cexpr system(command)
-  cw
-endfunction
-
-function! AckVisual()
-  normal gv"xy
-  let command = "ack ".@x
-  cexpr system(command)
-  cw
-endfunction
-
-map <Leader>a :call AckCommand()<CR>
-vmap <Leader>a :call AckVisual()<CR>
 
 " -----------------------------------------------------------
 " Post-init configuration
