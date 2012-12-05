@@ -9,6 +9,8 @@ setlocal cinoptions=           " Turn off programmer indentation
 setlocal nonumber
 setlocal nocindent             " C-style autoindenting
 setlocal nosmarttab            " Use shiftwidth to tab at line beginning
+setlocal tabstop=4
+setlocal shiftwidth=4
 
 " Mappings
 nmap j gj
