@@ -9,3 +9,4 @@ Thumbs.db
 *.swp
 *.netrwhist
 tmp/**/*
+.sass-cache
