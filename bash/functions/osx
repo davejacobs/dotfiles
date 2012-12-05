@@ -2,3 +2,7 @@
 smoothfonts() {
   defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
 }
+
+dockify() {
+  defaults write com.apple.dock no-glass -bool true
+}
