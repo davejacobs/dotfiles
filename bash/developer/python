@@ -1,2 +1,4 @@
-source $(which virtualenvwrapper.sh) 2> /dev/null
-export DJANGO_SETTINGS_MODULE="config.environments.development"
+if $(which virtualenvwrapper.sh &> /dev/null); then
+  source $(which virtualenvwrapper.sh) &> /dev/null
+  export DJANGO_SETTINGS_MODULE="config.environments.development"
+fi
