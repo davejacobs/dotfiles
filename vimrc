@@ -19,6 +19,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
+Bundle 'chrisbra/Replay'
+
+Bundle 'scrooloose/syntastic'
 
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/VimClojure'
@@ -29,14 +32,22 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 Bundle 'groenewege/vim-less'
+Bundle 'cakebaker/scss-syntax'
+Bundle 'nono/vim-handlebars'
+Bundle 'vim-scripts/nginx.vim'
+
+Bundle 'vim-scripts/dbext.vim'
 
 Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-scripts/paredit.vim'
+Bundle 'vim-scripts/csv.vim'
 
+Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'imsizon/wombat.vim'
 
 " -----------------------------------------------------------
 " General configuration
@@ -71,7 +82,7 @@ set tildeop             " Tilde is an operator
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+='
-set wig+=tmp/**
+set wig+=tmp/**,*node_modules/**,*dist/**,*components/**
 set autoread
 set autowriteall        " Save when focus is lost
 set statusline=
@@ -89,7 +100,7 @@ end
 let mapleader=','
 let maplocalleader=';'
 
-" kj - the easy way to escape insert mode 
+" kj - the easy way to escape inse;t mode 
 inoremap kj <Esc>
 
 " Leader/z - the easy way to fold one level
@@ -111,6 +122,8 @@ map <C-l>       <C-w>l
 
 map <Leader>y   :nohls<CR>
 vmap <Leader>p  :!par<CR>
+nmap <Leader>p  vip!par<CR>
+nmap <Leader>P  ggVG!par<CR>
 map Y           y$
 
 map <Leader>bl  :buffers<CR>
@@ -118,12 +131,53 @@ map <Leader>bn  :bn<CR>
 map <Leader>bp  :bp<CR>
 map <Leader>b   :b#<CR>
 
+function! FiletypeFile()
+  return expand("~/.vim/ftplugin/") . &ft . ".vim"
+endfunction
+
+function! CopyPathWithLine()
+  let l:pathWithLine = expand("%").":".line(".")
+  echo "Copied: ".l:pathWithLine
+  let @* = l:pathWithLine
+endfunction
+
+function! ExtractClojureNamespace(path)
+  let l:withoutExt = substitute(a:path, ".clj", "", "")
+  let l:underscoreToDash = substitute(l:withoutExt, "_", "-", "g")
+  let l:parts = split(l:underscoreToDash, "/")
+  let l:withoutParents = l:parts[1:]
+  return join(l:withoutParents, ".")
+endfunction
+
+function! CopyClojureNamespace()
+  let l:transformed = ExtractClojureNamespace(expand("%"))
+  echo "Copied: ".l:transformed
+  let @* = l:transformed
+endfunction
+
 " Copy current file path to system pasteboard
-map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
+map <leader>C :call CopyPathWithLine()<CR>
+map <leader>F :call CopyClojureNamespace()<CR>
+
+" Edit filetype-specific file
+map <Leader>h :execute "edit " . FiletypeFile()<CR>
+
+function! StripTrailingWhitespace()
+  let save_cursor = getpos(".")
+  %s/\s\+$//e
+  call setpos('.', save_cursor)
+endfunction
+
+autocmd BufWritePre *.js,*.rb,*.py,*.scss,*.md call StripTrailingWhitespace()
 
 " Plugins
 map <Leader>a :Ack ""<Left>
-map <Leader>rt :!/usr/local/bin/ctags -R --exclude=.git --exclude=log ./* `rvm gemhome`/*<CR>
+
+" Generic tag creator
+map <Leader>t :silent !ctags -R --exclude=.git --exclude=log ./*<CR>
+
+" Build tags for Ruby, including libraries in current Rbenv gemset
+map <Leader>rt :silent !ctags -R --exclude=.git --exclude=log ./* $(rbenv which gem)/../../gemsets/$(rbenv gemset active)/*<CR>
 
 map <C-N> :CommandTFlush<CR>:CommandT<CR>
 map <Leader>N :CommandTFlush<CR>:CommandT<CR>
@@ -141,10 +195,13 @@ let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2
 let g:NERDTreeDirArrows=1
 let g:NERDSpaceDelims=1               " Add a space before comments
-let g:NERDTreeIgnore=['tags']
+let g:NERDTreeIgnore=['tags', 'target', 'node_modules']
 let g:NERDTreeMinimalUI=1
 let g:rails_statusline=0
 let g:Powerline_symbols='fancy'
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['javascript'],
+                           \ 'passive_filetypes': ['html'] }
 
 " -----------------------------------------------------------
 " Post-init configuration
@@ -155,7 +212,5 @@ if getcwd() == expand('~')
     cd ~/Projects
   elseif isdirectory(expand('~/projects'))
     cd ~/projects
-  elseif isdirectory(expand('~/workspace'))
-    cd ~/workspace
   endif
 endif

@@ -1,7 +1,8 @@
-set lispwords+=deftest,testing,defproject,sql/select
+set lispwords+=deftest,testing,defproject,sql/select,sql/insert,up,down,ANY,GET,POST,PUT,DELETE,OPTIONS
 
-let vimclojure#SplitPos='right'
-let vimclojure#SplitSize=80
+" let vimclojure#SplitPos='right'
+let vimclojure#SplitPos='bottom'
+let vimclojure#SplitSize=10
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 let vimclojure#FuzzyIndent=1

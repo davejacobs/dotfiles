@@ -13,8 +13,8 @@ set guioptions-=T       " Remove toolbar
 set guioptions-=l       " Remove left scrollbar
 set guioptions-=r       " Remove right scrollbar
 set guioptions-=b       " Remove bottom scrollbar
-set lines=40
-set columns=100
+" set lines=40
+" set columns=100
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
 
 highlight Search gui=underline
@@ -27,8 +27,8 @@ if has("gui_gtk2")
   set lines=35
   set columns=90
 elseif has("gui_macvim")
-  set guifont=Monaco:h12
-  " set transparency=25  " 25% opaque background
+  " Inconsolata only looks good in experimental renderer
+  set guifont=Inconsolata:h18
   set fuoptions+=background:normal
   set fuoptions+=maxhorz " Fully expand in fullscreen mode,
   set fuoptions+=maxvert " horizontally and vertically
@@ -64,7 +64,8 @@ imap <D-CR>     <Esc>o
 noremap <D-M-i> gg=G``
 
 " Copy current file path to system pasteboard
-map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+map <silent> <D-C> :call CopyPathWithLine()<CR>
+map <silent> <D-F> :call CopyClojureNamespace()<CR>
 
 map <D-<>     :tabedit $MYVIMRC<CR>
 

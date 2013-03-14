@@ -1,0 +1,1 @@
+which teamocil && complete -W "$(teamocil --list)" teamocil

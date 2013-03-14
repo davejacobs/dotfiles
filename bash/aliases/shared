@@ -24,6 +24,9 @@ alias rs='rspec'
 alias c='cucumber'
 alias t='rspec && cucumber'
 alias m='./manage.py'
+p() {
+  psql $1 -c "$2"; 
+}
 
 # Locations
 

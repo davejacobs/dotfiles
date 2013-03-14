@@ -1,6 +1,6 @@
 # Support Haml
 --type-add
-html=.haml
+html=.haml,.hbs
 --type-add
 css=.sass,.scss,.less
 

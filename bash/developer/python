@@ -1,1 +1,2 @@
 source $(which virtualenvwrapper.sh) 2> /dev/null
+export DJANGO_SETTINGS_MODULE="config.environments.development"
