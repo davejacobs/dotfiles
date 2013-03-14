@@ -1,5 +1,7 @@
-{:user {:plugins [[lein-difftest "1.3.8"]
-                  [lein-tarsier "0.9.3"]]
+{:user {:plugins [[lein-midje "2.0.4"]
+                  [lein-tarsier "0.10.0"]
+                  [lein-immutant "0.14.1"]
+                  [lein-iclojure "1.1"]]
         :dependencies {clj-stacktrace "0.2.4"}
         :injections [(let [orig (ns-resolve (doto 'clojure.stacktrace require)
                                             'print-cause-trace)

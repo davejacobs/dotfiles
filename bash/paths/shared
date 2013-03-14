@@ -1,7 +1,8 @@
 /usr/local/sbin
 /usr/local/bin
-$HOME/bin
-$HOME/.cljr/bin
-$HOME/.cake/bin
-$HOME/.lein
 /usr/local/share/npm/bin
+~/bin
+~/.cljr/bin
+~/.cake/bin
+~/.lein
+~/Projects/scripts/bin

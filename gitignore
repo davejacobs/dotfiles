@@ -10,3 +10,5 @@ Thumbs.db
 *.netrwhist
 tmp/**/*
 .sass-cache
+.rbenv-version
+.rbenv-gemsets

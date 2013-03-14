@@ -22,5 +22,4 @@ done
 
 source $HOME/.bash/completions/brew
 source $HOME/.bash/completions/git
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source $HOME/.bash/completions/npm

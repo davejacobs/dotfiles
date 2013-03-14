@@ -12,6 +12,7 @@ fld() {
   paste | par $1 | copy
 }
 
-# Enhanced grep
-# grepr() { grep -R $1 --include '*.*' *; }
-# grepe() { grep -R $1 --include '*.*' * --exclude $2; }
+# Send pgrep results back to ps for more information
+pg() {
+  pgrep "$@" | xargs ps -ef
+}

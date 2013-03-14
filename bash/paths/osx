@@ -1,3 +1,2 @@
-$HOME/Code/scripts/bin
-$HOME/.cabal/bin
+~/.cabal/bin
 /usr/local/share/python
