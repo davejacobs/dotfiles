@@ -1,11 +1,12 @@
 tab: complete
 
-# set editing-mode vi
 set completion-ignore-case on
 set completion-prefix-display-length 2
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set blink-matching-paren on
+
+# set editing-mode vi
 
 # "\e[B": history-search-forward
 # "\e[A": history-search-backward
