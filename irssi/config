@@ -87,12 +87,21 @@ chatnets = {
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
-  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; }
-  { name = "#python"; chatnet = "Freenode"; autojoin = "Yes"; }
-  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "No"; }
-  { name = "#statistics"; chatnet = "Freenode"; autojoin = "No"; }
+  { name = "#clojure"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
+
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#clojure";
+      }
+    );
+  };
+}
 
 aliases = {
   J = "join";
@@ -270,6 +279,9 @@ settings = {
   };
 };
 
-windows = {
-  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-}
+ignores = (
+  {
+    level = "JOINS PARTS QUITS MODES";
+    network  = "FreeNode";
+  }
+);
