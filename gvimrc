@@ -24,7 +24,15 @@ elseif has("gui_macvim")
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
 
-  map <D-<>       :edit $MYVIMRC<CR>
+  " Conveniently access config files
+  nmap <D-O>       :source %<CR>
+  nmap <D-<>       :edit $MYVIMRC<CR>
+  nmap <D-G>       :edit $MYGVIMRC<CR>
+  nmap <D->>a      :edit ~/.vim/config/basic.vim<CR>
+  nmap <D->>b      :edit ~/.vim/config/bundles.vim<CR>
+  nmap <D->>f      :edit ~/.vim/config/functions.vim<CR>
+  nmap <D->>k      :edit ~/.vim/config/keybindings.vim<CR>
+  nmap <D->>f      :edit ~/.vim/config/plugins.vim<CR>
 
   map <D-F>       :set invfu<CR>
   map <M-D-Left>  :bprevious<CR>

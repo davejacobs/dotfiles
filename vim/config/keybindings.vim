@@ -32,31 +32,21 @@ nmap <Leader>p  vip!par<CR>
 nmap <Leader>P  ggVG!par<CR>
 map Y           y$
 
-map <Leader>bl  :buffers<CR>
-map <Leader>bn  :bn<CR>
-map <Leader>bp  :bp<CR>
-map <Leader>b   :b#<CR>
-
 " Copy current file path to system pasteboard
-map <Leader>C :call CopyPathWithLine()<CR>
-map <Leader>F :call CopyClojureNamespace()<CR>
+map <Leader>C   :call CopyPathWithLine()<CR>
+map <Leader>F   :call CopyClojureNamespace()<CR>
 
 " Edit filetype-specific file
-map <Leader>h :execute "edit " . FiletypeFile()<CR>
+map <Leader>h   :execute "edit " . FiletypeFile()<CR>
 
-function! StripTrailingWhitespace()
-  let save_cursor = getpos(".")
-  %s/\s\+$//e
-  call setpos('.', save_cursor)
-endfunction
-
-autocmd BufWritePre *.js,*.rb,*.py,*.scss,*.md call StripTrailingWhitespace()
+autocmd BufWritePre *.js,*.rb,*.py,*.scss,*.md 
+      \ call StripTrailingWhitespace()
 
 " Plugins
 map <Leader>a :Ack! ""<Left>
 
 " Generic tag creator
-map <Leader>t :silent !ctags -R --exclude=.git --exclude=log ./*<CR>
+map <Silent> <Leader>t !ctags -R --exclude=.git --exclude=log ./*<CR>
 
 map <C-N>         :CtrlP<CR>
 map <Leader>N     :CtrlP<CR>

@@ -23,3 +23,9 @@ function! CopyClojureNamespace()
   echo "Copied: ".l:transformed
   let @* = l:transformed
 endfunction
+
+function! StripTrailingWhitespace()
+  let save_cursor = getpos(".")
+  %s/\s\+$//e
+  call setpos('.', save_cursor)
+endfunction
