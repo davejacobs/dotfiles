@@ -12,6 +12,9 @@ noremap <Leader>z zMzr
 " Run == formatting on the entire file and return to original position
 noremap <Leader>= gg=G``
 
+" Get the convenience of 'o' in insert mode
+imap <S-CR>     <Esc>o
+
 " Sudo - even if you didn't open the file as root
 cmap w!! %!sudo tee > /dev/null %
 
@@ -34,33 +37,9 @@ map <Leader>bn  :bn<CR>
 map <Leader>bp  :bp<CR>
 map <Leader>b   :b#<CR>
 
-function! FiletypeFile()
-  return expand("~/.vim/ftplugin/") . &ft . ".vim"
-endfunction
-
-function! CopyPathWithLine()
-  let l:pathWithLine = expand("%").":".line(".")
-  echo "Copied: ".l:pathWithLine
-  let @* = l:pathWithLine
-endfunction
-
-function! ExtractClojureNamespace(path)
-  let l:withoutExt = substitute(a:path, ".clj", "", "")
-  let l:underscoreToDash = substitute(l:withoutExt, "_", "-", "g")
-  let l:parts = split(l:underscoreToDash, "/")
-  let l:withoutParents = l:parts[1:]
-  return join(l:withoutParents, ".")
-endfunction
-
-function! CopyClojureNamespace()
-  let l:transformed = ExtractClojureNamespace(expand("%"))
-  echo "Copied: ".l:transformed
-  let @* = l:transformed
-endfunction
-
 " Copy current file path to system pasteboard
-map <leader>C :call CopyPathWithLine()<CR>
-map <leader>F :call CopyClojureNamespace()<CR>
+map <Leader>C :call CopyPathWithLine()<CR>
+map <Leader>F :call CopyClojureNamespace()<CR>
 
 " Edit filetype-specific file
 map <Leader>h :execute "edit " . FiletypeFile()<CR>
@@ -74,16 +53,13 @@ endfunction
 autocmd BufWritePre *.js,*.rb,*.py,*.scss,*.md call StripTrailingWhitespace()
 
 " Plugins
-map <Leader>a :Ack ""<Left>
+map <Leader>a :Ack! ""<Left>
 
 " Generic tag creator
 map <Leader>t :silent !ctags -R --exclude=.git --exclude=log ./*<CR>
 
-" Build tags for Ruby, including libraries in current Rbenv gemset
-map <Leader>rt :silent !ctags -R --exclude=.git --exclude=log ./* $(rbenv which gem)/../../gemsets/$(rbenv gemset active)/*<CR>
-
-map <C-N> :CommandTFlush<CR>:CommandT<CR>
-map <Leader>N :CommandTFlush<CR>:CommandT<CR>
-" map <Leader>e :CommandTBuffer<CR>
-map <Leader>n :NERDTreeToggle<CR>
-map <Leader>/ <plug>NERDCommenterToggle
+map <C-N>         :CtrlP<CR>
+map <Leader>N     :CtrlP<CR>
+map <Leader>e     :CtrlPBuffer<CR>
+map <Leader>n     :NERDTreeToggle<CR>
+map <Leader>/     <plug>NERDCommenterToggle

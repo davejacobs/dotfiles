@@ -6,7 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Global plugins
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
