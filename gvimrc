@@ -67,7 +67,7 @@ noremap <D-M-i> gg=G``
 map <silent> <D-C> :call CopyPathWithLine()<CR>
 map <silent> <D-F> :call CopyClojureNamespace()<CR>
 
-map <D-<>     :tabedit $MYVIMRC<CR>
+map <D-<>     :edit $MYVIMRC<CR>
 
 map <D-N>     :CommandTFlush<CR>:CommandT<CR>
 map <D-e>     :CommandTBuffer<CR>
