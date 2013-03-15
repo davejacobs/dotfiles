@@ -1,14 +1,8 @@
-**/*.DS_Store*
+tmp
+tags
 .DS_Store
 *~
 *.swp
-.svn
-tags
-Thumbs.db
-*~
-*.swp
-*.netrwhist
-tmp/**/*
 .sass-cache
 .rbenv-version
 .rbenv-gemsets
