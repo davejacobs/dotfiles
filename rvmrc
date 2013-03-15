@@ -1,4 +1,0 @@
-rvm_archflags="-arch x86_64"
-rvm_make_flags="-j 4"
-rvm_project_rvmrc=0
-rvm_gemset_create_on_use_flag=1
