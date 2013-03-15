@@ -1,20 +1,31 @@
-set lispwords+=deftest,testing,defproject,sql/select,sql/insert,up,down,ANY,GET,POST,PUT,DELETE,OPTIONS
+" Clojure.vim
 
-" let vimclojure#SplitPos='right'
-let vimclojure#SplitPos='bottom'
-let vimclojure#SplitSize=10
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
-let vimclojure#FuzzyIndent=1
-let vimclojure#FuzzyIndentPatterns .= ",deftest,testing,defproject"
-let vimclojure#WantNailgun=1
+autocmd BufEnter *.clj RainbowParenthesesActivate
+autocmd BufEnter *.clj RainbowParenthesesLoadRound
+autocmd BufEnter *.clj RainbowParenthesesLoadSquare
+autocmd BufEnter *.clj RainbowParenthesesLoadBraces
 
-function! ToggleNailgun()
-  if g:vimclojure#WantNailgun == 0
-    let g:vimclojure#WantNailgun = 1
-  else
-    let g:vimclojure#WantNailgun = 0
-  endif
-endfunction
+" How many lines the parser scans for matching delimiters 
+let g:clojure_maxlines = 150
 
-map <leader>v :call ToggleNailgun()<CR> 
+" Align strings the pretty way
+let g:clojure_align_multiline_strings = 0
+
+" Indentation configuration
+let g:clojure_fuzzy_indent_patterns = [
+      \ '^with',
+      \ '^def',
+      \ '^let',
+      \ '^select',
+      \ '^insert',
+      \ '^create',
+      \ '^delete',
+      \ '^ANY',
+      \ '^GET',
+      \ '^POST',
+      \ '^PUT',
+      \ '^DELETE',
+      \ '^OPTIONS',
+      \ '^table',
+      \ '^drop'
+      \ ]
