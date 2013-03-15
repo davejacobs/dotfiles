@@ -25,29 +25,31 @@ elseif has("gui_macvim")
   macmenu &Edit.Find.Find\.\.\. key = <nop>
 
   " Conveniently access config files
-  nmap <D-O>       :source %<CR>
-  nmap <D-<>       :edit $MYVIMRC<CR>
-  nmap <D-G>       :edit $MYGVIMRC<CR>
-  nmap <D->>a      :edit ~/.vim/config/basic.vim<CR>
-  nmap <D->>b      :edit ~/.vim/config/bundles.vim<CR>
-  nmap <D->>f      :edit ~/.vim/config/functions.vim<CR>
-  nmap <D->>k      :edit ~/.vim/config/keybindings.vim<CR>
-  nmap <D->>f      :edit ~/.vim/config/plugins.vim<CR>
+  nmap <D-O>          :source %<CR>
+  nmap <D-<>          :edit $MYVIMRC<CR>
+  nmap <D-G>          :edit $MYGVIMRC<CR>
+  nmap <D->>a         :edit ~/.vim/config/basic.vim<CR>
+  nmap <D->>b         :edit ~/.vim/config/bundles.vim<CR>
+  nmap <D->>f         :edit ~/.vim/config/functions.vim<CR>
+  nmap <D->>k         :edit ~/.vim/config/keybindings.vim<CR>
+  nmap <D->>f         :edit ~/.vim/config/plugins.vim<CR>
 
-  map <D-F>       :set invfu<CR>
-  map <M-D-Left>  :bprevious<CR>
-  map <M-D-Right> :bnext<CR>
+  " Enter full screen mode
+  map <D-F>           :set invfu<CR>
 
-  map <D-e>       :CtrlPBuffer<CR>
-  map <D-N>       :CtrlP<CR>
-  map <D-n>       :NERDTreeToggle<CR>
-  map <D-/>       <plug>NERDCommenterToggle
+  " Move between buffers
+  map <M-D-Left>      :bprevious<CR>
+  map <M-D-Right>     :bnext<CR>
+
+  " Access CtrlP, NERDTree, NERDCommenter
+  map <D-e>           :CtrlPBuffer<CR>
+  map <D-N>           :CtrlP<CR>
+  map <D-n>           :NERDTreeToggle<CR>
+  map <D-/>           <plug>NERDCommenterToggle
 
   " Copy current file path to system pasteboard
   map <Silent> <D-C>  :call CopyPathWithLine()<CR>
   map <Silent> <D-F>  :call CopyClojureNamespace()<CR>
-
-  noremap <M-i> gg=G``
 end
 
 colorscheme solarized
