@@ -16,10 +16,10 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^with',
       \ '^def',
       \ '^let',
-      \ '^select',
-      \ '^insert',
-      \ '^create',
-      \ '^delete',
+      \ '^select\s',
+      \ '^insert\s',
+      \ '^create\s',
+      \ '^delete\s',
       \ '^ANY',
       \ '^GET',
       \ '^POST',
@@ -27,5 +27,6 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^DELETE',
       \ '^OPTIONS',
       \ '^table',
-      \ '^drop'
+      \ '^drop',
+      \ '^->'
       \ ]
