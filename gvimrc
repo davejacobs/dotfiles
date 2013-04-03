@@ -19,7 +19,7 @@ if has("gui_gtk2")
   set guifont=Monaco\ 11
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
-  set guifont=Inconsolata:h18
+  set guifont=Inconsolata:h16
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
@@ -33,9 +33,10 @@ elseif has("gui_macvim")
   nmap <D->>f         :edit ~/.vim/config/functions.vim<CR>
   nmap <D->>k         :edit ~/.vim/config/keybindings.vim<CR>
   nmap <D->>f         :edit ~/.vim/config/plugins.vim<CR>
+  nmap <D->>g         :edit ~/.gvimrc<CR>
 
   " Enter full screen mode
-  map <D-F>           :set invfu<CR>
+  " map <D-F>           :set invfu<CR>
 
   " Move between buffers
   map <M-D-Left>      :bprevious<CR>
@@ -48,8 +49,8 @@ elseif has("gui_macvim")
   map <D-/>           <plug>NERDCommenterToggle
 
   " Copy current file path to system pasteboard
-  map <Silent> <D-C>  :call CopyPathWithLine()<CR>
-  map <Silent> <D-F>  :call CopyClojureNamespace()<CR>
+  nmap <Silent> <D-C>  :call CopyPathWithLine()<CR>
+  nmap <Silent> <D-F>  :call CopyClojureNamespace()<CR>
 end
 
 colorscheme solarized

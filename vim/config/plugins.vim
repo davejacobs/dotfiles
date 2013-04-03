@@ -1,7 +1,6 @@
 " Plugins.vim - Configuration for all global plugins
 
-let g:CommandTMaxDepth=8
-let g:CommandTMaxHeight=10
+let g:ctrlp_working_path_mode=0
 
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeWinSize=20
