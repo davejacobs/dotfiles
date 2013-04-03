@@ -22,7 +22,7 @@ Bundle 'tpope/vim-rails'
 " Clojure
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
+" Bundle 'tpope/vim-classpath'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'vim-scripts/paredit.vim'
 

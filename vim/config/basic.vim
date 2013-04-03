@@ -26,6 +26,7 @@ set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+='
 set wig+=tmp/**,*node_modules/**,*dist/**,*components/**
+set wig+=*ext/**
 set autoread
 set autowriteall        " Save when focus is lost
 set statusline=
