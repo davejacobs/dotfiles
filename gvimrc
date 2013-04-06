@@ -43,8 +43,9 @@ elseif has("gui_macvim")
   map <M-D-Right>     :bnext<CR>
 
   " Access CtrlP, NERDTree, NERDCommenter
+  "
+  map <D-N>           :ClearCtrlPCache<CR>\|:CtrlP<CR>
   map <D-e>           :CtrlPBuffer<CR>
-  map <D-N>           :CtrlP<CR>
   map <D-n>           :NERDTreeToggle<CR>
   map <D-/>           <plug>NERDCommenterToggle
 
