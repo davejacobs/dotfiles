@@ -32,7 +32,7 @@ elseif has("gui_macvim")
   nmap <D->>b         :edit ~/.vim/config/bundles.vim<CR>
   nmap <D->>f         :edit ~/.vim/config/functions.vim<CR>
   nmap <D->>k         :edit ~/.vim/config/keybindings.vim<CR>
-  nmap <D->>f         :edit ~/.vim/config/plugins.vim<CR>
+  nmap <D->>p         :edit ~/.vim/config/plugins.vim<CR>
   nmap <D->>g         :edit ~/.gvimrc<CR>
 
   " Enter full screen mode
