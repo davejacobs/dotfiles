@@ -1,5 +1,4 @@
-{:user {:plugins [[lein-midje "2.0.4"]
-                  [lein-tarsier "0.10.0"]
+{:user {:plugins [[lein-midje "3.0.0"]
                   [lein-immutant "0.14.1"]
                   [lein-iclojure "1.1"]
                   [lein-outdated "1.0.0"]]
@@ -8,5 +7,4 @@
                                             'print-cause-trace)
                            new (ns-resolve (doto 'clj-stacktrace.repl require)
                                            'pst)]
-                       (alter-var-root orig (constantly @new)))]
-        :vimclojure-opts {:repl false}}} 
+                       (alter-var-root orig (constantly @new)))]}}
