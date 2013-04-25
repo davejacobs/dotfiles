@@ -24,6 +24,8 @@ alias rs='rspec'
 alias c='cucumber'
 alias t='rspec && cucumber'
 alias m='./manage.py'
+alias hb='HandBrakeCLI'
+
 p() {
   psql $1 -c "$2"; 
 }
