@@ -3,10 +3,10 @@
 let g:javascript_conceal = 2
 
 if has("conceal")
-  syntax clear javaScript
-  syntax match javaScriptFunction /\<function\>/ nextgroup=javaScriptFuncName skipwhite conceal cchar=ƒ
-  hi link javaScriptFunctionNoParams javaScriptFunction
-  hi! link Conceal javaScriptFunction
+  syntax clear javascript
+  syntax match jsFunction /\<function\>/ nextgroup=jsFuncName skipwhite conceal cchar=ƒ
+  hi link jsFunctionNoParams jsFunction
+  hi! link Conceal jsFunction
 
   set conceallevel=2
 endif
