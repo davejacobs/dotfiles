@@ -8,8 +8,6 @@ let g:ctrlp_user_command = {
       \ 'fallback': 'find %s -type f'
       \ }
 
-let g:SimpleJsIndenter_BriefMode=1
-
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeWinSize=20
 let g:NERDTreeDirArrows=1
