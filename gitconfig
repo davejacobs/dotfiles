@@ -8,6 +8,8 @@
 [core]
 	filemode = false
 	excludesfile = ~/.gitignore
+[branch]
+	autosetuprebase = always
 [diff]
 	ignoreSubmodules = dirty 
 [github]
