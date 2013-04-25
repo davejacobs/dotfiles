@@ -27,8 +27,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'vim-scripts/paredit.vim'
 
 " Javascript & HTML5 & CSS
-Bundle 'vim-scripts/JavaScript-syntax'
-Bundle 'jiangmiao/simple-javascript-indenter'
+Bundle 'vim-scripts/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5-syntax.vim'
 Bundle 'tpope/vim-haml'
@@ -41,6 +40,8 @@ Bundle 'groenewege/vim-less'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'vim-scripts/dbext.vim'
 Bundle 'vim-scripts/csv.vim'
+Bundle 'vim-scripts/Align'
+Bundle 'vim-scripts/SQLUtilities'
 
 " Utilities
 Bundle 'tpope/vim-surround'
