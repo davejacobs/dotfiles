@@ -21,13 +21,16 @@ Bundle 'tpope/vim-rails'
 
 " Clojure
 Bundle 'guns/vim-clojure-static'
-" Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-fireplace'
 " Bundle 'tpope/vim-classpath'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'vim-scripts/paredit.vim'
+" Bundle 'vim-scripts/paredit.vim'
+" Bundle 'jduan/paredit.vim'
 
 " Javascript & HTML5 & CSS
 Bundle 'vim-scripts/vim-javascript'
+" Bundle 'vim-scripts/JavaScript-syntax'
+" Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5-syntax.vim'
 Bundle 'tpope/vim-haml'
