@@ -1,19 +1,19 @@
 [user]
-	name = David Jacobs
-	email = david@wit.io
+  name = David Jacobs
+  email = david@wit.io
 [color]
-	ui = auto
+  ui = auto
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [core]
-	filemode = false
-	excludesfile = ~/.gitignore
+  filemode = false
+  excludesfile = ~/.gitignore
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [diff]
-	ignoreSubmodules = dirty 
+  ignoreSubmodules = dirty 
 [github]
-	user = davejacobs
+  user = davejacobs
 [alias]
   a = add
   b = branch
