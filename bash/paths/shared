@@ -2,7 +2,5 @@
 /usr/local/bin
 /usr/local/share/npm/bin
 ~/bin
-~/.cljr/bin
-~/.cake/bin
 ~/.lein
 ~/Projects/scripts/bin

@@ -24,7 +24,6 @@ alias l='lein'
 alias rs='rspec'
 alias c='cucumber'
 alias t='rspec && cucumber'
-alias m='./manage.py'
 alias hb='HandBrakeCLI'
 
 p() {
