@@ -5,6 +5,8 @@ directory=${1-.}
 if [[ $(which brew) ]]; then
   brew install ack
   brew install coreutils
+  brew install par
+  brew install gettext
 elif [[ $(which pacman) ]]; then
   sudo pacman -S ack
 elif [[ $(which apt-get) ]]; then
