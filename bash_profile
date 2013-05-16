@@ -20,6 +20,6 @@ for language in $(find $HOME/.bash/developer -type f); do
   source $language
 done
 
-source $HOME/.bash/completions/brew
-source $HOME/.bash/completions/git
-source $HOME/.bash/completions/npm
+for completion in $(ls completions | grep -v -e "gem"); do
+  $source $completion
+done
