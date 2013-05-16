@@ -5,6 +5,8 @@ directory=${1-dotfiles}
 if [[ $(which brew) ]]; then
   brew remove ack
   brew remove coreutils
+  brew remove par
+  brew remove gettext
 elif [[ $(which pacman) ]]; then
   sudo pacman -Rs ack
 elif [[ $(which apt-get) ]]; then
