@@ -48,8 +48,10 @@ map <Leader>a :Ack! ""<Left>
 " Generic tag creator
 nmap <Silent> <Leader>t !ctags -R --exclude=.git --exclude=log ./*<CR>
 
-map <C-N>         :ClearCtrlPCache<CR>\|:CtrlP<CR>
-map <Leader>N     :ClearCtrlPCache<CR>\|:CtrlP<CR>
+" map <C-N>         :ClearCtrlPCache<CR>\|:CtrlP<CR>
+map <C-N>         :CtrlP<CR>
+" map <Leader>N     :ClearCtrlPCache<CR>\|:CtrlP<CR>
+map <Leader>N     :CtrlP<CR>
 map <Leader>e     :CtrlPBuffer<CR>
 map <Leader>n     :NERDTreeToggle<CR>
 map <Leader>/     <plug>NERDCommenterToggle
