@@ -13,6 +13,7 @@ alias ls='ls -aG'
 alias ll='ls -alF'
 alias grep='grep --color=auto'
 alias cap='cap -v'
+alias tree='tree -C'
 
 # Tools
 
