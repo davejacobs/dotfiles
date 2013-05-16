@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+directory=${1-.}
+
+if [[ $(which brew) ]]; then
+  brew install ack
+  brew install coreutils
+elif [[ $(which pacman) ]]; then
+  sudo pacman -S ack
+elif [[ $(which apt-get) ]]; then
+  sudo apt-get install ack-grep
+fi
+
+pushd $directory
+  for file in $(ls | grep -v -e "doc" -e "bin" -e "README.md"); do
+    echo "[linking] $(pwd)/${file} ~/.${file}"
+    ln -s $(pwd)/${file} ~/.${file}
+  done
+popd > /dev/null
+
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall
