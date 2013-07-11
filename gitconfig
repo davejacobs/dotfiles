@@ -42,3 +42,7 @@
   rl = flow release
   hf = flow hotfix
   sp = flow support
+[push]
+	default = current
+[pull]
+	default = current
