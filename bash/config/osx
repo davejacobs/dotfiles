@@ -14,6 +14,9 @@ fi
 
 source `brew --prefix`/etc/profile.d/z.sh
 
+# Install Casks to /Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # IPV6 support (if connected directly to non-NAT cable modem):
 # sudo ip6config start-v6 en0; sudo ip6config start-stf en0
 

@@ -1,4 +1,1 @@
-if $(which brew &> /dev/null); then
-  node_version=$(ls $(brew --cellar)/node | tail -1)
-  source $(brew --cellar)/node/${node_version}/lib/node_modules/npm/lib/utils/completion.sh
-fi
+[[ -r $NVM_DIR/bash_completion ]] && source $NVM_DIR/bash_completion
