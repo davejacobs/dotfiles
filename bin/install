@@ -1,24 +1,42 @@
 #!/usr/bin/env bash
 
-directory=${1-.}
+directory="."
+mode="all"
+simulate="false"
 
-if [[ $(which brew) ]]; then
-  brew install ack
-  brew install coreutils
-  brew install par
-  brew install gettext
-elif [[ $(which pacman) ]]; then
-  sudo pacman -S ack
-elif [[ $(which apt-get) ]]; then
-  sudo apt-get install ack-grep
-fi
+while getopts "o:vs" opt; do
+	case "$opt" in
+		o) 
+      directory=$OPTARG
+      ;;
+    v)
+      mode="vim"
+      ;;
+    s)
+      simulate="true"
+  esac
+done
+
+case $mode in
+  vim)
+    files=$(ls | grep vim)
+    ;;
+  all)
+    files=$(ls | grep -v -e "doc" -e "bin" -e "README.md")
+    ;;
+esac
 
 pushd $directory
-  for file in $(ls | grep -v -e "doc" -e "bin" -e "README.md"); do
-    echo "[linking] $(pwd)/${file} ~/.${file}"
-    ln -s $(pwd)/${file} ~/.${file}
+  for file in $files; do
+    echo "[linking] ~/.${file} -> $(pwd)/${file}"
+
+    if [[ $simulate == "false" ]]; then
+      ln -s $(pwd)/${file} ~/.${file}
+    fi
   done
 popd > /dev/null
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall +qall
+if [[ $simulate == "false" ]]; then
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  vim +BundleInstall +qall
+fi
