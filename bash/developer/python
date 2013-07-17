@@ -1,4 +1,10 @@
 if $(which virtualenvwrapper.sh &> /dev/null); then
-  source $(which virtualenvwrapper.sh) &> /dev/null
-  export DJANGO_SETTINGS_MODULE="config.environments.development"
+  # Old:
+  # source $(which virtualenvwrapper.sh) &> /dev/null
+
+  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+  export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/share/python/virtualenv
+  export WORKON_HOME=$HOME/.virtualenvs
+  source /usr/local/share/python/virtualenvwrapper.sh
 fi
+
