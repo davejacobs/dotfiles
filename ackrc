@@ -16,3 +16,7 @@ css=.sass,.scss,.less
 
 # Follow symlinks
 --follow
+--ignore-dir=client/app/components
+--ignore-dir=client/node_modules
+--ignore-dir=client/public
+--ignore-dir=logs
