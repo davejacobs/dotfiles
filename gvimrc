@@ -46,6 +46,7 @@ elseif has("gui_macvim")
   " map <D-N>         :ClearCtrlPCache<CR>\|:CtrlP<CR>
   map <D-N>           :CtrlP<CR>
   map <D-e>           :Eval<CR>
+  map <D-g>           :Gstatus<CR>
   map <D-n>           :NERDTreeToggle<CR>
   map <D-/>           <plug>NERDCommenterToggle
 
