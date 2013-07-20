@@ -23,3 +23,5 @@ done
 for completion in $(find $HOME/.bash/completions -type f | grep -v -e "gem"); do
   source $completion
 done
+
+clear

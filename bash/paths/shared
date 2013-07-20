@@ -4,3 +4,4 @@
 ~/bin
 ~/.lein
 ~/Projects/scripts/bin
+node_modules/.bin
