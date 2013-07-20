@@ -1,42 +1,58 @@
 #!/usr/bin/env bash
 
 directory="."
-mode="all"
-simulate="false"
+interactive="no"
+simulate="no"
 
-while getopts "o:vs" opt; do
+while getopts "o:is" opt; do
 	case "$opt" in
 		o) 
       directory=$OPTARG
       ;;
-    v)
-      mode="vim"
+    i)
+      interactive="yes"
       ;;
     s)
-      simulate="true"
+      simulate="yes"
+      ;;
   esac
 done
 
-case $mode in
-  vim)
-    files=$(ls | grep vim)
-    ;;
-  all)
-    files=$(ls | grep -v -e "doc" -e "bin" -e "README.md")
-    ;;
-esac
+normalize_yn_response() {
+  if [[ $1 =~ [Yy](es)? ]]; then
+    echo "yes"
+  else
+    echo "no"
+  fi
+}
 
-pushd $directory
-  for file in $files; do
-    echo "[linking] ~/.${file} -> $(pwd)/${file}"
+simulatedly_call() {
+  if [[ $simulate != "yes" ]]; then
+    echo "[calling] '${1}'"
+    $1
+  else
+    echo "[simulation] '${1}'"
+  fi
+}
 
-    if [[ $simulate == "false" ]]; then
-      ln -s $(pwd)/${file} ~/.${file}
+interactively_call() {
+  if [[ $interactive == "yes" ]]; then
+    read -p "[prompt] ${2}? " install_this
+    install_this=$(normalize_yn_response $install_this)
+    if [[ $install_this == "yes" ]]; then
+      simulatedly_call "$1"
     fi
+  else
+    simulatedly_call "$1"
+  fi
+}
+
+pushd $directory > /dev/null
+  files=$(ls | grep -v -e "doc" -e "bin" -e "README.md")
+  for file in $files; do
+    interactively_call "ln -s $(pwd)/${file} ~/.${file}" "Link .${file}"
   done
 popd > /dev/null
 
-if [[ $simulate == "false" ]]; then
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-  vim +BundleInstall +qall
-fi
+interactively_call "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle" "Vundle clone"
+interactively_call "vim +BundleInstall +qall" "Vundle installation"
