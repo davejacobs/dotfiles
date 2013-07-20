@@ -10,13 +10,5 @@ css=.sass,.scss,.less
 # Search with case sensitivity if there is mixed case
 --smart-case
 
---ignore-dir=resources/app/components
---ignore-dir=resources/public
---ignore-dir=resources/node_modules
-
 # Follow symlinks
 --follow
---ignore-dir=client/app/components
---ignore-dir=client/node_modules
---ignore-dir=client/public
---ignore-dir=logs
