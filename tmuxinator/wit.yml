@@ -1,12 +1,10 @@
 # ~/.tmuxinator/wit.yml
-# you can make as many tabs as you wish...
 
 project_name: wit
 project_root: ~/Projects/wit
-rbenv: 1.9.3@wit-clojure
+rbenv: 1.9.3@wit
 tabs:
   - server: lein ring server-headless
-  - grunt: "cd resources && ulimit -n 1024 && grunt watch"
-  - database: psql wit_clojure
+  - client: "cd resources && ulimit -n 1024 && grunt watch"
   - repl: lein repl
-  - bash: # empty
+  - bash: clear
