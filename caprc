@@ -1,1 +1,5 @@
-require 'capistrano_colors' rescue nil
+begin
+  require 'capistrano_colors' 
+rescue Exception
+end
+

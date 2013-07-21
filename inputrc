@@ -6,7 +6,5 @@ set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set blink-matching-paren on
 
-# set editing-mode vi
-
 # "\e[B": history-search-forward
 # "\e[A": history-search-backward
