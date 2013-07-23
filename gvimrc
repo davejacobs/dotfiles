@@ -23,6 +23,7 @@ elseif has("gui_macvim")
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
+  macmenu &File.Print key = <nop>
 
   " Conveniently access config files
   nmap <D-O>          :source %<CR>
@@ -49,6 +50,9 @@ elseif has("gui_macvim")
   map <D-g>           :Gstatus<CR>
   map <D-n>           :NERDTreeToggle<CR>
   map <D-/>           <plug>NERDCommenterToggle
+
+  vmap <D-p>           :!par<CR>
+  nmap <D-p>           vip!par<CR>
 
   " Copy current file path to system pasteboard
   nmap <D-C>          :call CopyPathWithLine()<CR>
