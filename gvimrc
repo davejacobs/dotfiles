@@ -19,7 +19,7 @@ if has("gui_gtk2")
   set guifont=Monaco\ 11
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
-  set guifont=Inconsolata:h16
+  set guifont=Inconsolata:h18
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
