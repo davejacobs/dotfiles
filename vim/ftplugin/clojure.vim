@@ -1,9 +1,9 @@
 " Clojure.vim
 
-" autocmd BufEnter *.clj RainbowParenthesesActivate
-" autocmd BufEnter *.clj RainbowParenthesesLoadRound
-" autocmd BufEnter *.clj RainbowParenthesesLoadSquare
-" autocmd BufEnter *.clj RainbowParenthesesLoadBraces
+au VimEnter *.clj RainbowParenthesesToggle
+au Syntax *.clj RainbowParenthesesLoadRound
+au Syntax *.clj RainbowParenthesesLoadSquare
+au Syntax *.clj RainbowParenthesesLoadBraces
 
 " How many lines the parser scans for matching delimiters 
 let g:clojure_maxlines = 150
