@@ -5,3 +5,4 @@
 ~/.lein
 ~/Projects/scripts/bin
 node_modules/.bin
+~/.datomic-free/bin
