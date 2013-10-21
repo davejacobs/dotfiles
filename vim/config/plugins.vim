@@ -17,7 +17,8 @@ let g:NERDTreeChDirMode=2             " Change working directory
 let g:NERDTreeIgnore = [
       \ 'tags',
       \ 'target',
-      \ 'node_modules'
+      \ 'node_modules',
+      \ '*\.pyc$'
       \ ]
 
 let g:Powerline_symbols='fancy'
