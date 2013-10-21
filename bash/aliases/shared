@@ -28,7 +28,9 @@ alias c='cucumber'
 alias t='rspec && cucumber'
 alias hb='HandBrakeCLI'
 
-p() {
+alias x='xmodmap ~/.Xmodmap'
+
+function p {
   psql $1 -c "$2"; 
 }
 
