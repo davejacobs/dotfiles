@@ -1,10 +1,8 @@
 if $(which virtualenvwrapper.sh &> /dev/null); then
-  # Old:
-  # source $(which virtualenvwrapper.sh) &> /dev/null
-
-  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-  export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/share/python/virtualenv
+  export VIRTUAL_ENV_DISABLE_PROMPT="true"
   export WORKON_HOME=$HOME/.virtualenvs
-  source /usr/local/share/python/virtualenvwrapper.sh
+  export VIRTUALENVWRAPPER_PYTHON=$(which python)
+  export VIRTUALENVWRAPPER_VIRTUALENV=$(which virtualenv)
+  # source /usr/local/bin/virtualenvwrapper.sh
+  source $(which virtualenvwrapper.sh)
 fi
-
