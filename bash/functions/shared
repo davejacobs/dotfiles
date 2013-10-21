@@ -16,3 +16,9 @@ fld() {
 pg() {
   pgrep "$@" | xargs ps -ef
 }
+
+lscmd() {
+  COMMANDS=$(echo $PATH | tr ":" "\n" | xargs -I @ find @ -type f -exec sh -c 'test -x {} && echo {}' \; 2> /dev/null)
+  ALIASES=$(alias | tr -d "alias ")
+  echo "$COMMANDS"$'\n'"$ALIASES" | sort -u
+}
