@@ -9,8 +9,10 @@ alias edfu='$EDITOR $HOME/.bash/functions/shared'
 
 # Default options
 
-alias ls='ls -aG'
-alias ll='ls -alF'
+# alias ls='ls -a'
+# alias ls='ls --color'
+# alias ls='ls -G'
+alias ll='ls -lF'
 alias grep='grep --color=auto'
 alias cap='cap -v'
 alias tree='tree -C'
