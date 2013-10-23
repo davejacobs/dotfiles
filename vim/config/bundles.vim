@@ -19,6 +19,9 @@ Bundle 'sjl/gundo.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 
+" Python
+Bundle 'klen/python-mode'
+
 " Clojure
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
