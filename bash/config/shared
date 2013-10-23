@@ -33,6 +33,7 @@ function createps1() {
   # local WHITE=$(colorize "1;37")
   local NONE=$(colorize "0")
 
+  # Other interesting Unicode characters to use in PS1: λ 
   local PS1="${NONE}[${GREEN}\u${NONE}@${BLUE}\h${NONE}]${LIGHT_RED} \W ${NONE}∴ "
   echo "$PS1"
 }
