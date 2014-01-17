@@ -57,3 +57,4 @@ map <Leader>n     :NERDTreeToggle<CR>
 map <Leader>/     <plug>NERDCommenterToggle
 
 map <D-e>         :Eval<CR>
+map <C-e>         :Eval<CR>

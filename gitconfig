@@ -8,6 +8,10 @@
 [core]
   filemode = false
   excludesfile = ~/.gitignore
+[push]
+	default = current
+[pull]
+	default = current
 [branch]
   autosetuprebase = always
 [diff]
@@ -42,7 +46,3 @@
   rl = flow release
   hf = flow hotfix
   sp = flow support
-[push]
-	default = current
-[pull]
-	default = current
