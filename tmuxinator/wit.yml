@@ -2,9 +2,8 @@
 
 project_name: wit
 project_root: ~/Projects/wit
-rbenv: 1.9.3@wit
-tabs:
+windows:
   - server: lein ring server-headless
-  - client: "cd resources && ulimit -n 1024 && grunt watch"
+  - client: "cd resources && grunt serve"
   - repl: lein repl
   - bash: clear

@@ -7,7 +7,7 @@ set expandtab           " Use soft tabs
 set tabstop=2           " Width of soft tabs
 set autoindent 
 set shiftwidth=2        " Width of autoindent
-set smartindent
+set nosmartindent       " Causes problems, esp. with reindenting hashes
 set smarttab            " Use shiftwidth to tab at line beginning
 set wrap                " Wrap text inside screen
 set linebreak           " Wrap words, not characters

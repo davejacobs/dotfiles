@@ -21,10 +21,21 @@ namedistro() {
   echo $ret
 }
 
+# Add path idempotently
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]
+    then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
 # Only source file if present
 sourcesafe() {
   [[ -f $1 ]] && source $1
 }
+
+# TODO: Use pathadd instead of this for idempotent
+# path adds
 
 # Create an environmental variable based on lines
 # in a file
@@ -35,6 +46,7 @@ sourceenv() {
   if [ -f $src ]; then
     entries=$(cat $src | grep -Ev '^\#|^$')
     for entry in $entries; do
+      # export $variable=$entry:${!variable}
       export $variable=$entry:${!variable}
     done
   fi
