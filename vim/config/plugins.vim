@@ -27,5 +27,7 @@ let g:Powerline_symbols='fancy'
 let g:syntastic_mode_map = {
       \ 'mode': 'active',
       \ 'active_filetypes': ['javascript'],
-      \ 'passive_filetypes': ['html'] 
+      \ 'passive_filetypes': ['html', 'python'] 
       \ }
+
+let g:pymode_lint = 0

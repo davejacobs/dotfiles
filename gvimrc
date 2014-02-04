@@ -2,6 +2,7 @@
 
 set guioptions=         " Reset options
 set guioptions+=i       " Show Vim icon in taskbar
+set guioptions+=e       " Show native GUI tabs
 set guioptions-=a       " Remove autoselect
 set guioptions-=A       " Remove autoselect
 set guioptions-=m       " Remove menu bar
@@ -19,7 +20,7 @@ if has("gui_gtk2")
   set guifont=Monaco\ 11
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
-  " set guifont=Inconsolata:h18
+  set guifont=Inconsolata:h18
   set guifont=Ubuntu\ Mono:h18
 
   " Delete MacVim key bindings before reusing
