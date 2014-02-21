@@ -4,8 +4,6 @@ tags
 *~
 *.swp
 .sass-cache
-.rbenv-version
-.rbenv-gemsets
 .dropbox
 .ackrc
 .ropeproject
