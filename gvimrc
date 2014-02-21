@@ -40,13 +40,12 @@ elseif has("gui_macvim")
   " Conveniently access config files
   nmap <D-O>          :source %<CR>
   nmap <D-<>          :edit $MYVIMRC<CR>
-  nmap <D-G>          :edit $MYGVIMRC<CR>
+  nmap <D->>g         :edit $MYGVIMRC<CR>
   nmap <D->>a         :edit ~/.vim/config/basic.vim<CR>
   nmap <D->>b         :edit ~/.vim/config/bundles.vim<CR>
   nmap <D->>f         :edit ~/.vim/config/functions.vim<CR>
   nmap <D->>k         :edit ~/.vim/config/keybindings.vim<CR>
   nmap <D->>p         :edit ~/.vim/config/plugins.vim<CR>
-  nmap <D->>g         :edit ~/.gvimrc<CR>
 
   " Enter full screen mode
   " map <D-F>           :set invfu<CR>
