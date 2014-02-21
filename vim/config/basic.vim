@@ -25,7 +25,7 @@ set tildeop             " Tilde is an operator
 set formatprg=par\ -w80 " Format paragraphs using par
 set wig+=checkouts/**   " Completion/search blacklist
 set wig+='
-set wig+=tmp/**,*node_modules/**,*dist/**,*components/**,public/**
+set wig+=tmp/**,*node_modules/**,*dist/**,public/**
 set wig+=*ext/**
 set wig+=*.pyc
 set autoread
