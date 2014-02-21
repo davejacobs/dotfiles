@@ -17,7 +17,17 @@ autocmd BufEnter * highlight clear nontext " Hide non-text characters
 autocmd BufEnter * highlight link nontext ignore
 
 if has("gui_gtk2")
-  set guifont=Monaco\ 11
+  set guifont=Ubuntu\ Mono\ 13
+
+  " Conveniently access config files
+  " nmap <C-<>          :edit $MYVIMRC<CR>
+  " nmap g         :edit $MYGVIMRC<CR>
+  " nmap a         :edit ~/.vim/config/basic.vim<CR>
+  " nmap b         :edit ~/.vim/config/bundles.vim<CR>
+  " nmap f         :edit ~/.vim/config/functions.vim<CR>
+  " nmap k         :edit ~/.vim/config/keybindings.vim<CR>
+  " nmap p         :edit ~/.vim/config/plugins.vim<CR>
+
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
   set guifont=Inconsolata:h18
