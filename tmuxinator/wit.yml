@@ -3,7 +3,5 @@
 project_name: wit
 project_root: ~/Projects/wit
 windows:
-  - server: lein ring server-headless
-  - client: "cd resources && grunt serve"
-  - repl: lein repl
-  - bash: clear
+  - server: "cd ../wit-server && lein serve"
+  - client: "cd ../wit-client && grunt serve"
