@@ -3,6 +3,6 @@
 name: wit
 root: ~/projects/wit
 windows:
-  - server: "cd ../wit-server && lein serve"
-  - client: "cd ../wit-client && grunt serve"
-  - ops: "cd ../wit-ops"
+  - server: "cd wit-server && lein serve"
+  - client: "cd wit-client && grunt serve"
+  - ops: "cd wit-ops"
