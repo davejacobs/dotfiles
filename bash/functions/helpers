@@ -23,10 +23,10 @@ namedistro() {
 
 # Add path idempotently
 pathadd() {
-    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]
-    then
-        PATH="${PATH:+"$PATH:"}$1"
-    fi
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]
+  then
+      PATH="${PATH:+"$PATH:"}$1"
+  fi
 }
 
 # Only source file if present
