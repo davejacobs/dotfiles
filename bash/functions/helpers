@@ -6,10 +6,10 @@ namedistro() {
     ret="osx"
     ;;
   Linux)
-    if [ -f "/etc/lsb-release" ]; then
-      ret="ubuntu"
-    elif [ -f "/etc/arch-release" ]; then
+    if [ -f "/etc/arch-release" ]; then
       ret="arch"
+    elif [ -f "/etc/lsb-release" ]; then
+      ret="ubuntu"
     fi
     ;;
   *)

@@ -1,8 +1,7 @@
 if $(which virtualenvwrapper.sh &> /dev/null); then
   export VIRTUAL_ENV_DISABLE_PROMPT="true"
   export WORKON_HOME=$HOME/.virtualenvs
-  export VIRTUALENVWRAPPER_PYTHON=$(which python)
+  export VIRTUALENVWRAPPER_PYTHON=$(which python2.7 || which python)
   export VIRTUALENVWRAPPER_VIRTUALENV=$(which virtualenv)
-  # source /usr/local/bin/virtualenvwrapper.sh
   source $(which virtualenvwrapper.sh)
 fi
