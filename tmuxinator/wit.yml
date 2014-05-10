@@ -2,9 +2,6 @@
 #
 name: wit
 root: ~/projects/wit
-# pre_window:
-  # - export RBENV_DIR=
-  # - export RBENV_VERSION=
 windows:
   - server: "cd ../wit-server && lein serve"
   - client: "cd ../wit-client && grunt serve"

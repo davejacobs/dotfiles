@@ -1,12 +1,8 @@
 # Directory config
-export WIT_PROJECTS_DIR="$HOME/projects"
-export WIT_WEB_DIR="$HOME/www"
-export WIT_DROPBOX_DIR="$HOME/dropbox"
-
 umask 022
 
 # Use full path to Vim for proper exit status
-export EDITOR=/usr/bin/vim 
+export EDITOR=$(which vim)
 
 function colorize() {
   local PREFIX="\[\e["
@@ -45,6 +41,6 @@ shopt -s checkwinsize # Update window after commands
 
 HISTCONTROL=${HISTCONTROL+,}ignoredups # De-dupe history
 HISTCONTROL=${HISTCONTROL+,}ignoreboth 
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=5000
+HISTFILESIZE=5000
 # HISTIGNORE="&:[bf]g:exit:git st:g st"

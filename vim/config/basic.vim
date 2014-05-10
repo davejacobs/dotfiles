@@ -1,5 +1,9 @@
 " Basic.vim - Basic Vim options, with thorough comments
 
+" Per-project .vimrc!
+set exrc 
+set secure 
+
 set hidden              " Allow unsaved changes in hidden buffers
 set hlsearch            " Highlight search results
 set visualbell t_vb=    " Get rid of that annoying error beep & flash

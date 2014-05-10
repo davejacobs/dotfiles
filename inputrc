@@ -6,9 +6,6 @@ set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set blink-matching-paren on
 
-# "\e[B": history-search-forward
-# "\e[A": history-search-backward
-
 "\e[1;3C": forward-word
 "\e[1;3D": backward-word
 
