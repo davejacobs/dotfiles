@@ -1,7 +1,7 @@
 Dotfiles
 ========
 
-The point of the directory? Dotfiles in the cloud. Nuff said.
+The point of the directory? Dotfiles in the cloud.
 
 Yes, I'm trying to keep all of my machines on the same dotfiles,
 branching my configurations where necessary. This should be a good baseline
