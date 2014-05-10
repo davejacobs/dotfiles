@@ -1,7 +1,11 @@
 # ~/.tmuxinator/wit.yml
-
-project_name: wit
-project_root: ~/Projects/wit
+#
+name: wit
+root: ~/projects/wit
+# pre_window:
+  # - export RBENV_DIR=
+  # - export RBENV_VERSION=
 windows:
   - server: "cd ../wit-server && lein serve"
   - client: "cd ../wit-client && grunt serve"
+  - ops: "cd ../wit-ops"
