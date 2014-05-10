@@ -21,12 +21,12 @@ if has("gui_gtk2")
 
   " Conveniently access config files
   " nmap <C-<>          :edit $MYVIMRC<CR>
-  " nmap g         :edit $MYGVIMRC<CR>
-  " nmap a         :edit ~/.vim/config/basic.vim<CR>
-  " nmap b         :edit ~/.vim/config/bundles.vim<CR>
-  " nmap f         :edit ~/.vim/config/functions.vim<CR>
-  " nmap k         :edit ~/.vim/config/keybindings.vim<CR>
-  " nmap p         :edit ~/.vim/config/plugins.vim<CR>
+  nmap <Leader>cg         :edit $MYGVIMRC<CR>
+  nmap <Leader>ca         :edit ~/.vim/config/basic.vim<CR>
+  nmap <Leader>cb         :edit ~/.vim/config/bundles.vim<CR>
+  nmap <Leader>cf         :edit ~/.vim/config/functions.vim<CR>
+  nmap <Leader>ck         :edit ~/.vim/config/keybindings.vim<CR>
+  nmap <Leader>cp         :edit ~/.vim/config/plugins.vim<CR>
 
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
