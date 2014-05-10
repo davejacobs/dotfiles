@@ -1,6 +1,3 @@
-alias wit="cd ~/www/wit.io/current"
-alias witb="cd ~/www/beta.wit.io/current"
-
 alias copy="xsel --clipboard --input"
 alias paste="xsel --clipboard --output"
 

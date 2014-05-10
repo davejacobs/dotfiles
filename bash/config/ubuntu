@@ -1,7 +1,3 @@
-# Directory config
-export WIT_PROJECTS_DIR="$HOME/projects/"
-export WIT_WEB_DIR="$HOME/www/"
-
 # Make less friendly for non-text input files, see lesspipe(1)
 [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 

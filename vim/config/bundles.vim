@@ -5,9 +5,13 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+" TimL
+Bundle 'tpope/timl'
+
 " Global plugins
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+" Bundle 'tpope/vim-vinegar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'

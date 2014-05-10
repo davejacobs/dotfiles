@@ -3,53 +3,22 @@
 # command options, shorthand for locations, and commands/functions
 
 # For sustainable aliases
-alias edal='$EDITOR $HOME/.bash/aliases/shared'
-alias edco='$EDITOR $HOME/.bash/config/shared'
-alias edfu='$EDITOR $HOME/.bash/functions/shared'
+alias edal="$EDITOR $HOME/.bash/aliases/shared"
+alias edco="$EDITOR $HOME/.bash/config/shared"
+alias edfu="$EDITOR $HOME/.bash/functions/shared"
 
 # Default options
 
-# alias ls='ls -a'
-# alias ls='ls --color'
-# alias ls='ls -G'
-alias ll='ls -lF'
-alias grep='grep --color=auto'
-alias cap='cap -v'
-alias tree='tree -C'
+alias ll="ls -lF"
+alias grep="grep --color=auto"
+alias tree="tree -C"
 
 # Tools
 
-alias g='git'
-alias s='ssh'
-alias r='ruby'
-alias l='lein'
-alias rs='rspec'
-alias c='cucumber'
-alias t='rspec && cucumber'
-alias hb='HandBrakeCLI'
-
-alias x='xmodmap ~/.Xmodmap'
-
-function p {
-  psql $1 -c "$2"; 
-}
-
-# Locations
-
-alias drb='cd $WIT_DROPBOX_DIR'
-alias dl='cd $WIT_DOWNLOADS_DIR'
-alias prj='cd $WIT_PROJECTS_DIR'
-
-# Projects
-
-alias stpr='cd $WIT_PROJECTS_DIR/stats'
-alias mipr='cd $WIT_PROJECTS_DIR/mint'
-alias wipr='cd $WIT_PROJECTS_DIR/wit'
-alias scpr='cd $WIT_PROJECTS_DIR/scripts'
-alias dfpr='cd $WIT_PROJECTS_DIR/dotfiles'
-alias mlpr='cd $WIT_PROJECTS_DIR/ml'
+alias g="git"
+alias s="ssh"
 
 # Commands
 
-alias tunnel='ssh -N -L 1234:localhost:80 $1'
-alias tunnelp='ssh -N -l david -L 1234:localhost:$2 $1'
+alias tunnel="ssh -N -L 1234:localhost:80 $1"
+alias tunnelp="ssh -N -l $(whoami) -L 1234:localhost:$2 $1"

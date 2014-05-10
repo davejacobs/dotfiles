@@ -1,4 +1,4 @@
-alias y='yaourt'
-alias p='sudo pacman'
-alias lsorphans='pacman -Qdtq'
-alias rmorphans='sudo pacman -Rsn $(pacman -Qdtq)'
+alias y="yaourt"
+alias p="sudo pacman"
+alias lsorphans="pacman -Qdtq"
+alias rmorphans="sudo pacman -Rsn $(lsorphans)"
