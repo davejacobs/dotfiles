@@ -2,3 +2,4 @@ vim/bundle
 lein/self-installs
 tmuxinator/*.yml
 doc/TODO*
+bash/completions/git
