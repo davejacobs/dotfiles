@@ -8,3 +8,6 @@ tags
 .ackrc
 .ropeproject
 Icon
+.lein-repl-history
+/target
+.repl

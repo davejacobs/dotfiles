@@ -1,8 +1,7 @@
+# /usr/local/share/npm/bin
+# node_modules/.bin
+/usr/local/share/npm/lib/node_modules/grunt-cli/bin
+~/bin
+~/Projects/scripts/bin
 /usr/local/sbin
 /usr/local/bin
-/usr/local/share/npm/bin
-~/bin
-~/.lein
-~/Projects/scripts/bin
-node_modules/.bin
-~/.datomic-free/bin
