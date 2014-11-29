@@ -1,8 +1,9 @@
 # ~/.tmuxinator/wit.yml
 #
 name: wit
-root: ~/projects/wit
+root: ~/Projects/wit
+# tmux_options: "-CC"
 windows:
   - server: "cd wit-server && lein serve"
   - client: "cd wit-client && grunt serve"
-  - ops: "cd wit-ops"
+  - bash: "cd wit-client"
