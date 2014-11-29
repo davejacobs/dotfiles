@@ -55,6 +55,7 @@ map <C-N>         :CtrlP<CR>
 map <Leader>N     :CtrlP<CR>
 map <Leader>e     :CtrlPBuffer<CR>
 map <Leader>n     :NERDTreeToggle<CR>
-map <Leader>/     <plug>NERDCommenterToggle
+" map <Leader>/     <plug>NERDCommenterToggle
+map <Leader>/     :TComment<CR>
 
 map <C-e>         :Eval<CR>
