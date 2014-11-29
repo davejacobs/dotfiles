@@ -18,28 +18,38 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'rizzatti/dash.vim'
 
 " Ruby
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 
 " Python
-Bundle 'klen/python-mode'
+" Bundle 'klen/python-mode'
 
-" Clojure
+" Clojure, Haskell, Purescript
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
 Bundle 'kien/rainbow_parentheses.vim'
 " Bundle 'vim-scripts/paredit.vim'
+Bundle 'raichoo/purescript-vim'
 
 " Javascript & HTML5 & CSS
-Bundle 'vim-scripts/vim-javascript'
+" Bundle 'vim-scripts/vim-javascript'
+" This is currently more updated than the above (which is
+" a derivative)
+Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5-syntax.vim'
-Bundle 'nono/vim-handlebars'
+Bundle 'jsx/jsx.vim'
+" Bundle 'mxw/vim-jsx'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'davidoc/taskpaper.vim'
 
 " Utilities
 Bundle 'tpope/vim-surround'

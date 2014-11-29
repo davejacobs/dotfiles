@@ -5,3 +5,4 @@ setlocal softtabstop=4
 setlocal shiftwidth=4
 
 let g:NERDTreeIgnore += ['*\.pyc$']
+let g:pymode_rope_completion = 0
