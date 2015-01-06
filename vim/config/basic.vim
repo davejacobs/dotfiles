@@ -43,3 +43,5 @@ if has('unix') || has('mac')
 end
 
 autocmd FocusLost * silent! wall
+
+
