@@ -1,10 +1,10 @@
 # Don't use this in order to make bashl loading faster
-if $(which virtualenvwrapper.sh &> /dev/null); then
+if $(type -P virtualenvwrapper.sh &> /dev/null); then
   export VIRTUAL_ENV_DISABLE_PROMPT="true"
   export WORKON_HOME=$HOME/.virtualenvs
-  export VIRTUALENVWRAPPER_PYTHON=$(which python2.7 || which python)
-  export VIRTUALENVWRAPPER_VIRTUALENV=$(which virtualenv)
-  source $(which virtualenvwrapper.sh)
+  export VIRTUALENVWRAPPER_PYTHON=$(type -P python2.7 || type -P python)
+  export VIRTUALENVWRAPPER_VIRTUALENV=$(type -P virtualenv)
+  source $(type -P virtualenvwrapper.sh)
 fi
 
 # A faster virtualenvwrapper
