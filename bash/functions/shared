@@ -22,3 +22,7 @@ lscmd() {
   ALIASES=$(alias | tr -d "alias ")
   echo "$COMMANDS"$'\n'"$ALIASES" | sort -u
 }
+
+clone() {
+  git clone http://github.com/${1}.git
+}
