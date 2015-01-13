@@ -3,3 +3,4 @@ lein/self-installs
 tmuxinator/*.yml
 doc/TODO*
 bash/completions/git
+.netrwhist
