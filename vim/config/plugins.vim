@@ -31,3 +31,5 @@ let g:syntastic_mode_map = {
       \ }
 
 let g:pymode_lint = 0
+
+au BufNewFile,BufRead *.ejs set filetype=html
