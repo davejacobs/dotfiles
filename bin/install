@@ -5,8 +5,8 @@ interactive="no"
 simulate="no"
 
 while getopts "o:is" opt; do
-	case "$opt" in
-		o) 
+  case "$opt" in
+    o) 
       directory=$OPTARG
       ;;
     i)
