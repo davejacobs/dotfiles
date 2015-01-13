@@ -22,6 +22,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'tpope/vim-abolish'
 
 " Ruby
 Bundle 'vim-ruby/vim-ruby'
