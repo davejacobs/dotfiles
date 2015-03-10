@@ -32,4 +32,8 @@ let g:syntastic_mode_map = {
 
 let g:pymode_lint = 0
 
+call tcomment#DefineType('jsx', '// %s')
+call tcomment#DefineType('jsx_block', g:tcommentBlockC)
+call tcomment#DefineType('jsx_inline', g:tcommentInlineC)
+
 au BufNewFile,BufRead *.ejs set filetype=html
