@@ -17,6 +17,7 @@ alias tree="tree -C"
 
 alias g="git"
 alias s="ssh"
+alias m="./manage.py "
 
 # Commands
 
