@@ -1,1 +1,6 @@
-[ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh
+if [[ -s ~/.nvm/nvm.sh ]]; then
+  source ~/.nvm/nvm.sh
+else
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+fi
