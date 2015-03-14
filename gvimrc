@@ -74,5 +74,7 @@ elseif has("gui_macvim")
   nmap <D-F>          :call CopyClojureNamespace()<CR>
 end
 
-colorscheme solarized
-set background=light
+" set background=light
+" colorscheme solarized
+set background=dark
+colorscheme toychest
