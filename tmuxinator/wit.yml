@@ -1,9 +1,11 @@
 # ~/.tmuxinator/wit.yml
 #
 name: wit
-root: ~/Projects/wit
-# tmux_options: "-CC"
+root: ~/projects/wit.io
+# pre_window:
+  # - export RBENV_DIR=
+  # - export RBENV_VERSION=
 windows:
-  - server: "cd wit-server && lein serve"
-  - client: "cd wit-client && grunt serve"
-  - bash: "cd wit-client"
+  - server: "cd ../wit-server; lein serve"
+  - client: "npm start"
+  - bash: #
