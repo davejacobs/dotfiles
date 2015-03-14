@@ -36,7 +36,7 @@ set wig+=*.pyc
 set autoread
 set autowriteall        " Save when focus is lost
 set statusline=
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 if has('unix') || has('mac')
   set directory=/tmp    " Don't store swap files by the originals!
