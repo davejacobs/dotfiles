@@ -17,7 +17,8 @@ autocmd BufEnter * highlight clear nontext " Hide non-text characters
 autocmd BufEnter * highlight link nontext ignore
 
 if has("gui_gtk2")
-  set guifont=Ubuntu\ Mono\ 13
+  " set guifont=Inconsolata\ 11
+  set guifont=Ubuntu\ Mono\ 12
 
   " Conveniently access config files
   " nmap <C-<>          :edit $MYVIMRC<CR>
@@ -28,10 +29,12 @@ if has("gui_gtk2")
   nmap <Leader>ck         :edit ~/.vim/config/keybindings.vim<CR>
   nmap <Leader>cp         :edit ~/.vim/config/plugins.vim<CR>
 
+  vmap <C-c>          "+y
+
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
   set guifont=Inconsolata:h18
-  set guifont=Ubuntu\ Mono:h18
+  set guifont=Ubuntu\ Mono:h16
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
