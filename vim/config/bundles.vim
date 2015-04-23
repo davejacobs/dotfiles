@@ -3,66 +3,65 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " TimL
-Bundle 'tpope/timl'
+Plugin 'tpope/timl'
 
 " Global plugins
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-" Bundle 'tpope/vim-vinegar'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-abolish'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'tpope/vim-vinegar'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-abolish'
 " Will work with Ack!
-Bundle 'tpope/vim-dispatch'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'tpope/vim-abolish'
+Plugin 'tpope/vim-dispatch'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'rizzatti/dash.vim'
 
 " Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 
 " Python
-" Bundle 'klen/python-mode'
+" Plugin 'klen/python-mode'
 
 " Clojure, Haskell, Purescript
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-fireplace'
-Bundle 'kien/rainbow_parentheses.vim'
-" Bundle 'vim-scripts/paredit.vim'
-Bundle 'raichoo/purescript-vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'vim-scripts/paredit.vim'
+Plugin 'raichoo/purescript-vim'
 
 " Javascript & HTML5 & CSS
-" Bundle 'vim-scripts/vim-javascript'
+" Plugin 'vim-scripts/vim-javascript'
 " This is currently more updated than the above (which is
 " a derivative)
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'othree/html5-syntax.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'jsx/jsx.vim'
-" Bundle 'mxw/vim-jsx'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-haml'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'davidoc/taskpaper.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'othree/html5-syntax.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'jsx/jsx.vim'
+" Plugin 'mxw/vim-jsx'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-haml'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'davidoc/taskpaper.vim'
 
 " Utilities
-Bundle 'tpope/vim-surround'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-endwise'
 
 " Themes
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'imsizon/wombat.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'imsizon/wombat.vim'
