@@ -22,3 +22,9 @@ The install should work on OS X, Arch Linux, and Ubuntu.
 
 If you want your prompt to load faster, consider editing your `.bash_profile`
 and removing completions and language version managers.
+
+### To do ###
+
+- [ ] Modularize configuration, aliases, etc.
+- [ ] Convert segments of config into homebrew taps
+- [ ] Allow for easier install/uninstall
