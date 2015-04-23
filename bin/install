@@ -52,11 +52,15 @@ interactively_call() {
 pushd $directory > /dev/null
   files=$(ls | grep -v -e "doc" -e "bin" -e "README.md" -e '~')
   for file in $files; do
-    # rm -rf ~/.${file}
+    rm -rf $HOME/.${file}
     interactively_call "ln -s $(pwd)/${file} $HOME/.${file}" "Link .${file}"
   done
 popd > /dev/null
 
-interactively_call "curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -L > bash/completions/git" "Git autocompletion"
-interactively_call "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle" "Vundle clone"
+interactively_call "curl -L https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o bash/completions/git" "Git autocompletion"
+
+if [[ ! -d $HOME/.vim/bundle/vundle ]]; then
+  interactively_call "git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle" "Vundle clone"
+fi
+
 interactively_call "vim +BundleInstall +qall" "Vundle installation"
