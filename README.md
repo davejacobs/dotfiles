@@ -25,6 +25,7 @@ and removing completions and language version managers.
 
 ### To do ###
 
-- [ ] Modularize configuration, aliases, etc.
+- [ ] Modularize installation
+- [ ] Modularize configuration files, aliases, etc.
 - [ ] Convert segments of config into homebrew taps
 - [ ] Allow for easier install/uninstall
