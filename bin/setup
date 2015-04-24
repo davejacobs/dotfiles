@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Initial setup script
+# This script will setup a Mac (running Yosemite)
+# from scratch. This is probably only useful for @davejacobs, but feel free to co-opt it for yourself.
+
+set -e
+
+declare email
+read -p "What is your email address?" email
+
+# Generate SSH key
+ssh-keygen -t rsa -C "$email" -N "" -f ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub 
+
+echo "+ Public key has been copied to your clipboard."
+
+# Stop annoying Apple behavior
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Install GCC
+xcode-select --install
+
+# Install Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install deps
+brew install tmux
+brew install ruby-build
+brew install rbenv
+brew install rbenv-gemset
+brew install python
+brew install pup
+brew install jq
+
+brew install caskroom/cask/brew-cask
+
+# Install free GUI apps
+brew cask install iterm2
+brew cask install alfred
+brew cask install macvim
+brew cask install google-chrome
+brew cask install limechat
+
+# Install paid GUI apps
+brew cask install jumpcut
+brew cask install hipchat
+brew cask install fluid
+brew cask install divvy
+
+pushd Downloads &> /dev/null
+  curl http://font.ubuntu.com/download/ubuntu-font-family-0.80.zip -o fonts.zip
+  unzip fonts.zip
+  cd fonts
+  mv *.ttf ~/Library/Fonts
+popd &> /dev/null
+
+see ~/Library
