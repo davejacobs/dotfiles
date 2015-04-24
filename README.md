@@ -9,7 +9,7 @@ to build your own dotfiles, if you are just starting out. However, there
 are definitely configuration options that are particular to me (for example,
 my Github and IRC usernames, aliases to directories on my box, etc.).
 
-I'm thinking about containing user-specific config in a config file, as
+I'm thinking about moving user-specific config to a config file, as
 soon as I come up with a good way to do that in bash.
 
 If you do want to install:
