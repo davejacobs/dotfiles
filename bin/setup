@@ -56,3 +56,9 @@ pushd Downloads &> /dev/null
 popd &> /dev/null
 
 see ~/Library
+
+echo "Reminders:"
+echo "- Set up FileVault"
+echo "- Remove entries from the sidebar"
+echo "- Install powerline fonts"
+echo "- Install and set up mail app"
