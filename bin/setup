@@ -30,6 +30,7 @@ brew install ruby-build
 brew install rbenv
 brew install rbenv-gemset
 brew install python
+brew install ack
 brew install pup
 brew install jq
 
@@ -41,6 +42,7 @@ brew cask install alfred
 brew cask install macvim
 brew cask install google-chrome
 brew cask install limechat
+brew cask install scroll-reverser
 
 # Install paid GUI apps
 brew cask install jumpcut
@@ -48,11 +50,30 @@ brew cask install hipchat
 brew cask install fluid
 brew cask install divvy
 
-pushd Downloads &> /dev/null
-  curl http://font.ubuntu.com/download/ubuntu-font-family-0.80.zip -o fonts.zip
+pushd /tmp &> /dev/null
+  curl http://font.ubuntu.com/download/ubuntu-font-family-0.80.zip \
+    -o fonts.zip
   unzip fonts.zip
   cd fonts
   mv *.ttf ~/Library/Fonts
+
+  curl https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master \
+    -o iterm-themes.zip
+  unzip iterm-themes.zip
+  pushd iterm2-color-schemes &> /dev/null
+    for f in *; do
+      theme=$(basename "$f")
+      defaults write \
+        -app iTerm "Custom Color Presets" \
+        -dict-add "$theme" "$(cat "$f")"
+    done
+  popd &> /dev/null
+
+  git clone git@github.com:jschoolcraft/Limechat-Themes.git
+  pushd Limechat-Themes &> /dev/null
+    rake themes:init
+    rake themes:install
+  popd &> /dev/null
 popd &> /dev/null
 
 see ~/Library
@@ -62,3 +83,9 @@ echo "- Set up FileVault"
 echo "- Remove entries from the sidebar"
 echo "- Install powerline fonts"
 echo "- Install and set up mail app"
+echo "- Install Taskpaper, Mail"
+echo "- Change terminal font"
+echo "- Make option key work for CLI navigation"
+echo "- Cursor -> vertical bar"
+echo "- Change default view to column view"
+echo "- Configure themes for Atom, Taskpaper, etc."
