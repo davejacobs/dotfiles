@@ -40,5 +40,6 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^table',
       \ '^drop',
       \ '^fact',
-      \ '^->'
+      \ '^->',
+      \ '^dom'
       \ ]
