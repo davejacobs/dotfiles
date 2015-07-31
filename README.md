@@ -1,5 +1,4 @@
-Dotfiles
-========
+# Dotfiles
 
 The point of the directory? Dotfiles in the cloud.
 
