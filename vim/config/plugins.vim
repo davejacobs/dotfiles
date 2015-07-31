@@ -5,65 +5,63 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
-" TimL
-Plugin 'tpope/timl'
-
-" Global plugins
+" Navigation
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'EvanDotPro/nerdtree-chmod'
-" Plugin 'tpope/vim-vinegar'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-dispatch' " Will work with Ack!
-Plugin 'bling/vim-airline'
-Plugin 'vim-scripts/matchit.zip'
 Plugin 'mileszs/ack.vim'
+" Plugin 'tpope/vim-vinegar'
+
+" General editing
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
+Plugin 'kana/vim-textobj-user'
+
+" Code editing
 Plugin 'scrooloose/syntastic'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch'       " Will work with Ack!
+Plugin 'vim-scripts/matchit.zip'
+
+" Writing
+Plugin 'amix/vim-zenroom2'
+
+" Status and other things
+Plugin 'bling/vim-airline'
 Plugin 'sjl/gundo.vim'
-Plugin 'mattn/webapi-vim'   " Needed for gist-vim
+
+" Network
+Plugin 'mattn/webapi-vim'         " Needed for gist-vim
 Plugin 'mattn/gist-vim'
 Plugin 'rizzatti/dash.vim'
-Plugin 'tpope/vim-abolish'
 
-" Ruby
+" Languages and frameworks
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
 
-" Python
-" Plugin 'klen/python-mode'
-
-" Clojure, Haskell, Purescript
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
 " Plugin 'vim-scripts/paredit.vim'
-Plugin 'raichoo/purescript-vim'
-
-" Javascript & HTML5 & CSS
-" Plugin 'vim-scripts/vim-javascript'
-" This is currently more updated than the above (which is
-" a derivative)
-Plugin 'pangloss/vim-javascript'
+" Plugin 'raichoo/purescript-vim'
+" Plugin 'vim-scripts/vim-javascript' 
+Plugin 'pangloss/vim-javascript'  " This is currently more updated than the above
+                                  " (which is a derivative)
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'jsx/jsx.vim'
-" Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'davidoc/taskpaper.vim'
-
-" Other languages
 Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/timl'
 
-" Utilities
-Plugin 'tpope/vim-surround'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'tpope/vim-endwise'
+" Productivity
+Plugin 'davidoc/taskpaper.vim'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
