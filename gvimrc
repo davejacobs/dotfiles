@@ -24,10 +24,10 @@ if has("gui_gtk2")
   " nmap <C-<>          :edit $MYVIMRC<CR>
   nmap <Leader>cg         :edit $MYGVIMRC<CR>
   nmap <Leader>ca         :edit ~/.vim/config/basic.vim<CR>
-  nmap <Leader>cb         :edit ~/.vim/config/bundles.vim<CR>
+  nmap <Leader>cb         :edit ~/.vim/config/plugins.vim<CR>
   nmap <Leader>cf         :edit ~/.vim/config/functions.vim<CR>
   nmap <Leader>ck         :edit ~/.vim/config/keybindings.vim<CR>
-  nmap <Leader>cp         :edit ~/.vim/config/plugins.vim<CR>
+  nmap <Leader>cp         :edit ~/.vim/config/plugins-config.vim<CR>
 
   vmap <C-c>          "+y
 
@@ -45,13 +45,13 @@ elseif has("gui_macvim")
   nmap <D-<>          :edit $MYVIMRC<CR>
   nmap <D->>g         :edit $MYGVIMRC<CR>
   nmap <D->>a         :edit ~/.vim/config/basic.vim<CR>
-  nmap <D->>b         :edit ~/.vim/config/bundles.vim<CR>
+  nmap <D->>b         :edit ~/.vim/config/plugins.vim<CR>
   nmap <D->>f         :edit ~/.vim/config/functions.vim<CR>
   nmap <D->>k         :edit ~/.vim/config/keybindings.vim<CR>
-  nmap <D->>p         :edit ~/.vim/config/plugins.vim<CR>
+  nmap <D->>p         :edit ~/.vim/config/plugins-config.vim<CR>
 
   " Enter full screen mode
-  " map <D-F>           :set invfu<CR>
+  map <M-D-f>         :set invfu<CR>
 
   " Move between buffers
   map <M-D-Left>      :bprevious<CR>
