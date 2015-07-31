@@ -11,3 +11,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # sudo ip6config start-v6 en0; sudo ip6config start-stf en0
 
 # [1]: http://geoff.greer.fm/lscolors/
+
+if [ $(which lunchy) ]; then
+  LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+  if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
+  . $LUNCHY_DIR/lunchy-completion.bash
+  fi
+fi
