@@ -29,13 +29,24 @@ pathadd() {
   fi
 }
 
+# Second option, follows symlinks
+add_to_path() {
+  for d; do
+    d=$(cd -- "$d" && { pwd -P || pwd; }) 2>/dev/null # canonicalize symbolic links
+    if [ -z "$d" ]; then continue; fi # skip nonexistent directory
+    case ":$PATH:" in
+      *":$d:"*) :;;
+      *) PATH=$PATH:$d;;
+    esac
+  done
+}
+
 # Only source file if present
 sourcesafe() {
   [[ -f $1 ]] && source $1
 }
 
-# TODO: Use pathadd instead of this for idempotent
-# path adds
+# TODO: Use pathadd instead of this for idempotent path adds
 
 # Create an environmental variable based on lines
 # in a file
