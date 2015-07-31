@@ -4,3 +4,4 @@ tmuxinator/*.yml
 doc/TODO*
 bash/completions/git
 .netrwhist
+git-completion.bash
