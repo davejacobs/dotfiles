@@ -1,39 +1,72 @@
-" Plugins.vim - Configuration for all global plugins
+" Plugins.vim - Declarative package management with Vundle
 
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_user_command = {
-      \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-      \ },
-      \ 'fallback': 'find %s -type f'
-      \ }
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
 
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeWinSize=20
-let g:NERDTreeDirArrows=1
-let g:NERDSpaceDelims=1               " Add a space before comments
-let g:NERDTreeChDirMode=2             " Change working directory 
-                                      " when appropriate
-let g:NERDTreeIgnore = [
-      \ 'tags',
-      \ 'target',
-      \ 'node_modules',
-      \ '*\.pyc$'
-      \ ]
+Plugin 'gmarik/vundle'
 
-let g:Powerline_symbols='fancy'
+" TimL
+Plugin 'tpope/timl'
 
-" Actively correct Javascript, do not actively correct HTML
-let g:syntastic_mode_map = {
-      \ 'mode': 'active',
-      \ 'active_filetypes': ['javascript'],
-      \ 'passive_filetypes': ['html', 'sass', 'scss', 'scss.css', 'python'] 
-      \ }
+" Global plugins
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'EvanDotPro/nerdtree-chmod'
+" Plugin 'tpope/vim-vinegar'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch' " Will work with Ack!
+Plugin 'bling/vim-airline'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'mattn/webapi-vim'   " Needed for gist-vim
+Plugin 'mattn/gist-vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'tpope/vim-abolish'
 
-let g:pymode_lint = 0
+" Ruby
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 
-call tcomment#DefineType('jsx', '// %s')
-call tcomment#DefineType('jsx_block', g:tcommentBlockC)
-call tcomment#DefineType('jsx_inline', g:tcommentInlineC)
+" Python
+" Plugin 'klen/python-mode'
 
-au BufNewFile,BufRead *.ejs set filetype=html
+" Clojure, Haskell, Purescript
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'vim-scripts/paredit.vim'
+Plugin 'raichoo/purescript-vim'
+
+" Javascript & HTML5 & CSS
+" Plugin 'vim-scripts/vim-javascript'
+" This is currently more updated than the above (which is
+" a derivative)
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'othree/html5-syntax.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'jsx/jsx.vim'
+" Plugin 'mxw/vim-jsx'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-haml'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'davidoc/taskpaper.vim'
+
+" Other languages
+Plugin 'rust-lang/rust.vim'
+
+" Utilities
+Plugin 'tpope/vim-surround'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-endwise'
+
+" Themes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'imsizon/wombat.vim'
+
+call vundle#end()
