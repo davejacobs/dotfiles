@@ -16,8 +16,15 @@ alias tree="tree -C"
 # Tools
 
 alias g="git"
+alias gr="git"
 alias s="ssh"
 alias m="./manage.py "
+
+if [ $(which pgcli) ]; then
+  alias p="pgcli"
+else
+  alias p="psql"
+fi
 
 # Commands
 
