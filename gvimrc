@@ -18,7 +18,7 @@ autocmd BufEnter * highlight link nontext ignore
 
 if has("gui_gtk2")
   " set guifont=Inconsolata\ 11
-  set guifont=Ubuntu\ Mono\ 12
+  set guifont=Ubuntu\ Mono\ 11
 
   " Conveniently access config files
   " nmap <C-<>          :edit $MYVIMRC<CR>
@@ -33,8 +33,8 @@ if has("gui_gtk2")
 
 elseif has("gui_macvim")
   " Only looks good in experimental renderer
-  set guifont=Inconsolata:h18
-  set guifont=Ubuntu\ Mono:h16
+  " set guifont=Inconsolata:h18
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
@@ -74,7 +74,9 @@ elseif has("gui_macvim")
   nmap <D-F>          :call CopyClojureNamespace()<CR>
 end
 
-" set background=light
-" colorscheme solarized
-set background=dark
-colorscheme toychest
+set background=light
+colorscheme solarized
+" colorscheme toychest
+" colorscheme github
+" colorscheme flatui
+" colorscheme monokai
