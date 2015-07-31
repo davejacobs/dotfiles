@@ -1,7 +1,7 @@
 ~/bin
-~/Projects/scripts/bin
 /usr/local/sbin
 /usr/local/bin
 ~/.rbenv/bin
 ~/.cabal/bin
 .cabal-sandbox/bin
+node_modules/.bin
