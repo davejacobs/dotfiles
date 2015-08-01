@@ -1,3 +1,5 @@
-~/.local/bin
+~/projects/automate/bin
 ~/projects/scripts/bin
-node_modules/.bin
+~/projects/media/bin
+~/.local/bin
+~/.npm/bin
