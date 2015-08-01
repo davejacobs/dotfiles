@@ -24,8 +24,10 @@ for completion in $(find $HOME/.bash/completions -type f | grep -v -e "gem"); do
   source $completion
 done
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  source $(brew --prefix)/etc/bash_completion
+if [ $(type -P brew) ]; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+  fi
 fi
 
 ulimit -n 1024
