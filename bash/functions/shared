@@ -26,15 +26,3 @@ lscmd() {
 clone() {
   git clone http://github.com/${1}.git
 }
-
-edscr() {
-  file=${1-""}
-  full_file="$HOME/projects/scripts/bin/${file}"
-
-  if [ ! -f $full_file ]; then
-    touch $full_file
-    chmod +x $full_file
-  fi
-
-  $EDITOR $full_file 
-}
