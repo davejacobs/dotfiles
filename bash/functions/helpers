@@ -58,7 +58,7 @@ sourceenv() {
     entries=$(cat $src | grep -Ev '^\#|^$')
     for entry in $entries; do
       # export $variable=$entry:${!variable}
-      export $variable=$entry:${!variable}
+      export $variable=${!variable}:$entry
     done
   fi
 }
