@@ -110,7 +110,7 @@ brew cask install limechat
 brew cask install fluid
 brew cask install divvy
 brew cask install 1password
-brew cask install rdio
+brew cask install spotify
 
 pushd /tmp &> /dev/null
   echo "Install Ubuntu font family"
