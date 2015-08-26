@@ -4,6 +4,10 @@ else
   export NVM_DIR=~/.nvm
 
   if [[ $(which brew) ]]; then
-    source $(brew --prefix nvm)/nvm.sh
+    nvm_script=$(brew --prefix nvm)/nvm.sh
+
+    if [[ -f $nvm_script ]]; then
+      source $nvm_script
+    fi
   fi
 fi
