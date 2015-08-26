@@ -89,6 +89,11 @@ brew install jq
 echo "Install Brew Cask"
 brew install caskroom/cask/brew-cask
 
+echo "Install fonts"
+brew tap caskroom/fonts
+brew cask install font-ubuntu  
+brew cask install font-inconsolata
+
 echo "Install free GUI apps"
 brew cask install iterm2
 brew cask install alfred
