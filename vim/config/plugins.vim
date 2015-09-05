@@ -36,7 +36,7 @@ Plugin 'sjl/gundo.vim'
 " Network
 Plugin 'mattn/webapi-vim'         " Needed for gist-vim
 Plugin 'mattn/gist-vim'
-Plugin 'rizzatti/dash.vim'
+" Plugin 'rizzatti/dash.vim'
 
 " Languages and frameworks
 Plugin 'vim-ruby/vim-ruby'
