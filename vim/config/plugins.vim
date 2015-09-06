@@ -9,7 +9,7 @@ Plugin 'gmarik/vundle'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'EvanDotPro/nerdtree-chmod'
-Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 " Plugin 'tpope/vim-vinegar'
 
 " General editing

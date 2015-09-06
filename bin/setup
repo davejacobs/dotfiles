@@ -76,7 +76,7 @@ brew install ruby-build
 brew install rbenv
 brew install rbenv-gemset
 brew install python
-brew install ack
+brew install the_silver_searcher
 brew install pup
 brew install jq
 
