@@ -18,7 +18,8 @@ alias tree="tree -C"
 alias g="git"
 alias gr="git"
 alias s="ssh"
-alias m="./manage.py "
+alias m="./manage.py"
+alias v="vim"
 
 if [ $(which pgcli) ]; then
   alias p="pgcli"
