@@ -13,8 +13,10 @@ set guioptions-=b       " Remove bottom scrollbar
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
 
 autocmd BufEnter * highlight Search gui=underline
-autocmd BufEnter * highlight clear nontext " Hide non-text characters
+" autocmd BufEnter * highlight clear nontext " Hide non-text characters
 autocmd BufEnter * highlight link nontext ignore
+autocmd BufEnter * highlight NonText guifg=bg " Hide tildes at end of file
+highlight NonText guifg=bg " Hide tildes at end of file
 
 if has("gui_gtk2")
   " set guifont=Inconsolata\ 11
