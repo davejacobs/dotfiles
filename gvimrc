@@ -22,6 +22,8 @@ if has("gui_gtk2")
   " set guifont=Inconsolata\ 11
   set guifont=Ubuntu\ Mono\ 11
 
+  map <C-f>           :Ag! ""<Left>
+
   " Conveniently access config files
   " nmap <C-<>          :edit $MYVIMRC<CR>
   nmap <Leader>cg         :edit $MYGVIMRC<CR>
@@ -55,6 +57,8 @@ elseif has("gui_macvim")
 
   " Enter full screen mode
   map <M-D-f>         :set invfu<CR>
+
+  map <D-f>           :Ag! ""<Left>
 
   " Move between buffers
   map <M-D-Left>      :bprevious<CR>
