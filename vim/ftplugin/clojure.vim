@@ -35,11 +35,15 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^GET',
       \ '^POST',
       \ '^PUT',
+      \ '^PATCH',
       \ '^DELETE',
       \ '^OPTIONS',
       \ '^table',
       \ '^drop',
       \ '^fact',
       \ '^->',
-      \ '^dom'
+      \ '^dom',
+      \ '^did',
+      \ '^will',
+      \ '^render'
       \ ]
