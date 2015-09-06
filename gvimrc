@@ -39,7 +39,7 @@ elseif has("gui_macvim")
   " Only looks good in experimental renderer
   " set guifont=Inconsolata:h18
   " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
-  set guifont=Ubuntu\ Mono:h15
+  set guifont=Ubuntu\ Mono:h16
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
