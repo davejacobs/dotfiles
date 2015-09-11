@@ -11,3 +11,8 @@ dockify() {
 repeatify() {
   defaults write -g ApplePressAndHoldEnabled -bool false
 }
+
+change-hostname() {
+  sudo scutil –-set HostName "$@"
+  hostname "$@"
+}
