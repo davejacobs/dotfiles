@@ -43,7 +43,7 @@ autocmd BufWritePre *.js,*.rb,*.py,*.scss,*.md
       \ call StripTrailingWhitespace()
 
 " Plugins
-map <Leader>a :Ack! ""<Left>
+map <Leader>a :Ag! ""<Left>
 
 " Generic tag creator
 nmap <Silent> <Leader>t !ctags -R --exclude=.git --exclude=log ./*<CR>

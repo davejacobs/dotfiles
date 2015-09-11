@@ -45,6 +45,8 @@ elseif has("gui_macvim")
   macmenu &Edit.Find.Find\.\.\. key = <nop>
   macmenu &File.Print key = <nop>
 
+  map <D-f>           :Ag! ""<Left>
+
   " Conveniently access config files
   nmap <D-O>          :source %<CR>
   nmap <D-<>          :edit $MYVIMRC<CR>
