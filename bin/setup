@@ -72,13 +72,17 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 echo "Install deps"
 brew install tmux
+brew install ctags
 brew install ruby-build
 brew install rbenv
 brew install rbenv-gemset
+brew install rbenv-ctags
 brew install python
 brew install the_silver_searcher
 brew install pup
 brew install jq
+brew install mmv
+brew install the_silver_searcher
 
 # Running this as-is will halt shell -- currently need manual intervention.
 # echo "Install Node"
