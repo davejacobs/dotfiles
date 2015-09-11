@@ -21,7 +21,7 @@ let g:NERDTreeIgnore = [
       \ '*\.pyc$'
       \ ]
 
-let g:Powerline_symbols='fancy'
+" let g:Powerline_symbols='fancy'
 
 " Actively correct Javascript, do not actively correct HTML
 let g:syntastic_mode_map = {
@@ -38,7 +38,7 @@ call tcomment#DefineType('jsx_inline', g:tcommentInlineC)
 
 au BufNewFile,BufRead *.ejs set filetype=html
 
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
