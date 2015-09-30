@@ -19,7 +19,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'kana/vim-textobj-user'
 
 " Code editing
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'tpope/vim-fugitive'
@@ -30,7 +30,7 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'amix/vim-zenroom2'
 
 " Status and other things
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'sjl/gundo.vim'
 
 " Network
@@ -52,7 +52,7 @@ Plugin 'pangloss/vim-javascript'  " This is currently more updated than the abov
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5-syntax.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'jsx/jsx.vim'
+Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
@@ -64,6 +64,7 @@ Plugin 'tpope/timl'
 Plugin 'davidoc/taskpaper.vim'
 
 " Themes
+Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'imsizon/wombat.vim'
 

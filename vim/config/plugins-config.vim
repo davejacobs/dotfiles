@@ -30,6 +30,8 @@ let g:syntastic_mode_map = {
       \ 'passive_filetypes': ['html', 'sass', 'scss', 'scss.css', 'python'] 
       \ }
 
+let g:jsx_ext_required = 0
+
 let g:pymode_lint = 0
 
 call tcomment#DefineType('jsx', '// %s')
