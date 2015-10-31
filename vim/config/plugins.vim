@@ -58,7 +58,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'tpope/timl'
 
 " Productivity
 Plugin 'davidoc/taskpaper.vim'
