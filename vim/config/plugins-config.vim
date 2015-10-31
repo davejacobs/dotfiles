@@ -41,8 +41,6 @@ call tcomment#DefineType('jsx_inline', g:tcommentInlineC)
 
 au BufNewFile,BufRead *.ejs set filetype=html
 
-" let g:airline_powerline_fonts = 1
-
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
