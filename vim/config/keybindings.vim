@@ -36,6 +36,9 @@ map Y           y$
 map <Leader>C   :call CopyPathWithLine()<CR>
 map <Leader>F   :call CopyClojureNamespace()<CR>
 
+nmap <D-B>      :Gbrowse<CR>
+vmap <D-B>      :Gbrowse<CR>
+
 " Edit filetype-specific file
 map <Leader>h   :execute "edit " . FiletypeFile()<CR>
 
