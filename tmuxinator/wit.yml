@@ -1,11 +1,7 @@
 # ~/.tmuxinator/wit.yml
 #
 name: wit
-root: ~/projects/wit.io
-# pre_window:
-  # - export RBENV_DIR=
-  # - export RBENV_VERSION=
+root: ~/Projects/wit.io
 windows:
-  - server: "cd ../wit-server; lein serve"
-  - client: "npm start"
+  - server: npm start
   - bash: #

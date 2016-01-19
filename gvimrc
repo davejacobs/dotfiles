@@ -45,8 +45,6 @@ elseif has("gui_macvim")
   macmenu &Edit.Find.Find\.\.\. key = <nop>
   macmenu &File.Print key = <nop>
 
-  map <D-f>           :Ag! ""<Left>
-
   " Conveniently access config files
   nmap <D-O>          :source %<CR>
   nmap <D-<>          :edit $MYVIMRC<CR>
@@ -61,6 +59,7 @@ elseif has("gui_macvim")
   map <M-D-f>         :set invfu<CR>
 
   map <D-f>           :Ag! ""<Left>
+  map <D-F>           :Ag! ""<Left>
 
   " Move between buffers
   map <M-D-Left>      :bprevious<CR>
@@ -80,7 +79,6 @@ elseif has("gui_macvim")
 
   " Copy current file path to system pasteboard
   nmap <D-C>          :call CopyPathWithLine()<CR>
-  nmap <D-F>          :call CopyClojureNamespace()<CR>
 end
 
 set background=light
