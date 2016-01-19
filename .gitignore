@@ -3,5 +3,6 @@ lein/self-installs
 tmuxinator/*.yml
 doc/TODO*
 bash/completions/git
+bash/environments/secrets
 .netrwhist
 git-completion.bash

@@ -7,6 +7,7 @@ distro=$(namedistro)
 
 for dir in config aliases functions environments; do
   sourcesafe $HOME/.bash/${dir}/shared
+  sourcesafe $HOME/.bash/${dir}/secrets
   sourcesafe $HOME/.bash/${dir}/${distro}
 done
 
