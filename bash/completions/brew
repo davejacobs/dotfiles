@@ -1,4 +1,0 @@
-if $(which brew &> /dev/null); then
-  [ -f $(brew --prefix)/etc/bash_completion ] && \
-    source $(brew --prefix)/etc/bash_completion
-fi

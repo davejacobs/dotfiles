@@ -1,7 +1,0 @@
-alias y="yaourt"
-alias p="sudo pacman"
-alias lsorphans="pacman -Qdtq"
-function rmorphans() {
-  echo "Removing $(pacman -Qdtq)"
-  sudo pacman -Rsn $(pacman -Qdtq)
-}

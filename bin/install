@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Note: Use bash to install, but then switch over
+# to ZSH.
+
 set -e
 
 directory="."
