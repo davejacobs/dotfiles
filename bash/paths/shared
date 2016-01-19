@@ -1,7 +1,0 @@
-/usr/local/sbin
-/usr/local/bin
-~/bin
-~/.rbenv/bin
-~/.cabal/bin
-.cabal-sandbox/bin
-node_modules/.bin

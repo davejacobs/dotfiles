@@ -1,8 +1,0 @@
-alias paste="pbpaste"
-alias copy="pbcopy"
-alias see="SetFile -a v"
-alias hide="SetFile -a V"
-
-# Maintenance tasks
-# Clear out ASL logs to keep Terminal startup time super-speedy.
-alias cleanterm="sudo rm -f /private/var/log/asl/*.asl"
