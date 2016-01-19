@@ -19,7 +19,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'kana/vim-textobj-user'
 
 " Code editing
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'tpope/vim-fugitive'
