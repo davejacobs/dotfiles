@@ -30,6 +30,8 @@ let g:syntastic_mode_map = {
       \ 'passive_filetypes': ['html', 'sass', 'scss', 'scss.css', 'python'] 
       \ }
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 let g:jsx_ext_required = 0
 
 let g:pymode_lint = 0
@@ -45,6 +47,3 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
 let g:gist_post_private = 1
-
-" JSX will work for .js files, too
-let g:jsx_ext_required = 0
