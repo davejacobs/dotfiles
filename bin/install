@@ -60,8 +60,6 @@ pushd $directory > /dev/null
   done
 popd > /dev/null
 
-interactively_call "curl -L https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o bash/completions/git" "Git autocompletion"
-
 if [[ ! -d $HOME/.vim/bundle/vundle ]]; then
   interactively_call "git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle" "Vundle clone"
 fi
