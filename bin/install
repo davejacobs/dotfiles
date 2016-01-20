@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Note: Use bash to install, but then switch over
 # to ZSH.
