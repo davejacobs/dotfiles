@@ -11,6 +11,7 @@ set guioptions-=l       " Remove left scrollbar
 set guioptions-=r       " Remove right scrollbar
 set guioptions-=b       " Remove bottom scrollbar
 set visualbell t_vb=    " Get rid of that annoying error beep & flash
+set linespace=4
 
 autocmd BufEnter * highlight Search gui=underline
 " autocmd BufEnter * highlight clear nontext " Hide non-text characters
