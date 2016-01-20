@@ -27,6 +27,7 @@ Plugin 'tpope/vim-dispatch'       " Will work with Ack!
 Plugin 'vim-scripts/matchit.zip'
 
 " Writing
+Plugin 'junegunn/goyo.vim'
 Plugin 'amix/vim-zenroom2'
 
 " Status and other things
@@ -36,31 +37,22 @@ Plugin 'sjl/gundo.vim'
 " Network
 Plugin 'mattn/webapi-vim'         " Needed for gist-vim
 Plugin 'mattn/gist-vim'
-" Plugin 'rizzatti/dash.vim'
 
 " Languages and frameworks
 Plugin 'vim-ruby/vim-ruby'
-
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
-" Plugin 'vim-scripts/paredit.vim'
-" Plugin 'raichoo/purescript-vim'
-" Plugin 'vim-scripts/vim-javascript' 
 Plugin 'pangloss/vim-javascript'  " This is currently more updated than the above
                                   " (which is a derivative)
+Plugin 'mxw/vim-jsx'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5-syntax.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'rust-lang/rust.vim'
-
-" Productivity
-Plugin 'davidoc/taskpaper.vim'
 
 " Themes
 Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }

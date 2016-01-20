@@ -21,8 +21,6 @@ let g:NERDTreeIgnore = [
       \ '*\.pyc$'
       \ ]
 
-" let g:Powerline_symbols='fancy'
-
 " Actively correct Javascript, do not actively correct HTML
 let g:syntastic_mode_map = {
       \ 'mode': 'active',
@@ -31,17 +29,13 @@ let g:syntastic_mode_map = {
       \ }
 
 let g:syntastic_javascript_checkers = ['eslint']
-
 let g:jsx_ext_required = 0
-
 let g:pymode_lint = 0
 
 call tcomment#DefineType('js', '// %s')
 call tcomment#DefineType('jsx', '// %s')
 call tcomment#DefineType('jsx_block', g:tcommentBlockC)
 call tcomment#DefineType('jsx_inline', g:tcommentInlineC)
-
-au BufNewFile,BufRead *.ejs set filetype=html
 
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
