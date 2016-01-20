@@ -10,6 +10,7 @@
 [core]
   filemode = false
   excludesfile = ~/.gitignore
+  editor = /usr/bin/vim
 [push]
   default = current
 [pull]
