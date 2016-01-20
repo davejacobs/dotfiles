@@ -49,6 +49,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
+echo "Show the ~/Library folder"
+chflags nohidden ~/Library
+
 # echo "Kill affected applications"
 # for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
@@ -84,7 +87,6 @@ echo "Install fonts"
 brew tap caskroom/fonts
 brew cask install font-ubuntu
 brew cask install font-inconsolata
-brew cask install font-
 
 echo "Install free GUI apps"
 brew cask install iterm2
@@ -95,8 +97,6 @@ brew cask install google-chrome
 brew cask install java
 brew cask install jumpcut
 brew cask install scroll-reverser
-brew cask install skitch
-brew cask install limechat
 
 # Install paid GUI apps
 brew cask install fluid
@@ -108,12 +108,7 @@ echo "Install Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 pushd /tmp &> /dev/null
-  echo "Install Ubuntu font family"
-  # TODO: Replace with brew or apt fonts when appropriate
-  curl http://font.ubuntu.com/download/ubuntu-font-family-0.80.zip -o fonts.zip
-  unzip fonts.zip
-  cp ubuntu-font-family-0.80/*.ttf ~/Library/Fonts
-
+  echo "Install iTerm color presets"
   curl https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master \
     -o iterm-themes.zip
   unzip iterm-themes.zip
@@ -127,19 +122,11 @@ pushd /tmp &> /dev/null
   popd &> /dev/null
 popd &> /dev/null
 
-echo "Show the ~/Library folder"
-chflags nohidden ~/Library
-
 echo "Reminders:"
-echo "- Add licenses"
 echo "- Set up FileVault"
-echo "- Remove entries from the sidebar"
-echo "- Install Taskpaper, Mail"
-echo "- Install powerline fonts"
-echo "- Install and set up mail app"
 echo "- Set up iTerm profile"
 echo "- Change terminal font"
 echo "- Make option key work for CLI navigation"
 echo "- Cursor -> vertical bar"
 echo "- Change default view to column view"
-echo "- Configure themes for Atom, Taskpaper, etc."
+echo "- Configure theme for Atom"
