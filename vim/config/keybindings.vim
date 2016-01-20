@@ -34,10 +34,6 @@ map Y           y$
 
 " Copy current file path to system pasteboard
 map <Leader>C   :call CopyPathWithLine()<CR>
-map <Leader>F   :call CopyClojureNamespace()<CR>
-
-nmap <D-B>      :Gbrowse<CR>
-vmap <D-B>      :Gbrowse<CR>
 
 " Edit filetype-specific file
 map <Leader>h   :execute "edit " . FiletypeFile()<CR>
@@ -46,19 +42,25 @@ autocmd BufWritePre *.js,*.rb,*.py,*.scss,*.md
       \ call StripTrailingWhitespace()
 
 " Plugins
+
+" Fast search
 map <Leader>a :Ag! ""<Left>
+
+" WriteRoom
+nnoremap <silent> <leader>z :Goyo<cr>
+
+" GitHub integration
+nmap <D-B>      :Gbrowse<CR>
+vmap <D-B>      :Gbrowse<CR>
+
 
 " Generic tag creator
 nmap <Silent> <Leader>t !ctags -R --exclude=.git --exclude=log ./*<CR>
-
-" map <C-N>         :ClearCtrlPCache<CR>\|:CtrlP<CR>
-" map <Leader>N     :ClearCtrlPCache<CR>\|:CtrlP<CR>
 
 map <C-N>         :CtrlPMixed<CR>
 map <Leader>N     :CtrlPMixed<CR>
 map <Leader>e     :CtrlPBuffer<CR>
 map <Leader>n     :NERDTreeToggle<CR>
-" map <Leader>/     <plug>NERDCommenterToggle
 map <Leader>/     :TComment<CR>
 
 map <C-e>         :Eval<CR>
