@@ -16,8 +16,6 @@ set smarttab            " Use shiftwidth to tab at line beginning
 set wrap                " Wrap text inside screen
 set linebreak           " Wrap words, not characters
 set linespace=4         " Baseline spacing, measured in pixels
-" set list                " Show difference between tabs and spaces
-" set listchars=tab:\\t
 set number              " Show line numbers
 set incsearch           " Incremental search
 set ignorecase          " Ignore search case
