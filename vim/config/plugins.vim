@@ -2,47 +2,53 @@
 
 call plug#begin('~/.vim/plugged')
 
-" Navigation
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'EvanDotPro/nerdtree-chmod'
-Plug 'rking/ag.vim'
+" Themes
+Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
+Plug 'altercation/vim-colors-solarized'
+Plug 'imsizon/wombat.vim'
+
+" Navigation, status, undo
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'EvanDotPro/nerdtree-chmod', { 'on': 'NERDTreeToggle' }
+Plug 'rking/ag.vim', { 'on': [ 'Ag', 'Ag!' ] }
+Plug 'itchyny/lightline.vim'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Plug 'tpope/vim-vinegar'
+
+" Git
+Plug 'tpope/vim-fugitive'
+if v:version >= 703
+  Plug 'mhinz/vim-signify'
+endif
 
 " General editing
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
 Plug 'kana/vim-textobj-user'
-
-" Code editing
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
-Plug 'tomtom/tcomment_vim'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-dispatch'       " Will work with Ack!
-Plug 'vim-scripts/matchit.zip'
+Plug 'tpope/vim-dispatch'
 
 " Writing
 Plug 'junegunn/goyo.vim'
 Plug 'amix/vim-zenroom2'
 
-" Status and other things
-Plug 'itchyny/lightline.vim'
-Plug 'sjl/gundo.vim'
+" Code editing
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
+Plug 'vim-scripts/matchit.zip'
 
 " Network
-Plug 'mattn/webapi-vim'         " Needed for gist-vim
-Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 
 " Languages and frameworks
 Plug 'vim-ruby/vim-ruby'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-fireplace'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'pangloss/vim-javascript'  " This is currently more updated than the above
-                                  " (which is a derivative)
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5-syntax.vim'
@@ -51,10 +57,5 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-haml'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'rust-lang/rust.vim'
-
-" Themes
-Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
-Plug 'altercation/vim-colors-solarized'
-Plug 'imsizon/wombat.vim'
 
 call plug#end()
