@@ -24,7 +24,9 @@ and removing completions and language version managers.
 
 ### To do ###
 
+- [x] Migrate to Zsh
+- [x] Update Vim plugins and settings
 - [ ] Modularize installation
 - [ ] Modularize configuration files, aliases, etc.
 - [ ] Convert segments of config into homebrew taps
-- [ ] Allow for easier install/uninstall
+- [ ] Allow for easier and cleaner install/uninstall
