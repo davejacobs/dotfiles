@@ -1,11 +1,10 @@
 # Support Haml
 --type-add
-html=.haml,.hbs,.mustache
+html=.haml,.hbs
+
 --type-add
 css=.sass,.scss,.less
 
---type-set=coffee=.coffee
---type-set=jade=.jade
 --type-set=json=.json
 
 # Markdown, textile, and reStructuredText
