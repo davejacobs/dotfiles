@@ -37,9 +37,6 @@ if has("gui_gtk2")
   vmap <C-c>          "+y
 
 elseif has("gui_macvim")
-  " Only looks good in experimental renderer
-  " set guifont=Inconsolata:h18
-  " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
   set guifont=Ubuntu\ Mono:h16
 
   " Delete MacVim key bindings before reusing
@@ -82,9 +79,6 @@ elseif has("gui_macvim")
   nmap <D-C>          :call CopyPathWithLine()<CR>
 end
 
-set background=light
-colorscheme solarized
-" colorscheme toychest
-" colorscheme github
-" colorscheme flatui
-" colorscheme monokai
+" Best choices: solarized, toychest, github, flatui, monokai
+" set background=light
+" colorscheme solarized
