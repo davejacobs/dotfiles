@@ -64,4 +64,4 @@ if [[ ! -d $HOME/.vim/bundle/vundle ]]; then
   interactively_call "git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle" "Vundle clone"
 fi
 
-interactively_call "vim +BundleInstall +qall" "Vundle installation"
+interactively_call "vim +PlugInstall +qall" "Vundle installation"
