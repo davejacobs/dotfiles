@@ -1,62 +1,60 @@
-" Plugins.vim - Declarative package management with Vundle
+" Plugs.vim - Declarative package management with Vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
-
-Plugin 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
 " Navigation
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'EvanDotPro/nerdtree-chmod'
-Plugin 'rking/ag.vim'
-" Plugin 'tpope/vim-vinegar'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'EvanDotPro/nerdtree-chmod'
+Plug 'rking/ag.vim'
+" Plug 'tpope/vim-vinegar'
 
 " General editing
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-Plugin 'kana/vim-textobj-user'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'kana/vim-textobj-user'
 
 " Code editing
-Plugin 'scrooloose/syntastic'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-dispatch'       " Will work with Ack!
-Plugin 'vim-scripts/matchit.zip'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'tomtom/tcomment_vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'       " Will work with Ack!
+Plug 'vim-scripts/matchit.zip'
 
 " Writing
-Plugin 'junegunn/goyo.vim'
-Plugin 'amix/vim-zenroom2'
+Plug 'junegunn/goyo.vim'
+Plug 'amix/vim-zenroom2'
 
 " Status and other things
-Plugin 'itchyny/lightline.vim'
-Plugin 'sjl/gundo.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'sjl/gundo.vim'
 
 " Network
-Plugin 'mattn/webapi-vim'         " Needed for gist-vim
-Plugin 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'         " Needed for gist-vim
+Plug 'mattn/gist-vim'
 
 " Languages and frameworks
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'pangloss/vim-javascript'  " This is currently more updated than the above
+Plug 'vim-ruby/vim-ruby'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'pangloss/vim-javascript'  " This is currently more updated than the above
                                   " (which is a derivative)
-Plugin 'mxw/vim-jsx'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'othree/html5-syntax.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-haml'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'rust-lang/rust.vim'
+Plug 'mxw/vim-jsx'
+Plug 'kchmck/vim-coffee-script'
+Plug 'othree/html5-syntax.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-haml'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'rust-lang/rust.vim'
 
 " Themes
-Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'imsizon/wombat.vim'
+Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
+Plug 'altercation/vim-colors-solarized'
+Plug 'imsizon/wombat.vim'
 
-call vundle#end()
+call plug#end()
