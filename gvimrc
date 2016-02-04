@@ -79,6 +79,6 @@ elseif has("gui_macvim")
   nmap <D-C>          :call CopyPathWithLine()<CR>
 end
 
-" Best choices: solarized, toychest, github, flatui, monokai
+" Best choices: solarized, toychest, github, flatui, monokai, cobalt2
 " set background=light
-" colorscheme solarized
+colorscheme cobalt2

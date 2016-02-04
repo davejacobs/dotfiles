@@ -6,12 +6,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'imsizon/wombat.vim'
+Plug 'herrbischoff/cobalt2.vim'
 
 " Navigation, status, undo
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'EvanDotPro/nerdtree-chmod', { 'on': 'NERDTreeToggle' }
-Plug 'rking/ag.vim', { 'on': [ 'Ag', 'Ag!' ] }
+Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Plug 'tpope/vim-vinegar'
