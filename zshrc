@@ -46,7 +46,8 @@ plugins=(git rbenv virtualenv virtualenvwrapper nvm node npm cabal heroku z tmux
 
 # User configuration
 
-export PATH="~/Automation/automate/bin:~/Automation/scripts/bin:~/Automation/media/bin":$PATH
+export PATH="$HOME/Automation/automate/bin:$HOME/Automation/scripts/bin:$HOME/Automation/media/bin":$PATH
+export PATH=$PATH:"node_modules/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
