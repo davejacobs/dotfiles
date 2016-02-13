@@ -45,6 +45,7 @@ Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 
 " Languages and frameworks
 Plug 'vim-ruby/vim-ruby'
+Plug 'hynek/vim-python-pep8-indent'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static'
