@@ -1,0 +1,16 @@
+! Turn Caps Lock into Control
+! remove Lock = Caps_Lock
+! keysym Caps_Lock = Control_L
+! add Lock = Caps_Lock
+
+keycode 66 = Control_L
+clear Lock
+add Control = Control_L
+
+! To swap, integrate these above:
+! remove Control = Control_L
+! keysym Control_L = Caps_Lock
+! add Control = Control_L
+
+! Reverse scrolling (5 and 4 are vertical, 7 and 6 are horizontal)
+pointer = 1 2 3 5 4 7 6 8 9 10 11 12
