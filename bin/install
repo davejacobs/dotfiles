@@ -53,7 +53,7 @@ interactively_call() {
 }
 
 pushd $directory > /dev/null
-  files=$(ls | grep -v -e "^doc" -e "^bin" -e "^config" -e "README.md" -e '~' -e "awesome")
+  files=$(ls | grep -v -e "^doc" -e "^bin" -e "^config" -e "README.md" -e '~' -e "awesome" -e "Xmodmap")
   for file in $files; do
     rm -rf $HOME/.${file}
     interactively_call "ln -s $(pwd)/${file} $HOME/.${file}" "Link .${file}"

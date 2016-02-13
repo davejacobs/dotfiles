@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/David/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -42,13 +42,15 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rbenv virtualenv virtualenvwrapper nvm node npm cabal heroku z tmuxinator)
+
+plugins=(git)
+# plugins=(git rbenv nvm cabal heroku z tmuxinator virtualenv virtualenvwrapper)
 
 # User configuration
 
 export PATH="$HOME/Automation/automate/bin:$HOME/Automation/scripts/bin:$HOME/Automation/media/bin":$PATH
+export PATH="$HOME/.local/bin":$PATH
 export PATH=$PATH:"node_modules/.bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
@@ -82,18 +84,18 @@ alias s="ssh"
 alias m="./manage.py"
 alias v="vim"
 
-if [ $(which pgcli) ]; then
-  alias p="pgcli"
-else
-  alias p="psql"
-fi
+# if [ $(which pgcli) ]; then
+#   alias p="pgcli"
+# else
+#   alias p="psql"
+# fi
 
 # OSX aliases
 
-alias paste="pbpaste"
-alias copy="pbcopy"
-alias see="SetFile -a v"
-alias hide="SetFile -a V"
+# alias paste="pbpaste"
+# alias copy="pbcopy"
+# alias see="SetFile -a v"
+# alias hide="SetFile -a V"
 
 # Linux aliases
 
@@ -102,8 +104,8 @@ alias hide="SetFile -a V"
 
 # Commands
 
-alias tunnel="ssh -N -L 1234:localhost:80 $1"
-alias tunnelp="ssh -N -l $(whoami) -L 1234:localhost:$2 $1"
+# alias tunnel="ssh -N -L 1234:localhost:80 $1"
+# alias tunnelp="ssh -N -l $(whoami) -L 1234:localhost:$2 $1"
 
 # Other commands 
 
