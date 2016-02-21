@@ -43,14 +43,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git)
 # plugins=(git rbenv nvm cabal heroku z tmuxinator virtualenv virtualenvwrapper)
+plugins=(git rbenv virtualenv virtualenvwrapper)
 
 # User configuration
 
 export PATH="$HOME/Automation/automate/bin:$HOME/Automation/scripts/bin:$HOME/Automation/media/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$PATH:"node_modules/.bin"
+export PATH="/opt/chefdk/bin":$PATH
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
