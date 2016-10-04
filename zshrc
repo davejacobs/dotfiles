@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -49,11 +49,14 @@ plugins=(git rbenv virtualenv virtualenvwrapper)
 # User configuration
 
 export PATH="$HOME/Automation/automate/bin:$HOME/Automation/scripts/bin:$HOME/Automation/media/bin":$PATH
+export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$PATH:"node_modules/.bin"
 export PATH="/opt/chefdk/bin":$PATH
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+alias mux=tmuxinator
 
 source $ZSH/oh-my-zsh.sh
 
