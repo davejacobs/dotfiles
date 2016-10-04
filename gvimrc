@@ -37,11 +37,13 @@ if has("gui_gtk2")
   vmap <C-c>          "+y
 
 elseif has("gui_macvim")
-  set guifont=Ubuntu\ Mono:h16
+  " set guifont=Ubuntu\ Mono:h16
+  set guifont=Monaco:h13
 
   " Delete MacVim key bindings before reusing
   macmenu &Edit.Find.Find\.\.\. key = <nop>
   macmenu &File.Print key = <nop>
+  macmenu &File.Save\ As\.\.\. key = <nop>
 
   " Conveniently access config files
   nmap <D-O>          :source %<CR>
@@ -82,3 +84,7 @@ end
 " Best choices: solarized, toychest, github, flatui, monokai, cobalt2
 " set background=light
 colorscheme cobalt2
+
+" Don't show tildes
+hi NonText guifg=bg
+
