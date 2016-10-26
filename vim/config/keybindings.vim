@@ -49,6 +49,8 @@ map <Leader>a :Ag! ""<Left>
 " WriteRoom
 nnoremap <silent> <leader>z :Goyo<cr>
 
+nmap <Leader>fs :%SQLUFormatter<CR>
+
 " GitHub integration
 nmap <D-B>      :Gbrowse<CR>
 vmap <D-B>      :Gbrowse<CR>
