@@ -33,9 +33,6 @@ let g:jsx_ext_required = 0
 let g:pymode_lint = 0
 
 call tcomment#DefineType('js', '// %s')
-call tcomment#DefineType('jsx', '// %s')
-call tcomment#DefineType('jsx_block', g:tcommentBlockC)
-call tcomment#DefineType('jsx_inline', g:tcommentInlineC)
 
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
