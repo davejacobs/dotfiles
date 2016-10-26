@@ -1,9 +1,9 @@
 # ~/.tmuxinator/wit.yml
 #
 name: wit
-root: ~/Projects/wit-cms
-pre_window: workon wit-cms
+root: ~/Projects/wit-web
+pre_window: workon wit-web
 windows:
   - server: ./manage.py runserver
-  - client: webpack -w
+  - client: npm start
   - bash: #
