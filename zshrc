@@ -44,7 +44,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 
 # plugins=(git rbenv nvm cabal heroku z tmuxinator virtualenv virtualenvwrapper)
-plugins=(git rbenv virtualenv virtualenvwrapper)
+plugins=(git rbenv nvm virtualenv virtualenvwrapper)
 
 # User configuration
 
