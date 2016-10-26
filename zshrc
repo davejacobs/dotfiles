@@ -60,6 +60,9 @@ alias mux=tmuxinator
 
 source $ZSH/oh-my-zsh.sh
 
+# Don't share history between tabs
+unsetopt share_history
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
