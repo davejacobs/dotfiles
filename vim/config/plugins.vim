@@ -54,6 +54,8 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'vim-scripts/SQLUtilities' | Plug 'vim-scripts/Align'
+
+Plug 'lambdatoast/elm.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
 Plug 'othree/html5-syntax.vim'
