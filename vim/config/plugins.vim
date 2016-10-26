@@ -45,7 +45,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 
 " Languages and frameworks
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'branch': 'master' }
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
