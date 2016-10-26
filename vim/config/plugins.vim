@@ -36,7 +36,7 @@ Plug 'amix/vim-zenroom2'
 
 " Code editing
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
+Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/matchit.zip'
