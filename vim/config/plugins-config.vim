@@ -41,3 +41,5 @@ let g:gist_post_private = 1
 
 let g:sqlutil_align_comma = 1
 let g:sqlutil_align_first_word = 1
+
+autocmd FileType html,css,javascript.jsx EmmetInstall

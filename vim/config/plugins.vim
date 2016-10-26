@@ -28,6 +28,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'kana/vim-textobj-user'
 Plug 'tpope/vim-dispatch'
+Plug 'henrik/vim-qargs'
 
 " Writing
 Plug 'junegunn/goyo.vim'
