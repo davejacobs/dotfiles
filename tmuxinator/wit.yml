@@ -2,7 +2,6 @@
 #
 name: wit
 root: ~/Projects/wit-web
-pre_window: workon wit-web
 windows:
   - server: ./manage.py runserver
   - client: npm start
