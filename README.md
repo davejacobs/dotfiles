@@ -1,15 +1,6 @@
 # Dotfiles
 
-The point of the directory? Dotfiles in the cloud.
-
-Yes, I'm trying to keep all of my machines on the same dotfiles,
-branching my configurations where necessary. This should be a good baseline
-to build your own dotfiles, if you are just starting out. However, there
-are definitely configuration options that are particular to me (for example,
-my Github and IRC usernames, aliases to directories on my box, etc.).
-
-I'm thinking about moving user-specific config to a config file, as
-soon as I come up with a good way to do that in bash.
+Dotfiles in the cloud. Mostly specific to how I work.
 
 If you do want to install:
 
@@ -17,7 +8,7 @@ If you do want to install:
     cd dotfiles
     bin/install
 
-The install should work on OS X, Arch Linux, and Ubuntu.
+The install should work on OS X and Ubuntu.
 
 If you want your prompt to load faster, consider editing your `.bash_profile`
 and removing completions and language version managers.
