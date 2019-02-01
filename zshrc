@@ -13,15 +13,6 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
@@ -35,25 +26,18 @@ DISABLE_AUTO_UPDATE="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-
-# plugins=(git rbenv nvm cabal heroku z tmuxinator virtualenv virtualenvwrapper)
-# plugins=(rbenv nvm virtualenv virtualenvwrapper autoenv)
-plugins=(virtualenv virtualenvwrapper autoenv)
+plugins=(autoenv composer zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
 export PATH="$HOME/Automation/automate/bin:$HOME/Automation/scripts/bin:$HOME/Automation/media/bin":$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.cabal/bin":$PATH
 export PATH=$PATH:"node_modules/.bin"
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH="/opt/chefdk/bin":$PATH
+
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -70,15 +54,6 @@ unsetopt share_history
 # Preferred editor for local and remote sessions
 export EDITOR="vim"
 
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -91,3 +66,23 @@ alias g="git"
 alias s="ssh"
 alias m="./manage.py"
 alias v="vim"
+alias dcr="docker-compose run"
+
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' \
+                  -not -path '*node_modules*' \
+                  -not -path '*.sass-cache*' \
+                  -not -path '*.git*' \
+                  -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(pyenv init -)"
+
+# Connect docker to docker-machine 
+# docker-machine restart default
+eval $(docker-machine env default)
