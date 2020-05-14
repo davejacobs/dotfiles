@@ -1,6 +1,0 @@
-vim/plugged
-vim/autoload/plug.vim
-tmuxinator/*.yml
-doc/TODO*
-bash/completions/git
-bash/environments/secrets

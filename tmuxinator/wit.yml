@@ -1,8 +1,0 @@
-# ~/.tmuxinator/wit.yml
-#
-name: wit
-root: ~/Projects/wit-web
-windows:
-  - server: ./manage.py runserver
-  - client: npm start
-  - bash: #
