@@ -26,63 +26,35 @@ DISABLE_AUTO_UPDATE="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(autoenv composer zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
-
-export PATH="$HOME/Automation/automate/bin:$HOME/Automation/scripts/bin:$HOME/Automation/media/bin":$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.local/bin":$PATH
-export PATH="$HOME/.cabal/bin":$PATH
-export PATH=$PATH:"node_modules/.bin"
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
-export PATH="/opt/chefdk/bin":$PATH
-
+export PATH=/usr/local/bin:$HOME/.local/bin:$PATH
+export EDITOR="vim"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-fpath=(/usr/local/share/zsh-completions $fpath)
-alias mux=tmuxinator
+# Move zcompdump files out of ~. Instructions from
+# https://github.com/ohmyzsh/ohmyzsh/issues/7332#issuecomment-624630253
+mkdir -p ~/.cache/zsh
+export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
 source $ZSH/oh-my-zsh.sh
 
 # Don't share history between tabs
 unsetopt share_history
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-export EDITOR="vim"
-
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
 alias g="git"
 alias s="ssh"
-alias m="./manage.py"
 alias v="vim"
+alias k="kubectl"
+alias dc="docker-compose"
 alias dcr="docker-compose run"
 
-fd() {
-  local dir
-  dir=$(find ${1:-.} -path '*/\.*' \
-                  -not -path '*node_modules*' \
-                  -not -path '*.sass-cache*' \
-                  -not -path '*.git*' \
-                  -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-
-
+# Set up tools
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(pyenv init -)"
-
-# Connect docker to docker-machine 
-# docker-machine restart default
-eval $(docker-machine env default)
+# eval $(docker-machine env default)

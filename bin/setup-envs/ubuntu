@@ -1,9 +1,0 @@
-sudo apt-get update
-sudo apt-get install git
-sudo apt-get install zsh
-sudo apt-get install vim vim-gnome
-sudo apt-get install python
-
-# (Install Oh My Zsh)
-
-sudo apt-get install silversearcher-ag

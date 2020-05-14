@@ -1,8 +1,6 @@
 #!/bin/bash
-
-# Initial setup script
-# This script will setup a Mac (running Yosemite)
-# from scratch. This is probably only useful for @davejacobs, but feel free to co-opt it for yourself.
+# Initial setup script for Mac (Yosemite+)
+# This is probably only useful for @davejacobs, but feel free to co-opt it.
 
 set -e
 
@@ -14,4 +12,100 @@ if [ ! -f ~/.ssh/id_rsa ]; then
   ssh-keygen -t rsa -C "$email" -N "" -f ~/.ssh/id_rsa
 fi
 
-source ./setup-envs/osx
+pbcopy < ~/.ssh/id_rsa.pub
+echo "Public key has been copied to your clipboard."
+
+# Stop annoying Apple behavior
+defaults write ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain InitialKeyRepeat -int 0
+
+echo "Enable subpixel font rendering on non-Apple LCDs"
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+echo "Disable window animations and Get Info animations in Finder"
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+echo "Expand save panel by default"
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+echo "Expand print panel by default"
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+echo "Enable highlight hover effect for the grid view of a stack (Dock)"
+defaults write com.apple.dock mouse-over-hilte-stack -bool true
+
+echo "Enable spring loading for all Dock items"
+defaults write enable-spring-load-actions-on-all-items -bool true
+
+echo "Don’t animate opening applications from the Dock"
+defaults write com.apple.dock launchanim -bool false
+
+echo "Set a  fast keyboard repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+echo "Set a shorter delay until key repeat"
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
+echo "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+echo "Disable the warning when changing a file extension"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+echo "Only use UTF-8 in Terminal.app"
+defaults write com.apple.terminal StringEncodings -array 4
+
+echo "Show the ~/Library folder"
+chflags nohidden ~/Library
+
+echo "Install GCC (was probably already installed when you typed 'git clone')"
+xcode-select -v || xcode-select --install
+
+echo "Install Homebrew"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Install dependencies"
+brew install zsh
+brew install pup
+brew install jq
+brew install mmv
+brew install fd
+brew install fzf
+brew install the_silver_searcher
+
+brew install caskroom/cask/brew-cask
+brew cask install iterm2
+brew cask install alfred
+brew cask install macvim
+brew cask install atom
+brew cask install java
+brew cask install jumpcut
+brew cask install scroll-reverser
+brew cask install divvy
+brew cask install 1password
+brew cask install spotify
+
+brew tap caskroom/fonts
+brew cask install font-ubuntu
+brew cask install font-inconsolata
+
+# Missing: Docker for Mac, Flux
+
+echo "Install Oh My Zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+pushd /tmp &> /dev/null
+  echo "Install iTerm color presets"
+  curl https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master \
+    -o iterm-themes.zip
+  unzip iterm-themes.zip
+  pushd iterm2-color-schemes &> /dev/null
+    for f in *; do
+      theme=$(basename "$f")
+      defaults write \
+        -app iTerm "Custom Color Presets" \
+        -dict-add "$theme" "$(cat "$f")"
+    done
+  popd &> /dev/null
+popd &> /dev/null
