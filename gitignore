@@ -9,5 +9,6 @@ tags
 .ropeproject
 Icon
 .lein-repl-history
-/target
+target
 .repl
+*.code-workspace

@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# Note: Use bash to install, but then switch over
-# to ZSH.
+# Use bash to install dependencies, but then switch over to ZSH
 
 set -e
 
@@ -55,7 +53,7 @@ interactively_call() {
 pushd $directory > /dev/null
   files=$(ls | grep -v -e "^doc" -e "^bin" -e "^config" -e "README.md" -e '~' -e "awesome" -e "Xmodmap")
   for file in $files; do
-    rm -rf $HOME/.${file}
-    interactively_call "ln -s $(pwd)/${file} $HOME/.${file}" "Link .${file}"
+    rm -rf ${HOME}/.${file}
+    interactively_call "ln -s $(pwd)/${file} ${HOME}/.${file}" "Link .${file}"
   done
 popd > /dev/null
