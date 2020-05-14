@@ -12,3 +12,4 @@ Icon
 target
 .repl
 *.code-workspace
+node_modules/**/*
