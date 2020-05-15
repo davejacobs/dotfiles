@@ -67,13 +67,15 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 echo "Install dependencies"
 brew install zsh
-brew install pup
-brew install jq
+brew install tree
 brew install mmv
 brew install fd
 brew install fzf
 brew install the_silver_searcher
 brew install diff-so-fancy
+brew install exa
+brew install jq
+brew install pup
 
 brew install caskroom/cask/brew-cask
 brew cask install iterm2
@@ -90,6 +92,10 @@ brew cask install spotify
 brew tap caskroom/fonts
 brew cask install font-ubuntu
 brew cask install font-inconsolata
+brew cask install font-roboto-mono
+brew cask install font-source-code-pro
+brew cask install font-alegreya
+brew cask install font-alegreya-sans
 
 # Missing: Docker for Mac, Flux
 
@@ -98,15 +104,19 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 pushd /tmp &> /dev/null
   echo "Install iTerm color presets"
-  curl https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master \
-    -o iterm-themes.zip
-  unzip iterm-themes.zip
-  pushd iterm2-color-schemes &> /dev/null
-    for f in *; do
-      theme=$(basename "$f")
-      defaults write \
-        -app iTerm "Custom Color Presets" \
-        -dict-add "$theme" "$(cat "$f")"
-    done
+  curl -sL https://github.com/mbadolato/iTerm2-Color-Schemes/zipball/master -o iterm-themes.zip
+  unzip iterm-themes.zip -d iterm-themes
+
+  # TODO: Abort if directory structure doesn't match
+  # [[ -d ]] || exit 1
+
+  pushd iterm-themes
+    # Navigate into first directory, which is strangely named and may change
+    pushd $(ls | head -n 1)/schemes &> /dev/null
+      for f in *; do
+        theme_name=$(basename "$f")
+        defaults write -app iTerm "Custom Color Presets" -dict-add "$theme_name" "$(cat "$f")"
+      done
+    popd &> /dev/null
   popd &> /dev/null
 popd &> /dev/null
