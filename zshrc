@@ -65,4 +65,4 @@ precmd() {
 
 # Set up tools
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# eval $(docker-machine env default)
+eval "$(rbenv init -)"
