@@ -30,7 +30,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
-export PATH=/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/Projects/scripts:$HOME/Code/scripts:$HOME/.local/bin:node_modules/.bin:$HOME/.cargo/bin:$PATH
 export EDITOR="vim"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
