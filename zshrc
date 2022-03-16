@@ -56,6 +56,13 @@ alias k="kubectl"
 alias dc="docker-compose"
 alias dcr="docker-compose run"
 
+# Insert a newline before all commands except the first one
+precmd() {
+  precmd() {
+    echo
+  }
+}
+
 # Set up tools
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # eval $(docker-machine env default)
