@@ -49,12 +49,15 @@ unsetopt share_history
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias g="git"
-alias s="ssh"
-alias v="vim"
-alias k="kubectl"
-alias dc="docker-compose"
+alias g=git
+alias s=ssh
+alias v=vim
+alias k=kubectl
+alias d=docker
+alias dc=docker-compose
 alias dcr="docker-compose run"
+
+[ -f ~/.aliases ] && source ~/.aliases 
 
 # Insert a newline before all commands except the first one
 precmd() {
