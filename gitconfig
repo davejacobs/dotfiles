@@ -1,8 +1,3 @@
-[user]
-  name = David Jacobs
-  email = david@wit.io
-[github]
-  user = davejacobs
 [color]
   ui = auto
 [apply]
@@ -39,3 +34,5 @@
   lgp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   logp = --pretty=format:"%h - %an, %ar : %s"
   branches = "! for branch in `git branch -r | grep -v HEAD`; do echo `git show --format=\"%ai %ar by %an\" $branch | head -n 1` \t$branch; done | sort -r"
+[init]
+	defaultBranch = master
