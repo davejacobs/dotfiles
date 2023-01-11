@@ -1,6 +1,6 @@
 #!/bin/bash
-# Initial setup script for Mac (Yosemite+)
-# This is probably only useful for @davejacobs, but feel free to co-opt it.
+# Initial setup script for developer tools on macOS (Yosemite+)
+# This is probably only useful for @davejacobs, but feel free to use it.
 
 set -e
 
@@ -12,10 +12,7 @@ if [ ! -f ~/.ssh/id_rsa ]; then
   ssh-keygen -t rsa -C "$email" -N "" -f ~/.ssh/id_rsa
 fi
 
-pbcopy < ~/.ssh/id_rsa.pub
-echo "Public key has been copied to your clipboard."
-
-# Stop annoying Apple behavior
+# Stop annoying default behavior on macOS
 defaults write ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write NSGlobalDomain InitialKeyRepeat -int 0
@@ -65,8 +62,13 @@ xcode-select -v || xcode-select --install
 echo "Install Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Install dependencies"
+echo "Install useful commandline tools through Homebrew"
 brew install zsh
+brew install vim
+brew install coreutils
+brew install tmux
+brew install git
+brew install bat
 brew install tree
 brew install mmv
 brew install fd
@@ -75,29 +77,15 @@ brew install the_silver_searcher
 brew install diff-so-fancy
 brew install exa
 brew install jq
+brew install yq
 brew install pup
+brew install tv
+brew install trash
+brew install moreutils
+brew install csvkit
 
 brew install caskroom/cask/brew-cask
 brew cask install iterm2
-brew cask install alfred
-brew cask install macvim
-brew cask install atom
-brew cask install java
-brew cask install jumpcut
-brew cask install scroll-reverser
-brew cask install divvy
-brew cask install 1password
-brew cask install spotify
-
-brew tap caskroom/fonts
-brew cask install font-ubuntu
-brew cask install font-inconsolata
-brew cask install font-roboto-mono
-brew cask install font-source-code-pro
-brew cask install font-alegreya
-brew cask install font-alegreya-sans
-
-# Missing: Docker for Mac, Flux
 
 echo "Install Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
