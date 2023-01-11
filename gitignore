@@ -3,13 +3,4 @@ tags
 .DS_Store
 *~
 *.swp
-.sass-cache
-.dropbox
-.ackrc
-.ropeproject
-Icon
-.lein-repl-history
-target
-.repl
-*.code-workspace
 node_modules/**/*
