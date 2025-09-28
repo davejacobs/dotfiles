@@ -1,0 +1,38 @@
+[init]
+	defaultBranch = master
+[color]
+  ui = auto
+[apply]
+  whitespace = nowarn
+[core]
+  filemode = false
+  excludesfile = ~/.gitignore
+  editor = /usr/bin/vim
+  pager = "diff-so-fancy | less --tabs=4 -RFX"
+[push]
+  default = current
+[pull]
+  default = current
+[branch]
+  autosetuprebase = always
+[diff]
+  ignoreSubmodules = dirty 
+[alias]
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  s = status
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  cp = cherry-pick
+  pu = push
+  pl = pull
+  df = diff
+  lg = log -p
+  who = shortlog -s --
+  lgp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  logp = --pretty=format:"%h - %an, %ar : %s"
+  branches = "! for branch in `git branch -r | grep -v HEAD`; do echo `git show --format=\"%ai %ar by %an\" $branch | head -n 1` \t$branch; done | sort -r"
